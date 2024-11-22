@@ -37,12 +37,14 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-trees:before { content: "\f100"; }
+.flaticon-trees:before { content: "\f100"; }
 .flaticon-fence:before { content: "\f101"; }
 .flaticon-lawn-mower:before { content: "\f102"; }
 .flaticon-natural-resources:before { content: "\f103"; }
-    
+.flaticon-fall:before { content: "\f104"; }
+
     $font-Flaticon-trees: "\f100";
     $font-Flaticon-fence: "\f101";
     $font-Flaticon-lawn-mower: "\f102";
     $font-Flaticon-natural-resources: "\f103";
+    $font-Flaticon-fall: "\f104";

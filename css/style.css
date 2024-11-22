@@ -8133,8 +8133,7 @@ h1, h2, h3, h4, h5,
   color: #000000;
   font-weight: 900;
   font-size: 32px;
-  line-height: 1;
-  margin-bottom: 30px; }
+  line-height: 1; }
   .navbar-brand span {
     color: #4e9525; }
   .navbar-brand:hover, .navbar-brand:focus {

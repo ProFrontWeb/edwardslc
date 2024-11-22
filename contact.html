@@ -81,48 +81,37 @@
 				<div class="row justify-content-center">
 					<div class="col-md-12">
 						<div class="wrapper">
-							<div class="row mb-5">
+							<div class="row mb-5 justify-content-center">
 								<div class="col-md-3">
 									<div class="dbox w-100 text-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-map-marker"></span>
-				        		</div>
-				        		<div class="text">
-					            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-					          </div>
-				          </div>
+				        				<div class="icon d-flex align-items-center justify-content-center">
+				        					<span class="fa fa-map-marker"></span>
+				        				</div>
+				        				<div class="text">
+					            			<p>Lynchburg, Virginia</p>
+					          			</div>
+				          			</div>
 								</div>
 								<div class="col-md-3">
 									<div class="dbox w-100 text-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-phone"></span>
-				        		</div>
-				        		<div class="text">
-					            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-					          </div>
-				          </div>
+				        				<div class="icon d-flex align-items-center justify-content-center">
+				        					<span class="fa fa-paper-plane"></span>
+				        				</div>
+				        				<div class="text">
+					            			<p><a href="mailto:info@yoursite.com">edwardsvapropertymgmt@gmail.com</a></p>
+					          			</div>
+				          			</div>
 								</div>
 								<div class="col-md-3">
 									<div class="dbox w-100 text-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-paper-plane"></span>
-				        		</div>
-				        		<div class="text">
-					            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-					          </div>
-				          </div>
+										<div class="icon d-flex align-items-center justify-content-center">
+				        					<span class="fa fa-phone"></span>
+				        				</div>
+				        				<div class="text">
+					            			<p><a href="tel://1234567920">(434) 942-2455</a></p>
+					          			</div>
+				          			</div>
 								</div>
-								<div class="col-md-3">
-									<div class="dbox w-100 text-center">
-				        		<div class="icon d-flex align-items-center justify-content-center">
-				        			<span class="fa fa-globe"></span>
-				        		</div>
-				        		<div class="text">
-					            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-					          </div>
-				          </div>
-								</div>
-							</div>
 							<div class="row no-gutters">
 								<div class="col-md-7">
 									<div class="contact-wrap w-100 p-md-5 p-4">
@@ -131,12 +120,37 @@
 					      		<div id="form-message-success" class="mb-4">
 					            Your message was sent, thank you!
 					      		</div>
-										<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+										<form method="POST" id="form">
+
+											<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+											<input type="hidden" name="subject" value="New Submission from Web3Forms">
+											<input type="checkbox" name="botcheck" id="" style="display: none;">
+										
+											<!-- Custom Form Data -->
+											<input type="email" name="email" required>
+											<input type="text" name="name" required>
+											<input type="text" name="phone" required>
+											<textarea name="message" required></textarea>
+										
+											<button type="submit">Submit</button>
+										
+											<div id="result"></div>
+									
+										</form>
+										<!-- <form action="https://api.web3forms.com/submit" method="POST" class="contactForm">
+											<input type="hidden" name="access_key" value="29a0fdc1-43af-4a01-89b8-4951a0a5fc8b">
+
 											<div class="row">
 												<div class="col-md-6">
 													<div class="form-group">
-														<label class="label" for="name">Full Name</label>
-														<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+														<label class="label" for="name">First Name</label>
+														<input type="text" class="form-control" name="first name" id="name" placeholder="First Name">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="name">Last Name</label>
+														<input type="text" class="form-control" name="last name" id="name" placeholder="Last Name">
 													</div>
 												</div>
 												<div class="col-md-6"> 
@@ -145,10 +159,47 @@
 														<input type="email" class="form-control" name="email" id="email" placeholder="Email">
 													</div>
 												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="name">Phone Number</label>
+														<input type="text" class="form-control" name="phone number" id="name" placeholder="Phone Number">
+													</div>
+												</div>
 												<div class="col-md-12">
 													<div class="form-group">
-														<label class="label" for="subject">Subject</label>
-														<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+														<label class="label" for="subject">Which service(s) are you interested in</label>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<div>
+															<input type="checkbox" id="Fertilization and Weed Control" name="service" value="Fertilization and Weed Control">
+															<label for="Fertilization and Weed Control">Fertilization and Weed Control</label>	
+														</div>
+														<div>
+															<input type="checkbox" id="Aeration and Seeding" name="service" value="Aeration and Seeding">
+															<label for="Aeration and Seeding">Aeration and Seeding</label>
+														</div>
+														<div>
+															<input type="checkbox" id="Fall and Winter Clean Up" name="service" value="Fall and Winter Clean Up">
+															<label for="Fall and Winter Clean Up">Fall and Winter Clean Up</label>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class=""form-group>
+														<div>
+															<input type="checkbox" id="Mulching" name="service" value="Mulching">
+															<label for="Mulching">Mulching</label>
+														</div>
+														<div>
+															<input type="checkbox" id="Bed Maintenance" name="service" value="Bed Maintenance">
+															<label for="Bed Maintenance">Bed Maintenance</label>
+														</div>
+														<div>
+															<input type="checkbox" id="Tree and Shrub Care" name="service" value="Tree and Shrub Care">
+															<label for="Tree and Shrub Care">Tree and Shrub Care</label>
+														</div>
 													</div>
 												</div>
 												<div class="col-md-12">
@@ -163,8 +214,9 @@
 														<div class="submitting"></div>
 													</div>
 												</div>
+												<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 											</div>
-										</form>
+										</form> -->
 									</div>
 								</div>
 								<div class="col-md-5 d-flex align-items-stretch">
@@ -208,7 +260,6 @@
 				<a class="navbar-brand" href="https://justin9400.github.io/index.html" target="_blank">
 					<img src="images/Logo.png" width="75%">
 				</a>              
-				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 				<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 					<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
 					<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
@@ -219,11 +270,13 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Services</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Garden Care</a></li>
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Lawn mowing</a></li>
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Lawn Care</a></li>
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Gutter Cleaning</a></li>
-                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>New Lawn Installation</a></li>
+                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mowing</a></li>
+				<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mulching</a></li>
+                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Bed Maintenance</a></li>
+				<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Aeration and Seeding</a></li>
+                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Fertilization and Seeding</a></li>
+                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Fall and Winter Clean Up</a></li>
+				<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Tree and Shrub Care</a></li>
               </ul>
             </div>
           </div>
@@ -243,26 +296,22 @@
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Business Hours</h2>
               <div class="opening-hours">
-              	<h4>Opening Days:</h4>
-              	<p class="pl-3">
-              		<span>Monday – Friday : 9am to 20 pm</span>
-              		<span>Saturday : 9am to 17 pm</span>
-              	</p>
-              	<h4>Vacations:</h4>
-              	<p class="pl-3">
-              		<span>All Sunday Days</span>
-              		<span>All Official Holidays</span>
-              	</p>
-              </div>
+				<p class="pl-3">
+					<span>Monday – Friday</span>
+				</p>
+				<p class="pl-3">
+					<span>7am - 7pm</span>
+				</p>
+			</div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | ProFront Web Design</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p>
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | ProFront Web Design</a>
+			</p>
           </div>
         </div>
       </div>
@@ -296,6 +345,46 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
+</script>
+<script>
+	const form = document.getElementById('form');
+	const result = document.getElementById('result');
+
+	form.addEventListener('submit', function(e) {
+	e.preventDefault();
+	const formData = new FormData(form);
+	const object = Object.fromEntries(formData);
+	const json = JSON.stringify(object);
+	result.innerHTML = "Please wait..."
+
+		fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'Accept': 'application/json'
+				},
+				body: json
+			})
+			.then(async (response) => {
+				let json = await response.json();
+				if (response.status == 200) {
+					result.innerHTML = json.message;
+				} else {
+					console.log(response);
+					result.innerHTML = json.message;
+				}
+			})
+			.catch(error => {
+				console.log(error);
+				result.innerHTML = "Something went wrong!";
+			})
+			.then(function() {
+				form.reset();
+				setTimeout(() => {
+					result.style.display = "none";
+				}, 3000);
+			});
+	});
 </script>
     
   </body>
