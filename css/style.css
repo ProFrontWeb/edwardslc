@@ -439,6 +439,50 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
+/* Default styles for wide screens (greater than 1495px) */
+@media (max-width: 1495px) {
+  .d-flex {
+    flex-direction: column;
+  }
+  .d-flex > div {
+    margin-bottom: 20px; /* Add space between stacked elements */
+  }
+  .d-flex > div:first-child {
+    margin-bottom: 0; /* Remove margin for the first item */
+  }
+}
+
+/* Default layout for large screens (bigger than 1495px) */
+.service-item {
+  display: flex;
+  flex-direction: row; /* Stack image and text horizontally */
+  align-items: stretch;
+}
+
+/* Layout for smaller screens (smaller than 1495px) */
+@media (max-width: 1495px) {
+  .service-item {
+    flex-direction: column; /* Stack the image and text vertically */
+  }
+
+  .service-item > div:nth-child(1) {
+    order: 1; /* Make the heading/text come after the image */
+  }
+
+  .service-item > div:nth-child(3) {
+    order: -1; /* Move the image to the top */
+  }
+
+  .service-item > div {
+    margin-bottom: 20px; /* Add space between stacked elements */
+  }
+
+  .service-item > div:first-child {
+    margin-bottom: 0; /* Remove margin for the first item */
+  }
+}
+
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -3366,6 +3410,23 @@ input[type="button"].btn-block {
       -o-transition: none;
       transition: none; } }
 
+.navbar-nav.ml-auto .nav-item {
+    margin-left: 15px; /* Adds space between icons */
+}
+
+.navbar-nav.ml-auto .nav-link {
+    padding: 0; /* Removes padding to better align icons */
+}
+
+.navbar-nav.ml-auto .fa {
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-nav.ml-auto .fa:hover {
+    transform: scale(1.1); /* Enlarge icon on hover */
+}
+    
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3437,6 +3498,68 @@ input[type="button"].btn-block {
 
 .tab-content > .active {
   display: block; }
+
+/* Make sure the navbar aligns to the left */
+.navbar-nav {
+  margin-left: 0; /* Remove any centering */
+  padding-left: 0; /* Remove any padding */
+  list-style-type: none; /* Remove list styling */
+}
+
+/* Style the dropdown menu */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.nav-item .dropdown-menu {
+  display: none; /* Hide the dropdown menu by default */
+  position: absolute;
+  top: 100%; /* Position it below the parent item */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block; /* Show the dropdown menu when the parent item is hovered */
+}
+
+/* Style the dropdown arrow */
+.nav-link .arrow {
+  margin-left: 8px; /* Space between the text and the arrow */
+  font-size: 12px; /* Smaller size for the arrow */
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth transition for the rotation */
+}
+
+/* Rotate the arrow when hovering over the dropdown */
+.nav-item.dropdown:hover .arrow {
+  transform: rotate(180deg); /* Rotate the arrow to point upwards */
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-link {
+  display: flex;                /* Use flexbox for easy centering */
+  justify-content: center;      /* Horizontally center the content (image) */
+  align-items: center;          /* Vertically center the content (image) */
+  text-decoration: none;        /* Remove underline from the link */
+}
+
+.nav-logo {
+  width: 100px;                  /* Keep the aspect ratio of the image */
+}
 
 .navbar {
   position: relative;
@@ -8027,7 +8150,7 @@ h1, h2, h3, h4, h5,
 
 .ftco-navbar-light {
   background: #252525;
-  background: #4e9525 !important;
+  background: #FFFFFF !important;
   z-index: 3;
   padding: 0; }
   @media (max-width: 991.98px) {
@@ -8059,14 +8182,14 @@ h1, h2, h3, h4, h5,
       display: block;
       width: 0;
       height: 2px;
-      background: #fbd341;
+      background: #4F9525;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       -webkit-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-      color: #fbd341; }
+      color: #4F9525; }
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover:before {
         width: 100%; }
     @media (max-width: 991.98px) {
@@ -8114,10 +8237,10 @@ h1, h2, h3, h4, h5,
         background: #4e9525;
         border-radius: 4px; } }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #fbd341; }
+    color: #4F9525; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-        color: #fff; } }
+        color: #4F9525; } }
   .ftco-navbar-light .navbar-toggler {
     border: none;
     color: rgba(255, 255, 255, 0.5) !important;
@@ -8361,7 +8484,7 @@ h1, h2, h3, h4, h5,
   background: #f8f9fa !important; }
 
 .bg-secondary {
-  background: #fbd341 !important; }
+  background: #060270 !important; }
 
 .bg-primary {
   background: #4e9525; }
@@ -8482,7 +8605,7 @@ h1, h2, h3, h4, h5,
   .services:hover .icon {
     background: #4e9525; }
     .services:hover .icon span {
-      color: #fbd341; }
+      color: #ffc107; }
   .services:hover .btn-custom {
     opacity: 1;
     bottom: -25px; }
@@ -8530,7 +8653,7 @@ h1, h2, h3, h4, h5,
       background: #4e9525;
       color: #fff; }
       .services-wrap .services-list:hover .btn-custom {
-        background: #fbd341; }
+        background: #4F9525; }
         .services-wrap .services-list:hover .btn-custom span {
           color: #4e9525; }
 
@@ -8542,7 +8665,7 @@ h1, h2, h3, h4, h5,
     font-size: 34px; }
   .ftco-intro span.contact-number {
     font-size: 40px;
-    color: #fbd341;
+    color: #4F9525;
     font-weight: 700;
     font-family: "Lato", Arial, sans-serif; }
 
@@ -8746,7 +8869,7 @@ textarea.form-control {
     color: #000000;
     position: relative; }
   .ftco-footer .opening-hours h4 {
-    color: #fbd341;
+    color: #4F9525;
     font-size: 16px; }
   .ftco-footer .opening-hours p span {
     color: rgba(255, 255, 255, 0.9); }
@@ -8846,6 +8969,14 @@ textarea.form-control {
     -moz-box-shadow: 0 0 0 0 rgba(78, 149, 37, 0);
     -webkit-box-shadow: 0 0 0 0 rgba(78, 149, 37, 0);
     box-shadow: 0 0 0 0 rgba(78, 149, 37, 0); } }
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 .heading-section .subheading {
   font-size: 16px;
