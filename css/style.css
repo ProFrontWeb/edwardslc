@@ -440,7 +440,7 @@ pre {
   overflow-y: scroll; }
 
 /* Default styles for wide screens (greater than 1495px) */
-@media (max-width: 1495px) {
+@media (max-width: 1200px) {
   .d-flex {
     flex-direction: column;
   }
@@ -452,6 +452,13 @@ pre {
   }
 }
 
+/* Default styles for wide screens (greater than 1495px) */
+@media (max-width: 1500px) {
+  .service-text {
+    max-width: 45%;
+  }
+}
+
 /* Default layout for large screens (bigger than 1495px) */
 .service-item {
   display: flex;
@@ -460,7 +467,7 @@ pre {
 }
 
 /* Layout for smaller screens (smaller than 1495px) */
-@media (max-width: 1495px) {
+@media (max-width: 1200px) {
   .service-item {
     flex-direction: column; /* Stack the image and text vertically */
   }
