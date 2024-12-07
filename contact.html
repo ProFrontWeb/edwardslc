@@ -323,31 +323,6 @@
 	</script>
 	<script>
 		$(document).ready(function() {
-		  $('form').submit(function(e) {
-			e.preventDefault();  // Prevent the default form submission (no redirect)
-			
-			var form = $(this);
-			var responseDiv = $('#form-response');
-			
-			$.ajax({
-			  url: form.attr('action'), // Web3Forms action URL
-			  type: form.attr('method'), // POST method
-			  data: form.serialize(), // Serialize the form data
-			  success: function(response) {
-				// If the form was submitted successfully
-				responseDiv.html("<p>Thank you for your message! We'll get back to you shortly.</p>").show();
-				form.trigger("reset"); // Optionally reset the form fields
-			  },
-			  error: function() {
-				// If there was an error with submission
-				responseDiv.html("<p>Oops! Something went wrong. Please try again later.</p>").show();
-			  }
-			});
-		  });
-		});
-	</script>
-	<script>
-		$(document).ready(function() {
 			$('form').submit(function(e) {
 				e.preventDefault();  // Prevent default form submission (no page reload)
 	
@@ -380,27 +355,5 @@
 			});
 		});
 	</script>
-	<script>
-		// Wait for the DOM to load before attaching the event listener
-		document.addEventListener("DOMContentLoaded", function () {
-			// Get the form and the 'submitting' message element
-			const form = document.getElementById('form');
-			const submittingMessage = document.querySelector('.submitting');
-		
-			// Listen for the form submission
-			form.addEventListener('submit', function (e) {
-				e.preventDefault(); // Prevent the form from actually submitting and refreshing the page
-				
-				// Show the submitting message
-				submittingMessage.style.display = 'block';
-		
-				// Optionally, you can hide the message after a delay if needed
-				// setTimeout(function() {
-				//     submittingMessage.style.display = 'none';
-				// }, 5000); // Hide the message after 5 seconds
-			});
-		});
-	</script>
-	<!-- <script src="https://web3forms.com/client/script.js" async defer></script> -->
   </body>
 </html>
