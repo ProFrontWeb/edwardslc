@@ -459,6 +459,13 @@ pre {
   }
 }
 
+/* Default styles for wide screens (greater than 1495px) */
+@media (max-width: 1200px) {
+  .service-text {
+    max-width: 100%;
+  }
+}
+
 /* Default layout for large screens (bigger than 1495px) */
 .service-item {
   display: flex;
