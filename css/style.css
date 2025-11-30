@@ -10746,3 +10746,94 @@ body {
     padding: 18px;
   }
 }
+
+/* About page revamp */
+.about-hero {
+  min-height: 360px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.about-intro .card img,
+.about-process .card img,
+.about-service-area .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-pill-list li {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1c1c1c;
+}
+
+.about-pill-list i {
+  color: #5cb85c;
+  margin-right: 0.5rem;
+}
+
+.about-stats-band {
+  background: linear-gradient(90deg, rgba(46, 124, 67, 0.12), rgba(52, 73, 94, 0.12));
+  padding: 3rem 0;
+}
+
+.about-stats-band .stat-value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #2e7c43;
+}
+
+.about-stats-band .stat-label {
+  margin-bottom: 0;
+  color: #32475b;
+}
+
+.about-differentiators .feature-card {
+  border: 1px solid #e6ecf0;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.about-differentiators .card-title {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.about-process .about-step-list {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.about-process .about-step-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.about-owner .about-badge {
+  background: rgba(92, 184, 92, 0.15);
+  color: #2e7c43;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+}
+
+.about-service-area {
+  background: linear-gradient(120deg, rgba(26, 46, 64, 0.92), rgba(46, 124, 67, 0.92)), url('../images/bg_5.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+
+@media (max-width: 767px) {
+  .about-hero {
+    min-height: 260px;
+  }
+
+  .about-stats-band {
+    padding: 2.25rem 0;
+  }
+}
