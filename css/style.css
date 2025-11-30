@@ -9238,7 +9238,7 @@ body {
   background: #0f4d2b;
   color: #e5f2e7;
   font-size: 14px;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 .top-bar a {
@@ -9265,7 +9265,7 @@ body {
 .top-bar__cta {
   background: #f3b221;
   color: #0f4d2b;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 999px;
   font-weight: 700;
   text-transform: uppercase;
@@ -9301,19 +9301,26 @@ body {
   gap: 4px;
 }
 
-.nav-services .nav-link.nav-caret {
-  padding: 0.75rem 0.35rem;
+.nav-services-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 0.5rem;
 }
 
 .nav-services .nav-caret {
-  border: none;
-  background: transparent;
-  color: inherit;
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
-.nav-services .nav-caret:focus {
-  outline: none;
-  box-shadow: none;
+.nav-services.show .nav-caret {
+  transform: rotate(225deg);
 }
 
 .nav-services .dropdown-menu {

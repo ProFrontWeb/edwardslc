@@ -123,7 +123,37 @@
 	});
 
 
-	$('#dropdown04').on('show.bs.dropdown', function () {
+		$('.nav-services .nav-caret').on('click keydown', function(e){
+		if (e.type === 'click' || e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			e.stopPropagation();
+
+			var $parent = $(this).closest('.nav-services');
+			var $menu = $parent.find('.dropdown-menu');
+			var $toggle = $parent.find('.nav-services-toggle');
+			var isOpen = $parent.hasClass('show');
+
+			$('.nav-services').removeClass('show');
+			$('.nav-services .dropdown-menu').removeClass('show');
+			$('.nav-services .nav-services-toggle').attr('aria-expanded', false);
+
+			if (!isOpen) {
+				$parent.addClass('show');
+				$menu.addClass('show');
+				$toggle.attr('aria-expanded', true);
+			}
+		}
+	});
+
+	$(document).on('click touchstart', function(e) {
+		if (!$(e.target).closest('.nav-services').length) {
+			$('.nav-services').removeClass('show');
+			$('.nav-services .dropdown-menu').removeClass('show');
+			$('.nav-services .nav-services-toggle').attr('aria-expanded', false);
+		}
+	});
+
+$('#dropdown04').on('show.bs.dropdown', function () {
 	  console.log('show');
 	});
 
