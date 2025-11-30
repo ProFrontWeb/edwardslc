@@ -70,7 +70,32 @@
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto align-items-lg-center">
               <li class="nav-item"><a href="about.html" class="nav-link">About us</a></li>
-              <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="services.html"
+                  id="servicesDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                  <a class="dropdown-item" href="services.html">All services</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="mowing.html">Mowing</a>
+                  <a class="dropdown-item" href="mulching.html">Mulching</a>
+                  <a class="dropdown-item" href="bed-maintenance.html">Bed Maintenance</a>
+                  <a class="dropdown-item" href="aeration-seeding.html">Aeration &amp; Seeding</a>
+                  <a class="dropdown-item" href="fertilization-weed-control.html">Fertilization &amp; Weed Control</a>
+                  <a class="dropdown-item" href="fall-winter-cleanup.html">Fall &amp; Winter Clean Up</a>
+                  <a class="dropdown-item" href="tree-shrub-care.html">Tree &amp; Shrub Care</a>
+                  <a class="dropdown-item" href="hardscaping.html">Hardscaping</a>
+                  <a class="dropdown-item" href="landscaping.html">Landscaping</a>
+                </div>
+              </li>
               <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
               <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
               <li class="nav-item nav-cta"><a href="contact.html" class="btn btn-primary">Book Service</a></li>
@@ -81,72 +106,106 @@
     </header>
 
     <main>
-      <section class="hero-wrap hero-wrap-2" style="background-image: url('images/Fertilization_Service.png');" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
+      <section class="service-hero" style="background-image: url('images/Fertilization_Service.png');">
         <div class="container">
-          <div class="row no-gutters slider-text align-items-end justify-content-center">
-            <div class="col-md-9 pb-5 text-center">
-              <h1 class="mb-3 bread">Fertilization &amp; Weed Control</h1>
-              <p class="breadcrumbs">
-                <span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span>
-                <span class="mr-2"><a href="services.html">Services <i class="ion-ios-arrow-forward"></i></a></span>
-                <span>Fertilization &amp; Weed Control</span>
-              </p>
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-card">
+                <div class="section-label">Fertilization &amp; weed control</div>
+                <h1 class="mb-3">Season-long nutrition with targeted weed suppression</h1>
+                <p class="lead mb-4">Balanced fertilization, soil-first recommendations, and precise weed control keep turf thick without stressing new growth.</p>
+                <div class="stat-band mb-3">
+                  <div class="stat">
+                    <h4>6-visit program</h4>
+                    <p>Tailored to your turf type and irrigation</p>
+                  </div>
+                  <div class="stat">
+                    <h4>Soil testing</h4>
+                    <p>Optional pH and nutrient checks for custom plans</p>
+                  </div>
+                  <div class="stat">
+                    <h4>Family safe</h4>
+                    <p>Clear re-entry guidance after each application</p>
+                  </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary mr-2">Build my lawn plan</a>
+                <a href="services.html" class="btn btn-outline-light">All services</a>
+              </div>
+            </div>
+            <div class="col-lg-6 text-lg-right mt-4 mt-lg-0">
+              <img src="images/Fertilization_Service.png" alt="Lawn fertilization" class="img-fluid rounded shadow-lg" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="ftco-section">
+      <section class="service-section">
         <div class="container">
           <div class="row align-items-center mb-5">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <p class="eyebrow text-uppercase text-success font-weight-bold">Turf nutrition</p>
-              <h2>Balanced treatments for greener, thicker lawns</h2>
-              <p>
-                Our tailored programs deliver the right nutrients at the right time while preventing invasive weeds. We monitor seasonal needs so your turf stays healthy, resilient, and vibrant without guesswork.
-              </p>
-              <ul class="list-unstyled">
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Seasonal fertilization tailored to your turf type</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Pre- and post-emergent weed control</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Soil and pH guidance to maximize nutrient uptake</li>
-              </ul>
-              <div class="d-flex flex-wrap mt-3">
-                <a href="contact.html" class="btn btn-primary mr-3 mb-2">Start a program</a>
-                <a href="services.html" class="btn btn-outline-primary mb-2">Back to services</a>
+            <div class="col-lg-7 mb-4 mb-lg-0">
+              <div class="section-label">Program at a glance</div>
+              <h2 class="mb-3">Nutrition and weed control synced to the seasons</h2>
+              <div class="timeline-card">
+                <div class="process-steps">
+                  <div class="step">
+                    <strong>Early</strong>
+                    <p class="mb-1 font-weight-bold">Pre-emergent + feed</p>
+                    <p class="mb-0">Stop crabgrass before it sprouts and wake turf with balanced fertilizer.</p>
+                  </div>
+                  <div class="step">
+                    <strong>Mid</strong>
+                    <p class="mb-1 font-weight-bold">Broadleaf control</p>
+                    <p class="mb-0">Target dandelion, clover, and nutsedge with spot treatments.</p>
+                  </div>
+                  <div class="step">
+                    <strong>Late</strong>
+                    <p class="mb-1 font-weight-bold">Root-building feed</p>
+                    <p class="mb-0">Slow-release nutrition and winterizer to prepare for dormancy.</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <img src="images/Fertilization_Service.png" alt="Fertilization and weed control treatment" class="img-fluid rounded" />
+            <div class="col-lg-5">
+              <div class="callout-panel h-100">
+                <h4 class="mb-2">Soil-first recommendations</h4>
+                <p class="mb-3">If your turf needs lime, gypsum, or organic matter, we build it into the schedule and explain why it matters.</p>
+                <ul class="pill-list">
+                  <li>Lime applications</li>
+                  <li>pH balancing</li>
+                  <li>Core aeration pairing</li>
+                  <li>Starter fertilizer for seed</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-6 mb-4">
-              <h3>What’s included</h3>
-              <ul class="list-unstyled">
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Multi-application fertilization schedule</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Broadleaf and grassy weed control</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Spot treatments for trouble areas</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Recommendations for watering and mowing height</li>
-              </ul>
+          <div class="row info-grid">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 p-4">
+                <div class="icon-circle"><span class="ion-ios-flask"></span></div>
+                <h4>Targeted weed control</h4>
+                <p class="mb-0">Selective treatments by weed type—no blanket sprays when a spot treatment will do.</p>
+              </div>
             </div>
-            <div class="col-md-6 mb-4">
-              <h3>Ideal for</h3>
-              <ul class="list-unstyled">
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Lawns battling persistent weeds</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Properties seeking greener, thicker turf</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Homeowners wanting a predictable treatment schedule</li>
-              </ul>
-              <div class="mt-3 p-4 bg-light rounded">
-                <h4 class="h5">Service areas</h4>
-                <p class="mb-0">Lynchburg, Forest, Bedford, Amherst, Madison Heights, Smith Mountain Lake, and nearby communities.</p>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 p-4">
+                <div class="icon-circle"><span class="ion-ios-nutrition"></span></div>
+                <h4>Seasonal nutrition</h4>
+                <p class="mb-0">Balanced N-P-K ratios that change with the season to avoid surge growth.</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 p-4">
+                <div class="icon-circle"><span class="ion-ios-clipboard"></span></div>
+                <h4>Visit notes</h4>
+                <p class="mb-0">After each visit you get what we applied, watering tips, and next steps.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">

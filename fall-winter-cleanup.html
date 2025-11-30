@@ -70,7 +70,32 @@
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto align-items-lg-center">
               <li class="nav-item"><a href="about.html" class="nav-link">About us</a></li>
-              <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="services.html"
+                  id="servicesDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+                  <a class="dropdown-item" href="services.html">All services</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="mowing.html">Mowing</a>
+                  <a class="dropdown-item" href="mulching.html">Mulching</a>
+                  <a class="dropdown-item" href="bed-maintenance.html">Bed Maintenance</a>
+                  <a class="dropdown-item" href="aeration-seeding.html">Aeration &amp; Seeding</a>
+                  <a class="dropdown-item" href="fertilization-weed-control.html">Fertilization &amp; Weed Control</a>
+                  <a class="dropdown-item" href="fall-winter-cleanup.html">Fall &amp; Winter Clean Up</a>
+                  <a class="dropdown-item" href="tree-shrub-care.html">Tree &amp; Shrub Care</a>
+                  <a class="dropdown-item" href="hardscaping.html">Hardscaping</a>
+                  <a class="dropdown-item" href="landscaping.html">Landscaping</a>
+                </div>
+              </li>
               <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
               <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
               <li class="nav-item nav-cta"><a href="contact.html" class="btn btn-primary">Book Service</a></li>
@@ -81,72 +106,108 @@
     </header>
 
     <main>
-      <section class="hero-wrap hero-wrap-2" style="background-image: url('images/FallCleanUp_Service.jpg');" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
+      <section class="service-hero" style="background-image: url('images/FallCleanUp_Service.jpg');">
         <div class="container">
-          <div class="row no-gutters slider-text align-items-end justify-content-center">
-            <div class="col-md-9 pb-5 text-center">
-              <h1 class="mb-3 bread">Fall &amp; Winter Clean Up</h1>
-              <p class="breadcrumbs">
-                <span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span>
-                <span class="mr-2"><a href="services.html">Services <i class="ion-ios-arrow-forward"></i></a></span>
-                <span>Fall &amp; Winter Clean Up</span>
-              </p>
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-card">
+                <div class="section-label">Fall &amp; winter clean up</div>
+                <h1 class="mb-3">Leaf removal, pruning, and prep for the next season</h1>
+                <p class="lead mb-4">We clear leaves, cut back perennials, and haul debris so your beds and turf are protected through winter.</p>
+                <div class="stat-band mb-3">
+                  <div class="stat">
+                    <h4>Leaf control</h4>
+                    <p>Weekly or one-time visits to keep turf breathing</p>
+                  </div>
+                  <div class="stat">
+                    <h4>Winter cutbacks</h4>
+                    <p>Perennials and grasses trimmed at the right height</p>
+                  </div>
+                  <div class="stat">
+                    <h4>Haul away</h4>
+                    <p>Debris removal included—no piles left behind</p>
+                  </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary mr-2">Schedule a cleanup</a>
+                <a href="services.html" class="btn btn-outline-light">See services</a>
+              </div>
+            </div>
+            <div class="col-lg-6 text-lg-right mt-4 mt-lg-0">
+              <img src="images/FallCleanUp_Service.jpg" alt="Fall cleanup" class="img-fluid rounded shadow-lg" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="ftco-section">
+      <section class="service-section">
         <div class="container">
-          <div class="row align-items-center mb-5">
+          <div class="row align-items-start mb-5">
             <div class="col-lg-6 mb-4 mb-lg-0">
-              <p class="eyebrow text-uppercase text-success font-weight-bold">Seasonal reset</p>
-              <h2>Clear debris and protect plants before cold weather</h2>
-              <p>
-                We handle the heavy lifting that prepares your property for winter and a strong spring return. Leaves, branches, and dead growth are removed so turf can breathe and beds stay tidy.
-              </p>
-              <ul class="list-unstyled">
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Leaf and debris removal across turf and beds</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Pruning of perennials and shrubs for winter</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Optional final mow and mulch touch-ups</li>
+              <div class="section-label">Seasonal plan</div>
+              <h2 class="mb-3">We prep beds and turf for healthy dormancy</h2>
+              <ul class="checklist mb-3">
+                <li><i class="ion-ios-checkmark-circle"></i>Leaf removal from turf, beds, and hardscapes</li>
+                <li><i class="ion-ios-checkmark-circle"></i>Perennial cutbacks and ornamental grass trims</li>
+                <li><i class="ion-ios-checkmark-circle"></i>Storm debris pick-up and branch removal</li>
+                <li><i class="ion-ios-checkmark-circle"></i>Final mow and edge to tidy lines before winter</li>
               </ul>
-              <div class="d-flex flex-wrap mt-3">
-                <a href="contact.html" class="btn btn-primary mr-3 mb-2">Book a cleanup</a>
-                <a href="services.html" class="btn btn-outline-primary mb-2">Back to services</a>
+              <div class="callout-panel">
+                <h4 class="mb-2">Protection for plants</h4>
+                <p class="mb-0">We avoid over-pruning evergreens and leave the right structure for snow load and wildlife protection.</p>
               </div>
             </div>
             <div class="col-lg-6">
-              <img src="images/FallCleanUp_Service.jpg" alt="Fall and winter clean up" class="img-fluid rounded" />
+              <div class="timeline-card h-100">
+                <h4 class="mb-3">Recommended timing</h4>
+                <div class="process-steps">
+                  <div class="step">
+                    <strong>Early fall</strong>
+                    <p class="mb-1 font-weight-bold">Leaf control begins</p>
+                    <p class="mb-0">Keep turf uncovered to avoid fungus and matting.</p>
+                  </div>
+                  <div class="step">
+                    <strong>Late fall</strong>
+                    <p class="mb-1 font-weight-bold">Cutbacks &amp; mulch</p>
+                    <p class="mb-0">Trim perennials, shape shrubs, and refresh mulch where needed.</p>
+                  </div>
+                  <div class="step">
+                    <strong>Winter prep</strong>
+                    <p class="mb-1 font-weight-bold">Final pass</p>
+                    <p class="mb-0">Final blow-off, gutter line clearing, and driveway edge cleanup.</p>
+                  </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary mt-3">Reserve your spot</a>
+              </div>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-6 mb-4">
-              <h3>What’s included</h3>
-              <ul class="list-unstyled">
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Leaf collection, removal, and disposal</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Cutbacks for perennials and ornamental grasses</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Final mowing and edging on request</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Blowing and cleanup of hard surfaces</li>
-              </ul>
+          <div class="row info-grid">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 p-4">
+                <div class="icon-circle"><span class="ion-ios-snow"></span></div>
+                <h4>Winter readiness</h4>
+                <p class="mb-0">Protect shrubs from snow breakage and keep beds neat for holiday lighting.</p>
+              </div>
             </div>
-            <div class="col-md-6 mb-4">
-              <h3>Ideal for</h3>
-              <ul class="list-unstyled">
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Properties with heavy leaf drop</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Homeowners prepping beds for winter and spring growth</li>
-                <li><span class="ion-ios-checkmark-circle mr-2 text-success"></span>Real estate listings needing a tidy look fast</li>
-              </ul>
-              <div class="mt-3 p-4 bg-light rounded">
-                <h4 class="h5">Service areas</h4>
-                <p class="mb-0">Lynchburg, Forest, Bedford, Amherst, Madison Heights, Smith Mountain Lake, and nearby communities.</p>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 p-4">
+                <div class="icon-circle"><span class="ion-ios-pricetag"></span></div>
+                <h4>Add-ons</h4>
+                <p class="mb-0">Mulch refresh, gutter cleanouts, and small tree pruning available.</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 p-4">
+                <div class="icon-circle"><span class="ion-ios-rose"></span></div>
+                <h4>Spring ready</h4>
+                <p class="mb-0">Beds are clean and primed for early fertilizer and color installs.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
