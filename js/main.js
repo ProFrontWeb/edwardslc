@@ -36,51 +36,71 @@
 	// Scrollax
    $.Scrollax();
 
-	var carousel = function() {
-		$('.carousel-testimony').owlCarousel({
-			center: true,
-			loop: true,
-			items:1,
-			margin: 30,
-			stagePadding: 0,
-			nav: false,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 2
-				},
-				1000:{
-					items: 3
-				}
-			}
-		});
+        var carousel = function() {
+                $('.carousel-testimony').owlCarousel({
+                        center: true,
+                        loop: true,
+                        items:1,
+                        margin: 30,
+                        stagePadding: 0,
+                        nav: false,
+                        navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+                        responsive:{
+                                0:{
+                                        items: 1
+                                },
+                                600:{
+                                        items: 2
+                                },
+                                1000:{
+                                        items: 3
+                                }
+                        }
+                });
 
-		$('.carousel-seasonal').owlCarousel({
-			center: true,
-			loop: true,
-			items:1,
-			margin: 30,
-			stagePadding: 0,
-			nav: false,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 2
-				},
-				1000:{
-					items: 3
-				}
-			}
-		});
+                $('.carousel-seasonal').owlCarousel({
+                        center: true,
+                        loop: true,
+                        items:1,
+                        margin: 30,
+                        stagePadding: 0,
+                        nav: false,
+                        navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+                        responsive:{
+                                0:{
+                                        items: 1
+                                },
+                                600:{
+                                        items: 2
+                                },
+                                1000:{
+                                        items: 3
+                                }
+                        }
+                });
+
+                $('.gallery-carousel').owlCarousel({
+                        items: 3,
+                        margin: 16,
+                        loop: true,
+                        nav: true,
+                        dots: true,
+                        navText: ['<span class="ion-ios-arrow-back" aria-label="Previous"></span>', '<span class="ion-ios-arrow-forward" aria-label="Next"></span>'],
+                        responsive:{
+                                0:{
+                                        items:1
+                                },
+                                600:{
+                                        items:2
+                                },
+                                992:{
+                                        items:3
+                                }
+                        }
+                });
 
 
-	};
+        };
 	carousel();
 
 	$('nav .dropdown').hover(function(){

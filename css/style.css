@@ -10149,6 +10149,124 @@ body {
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
 }
 
+.gallery-collection {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 22px 12px;
+  margin-bottom: 28px;
+  box-shadow: 0 20px 48px rgba(17, 93, 50, 0.07);
+  border: 1px solid #e7ede9;
+}
+
+.gallery-collection__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.gallery-collection__title {
+  margin: 2px 0 6px;
+  font-size: 26px;
+  color: #0f4d2b;
+  font-weight: 800;
+}
+
+.gallery-collection__copy {
+  margin: 0;
+  color: #51635a;
+}
+
+.gallery-collection__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background: #115d32;
+  color: #ffffff;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-collection__cta:hover,
+.gallery-collection__cta:focus-visible {
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(17, 93, 50, 0.22);
+}
+
+.gallery-carousel .gallery-card {
+  box-shadow: none;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.gallery-carousel .owl-stage-outer {
+  border-radius: 14px;
+}
+
+.gallery-carousel .owl-nav button {
+  background: #ffffff !important;
+  border-radius: 50%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: #115d32 !important;
+  border: 1px solid #dfe8e2 !important;
+}
+
+.gallery-carousel .owl-nav button span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.gallery-carousel .owl-nav button:hover {
+  background: #0f4d2b !important;
+  color: #ffffff !important;
+}
+
+.gallery-carousel .owl-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.gallery-carousel .owl-dots {
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+.gallery-carousel .owl-dot span {
+  background: #cbd6cf;
+}
+
+.gallery-carousel .owl-dot.active span {
+  background: #115d32;
+}
+
+@media (max-width: 767px) {
+  .gallery-collection__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gallery-collection__cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gallery-collection {
+    padding: 20px 16px 8px;
+  }
+}
+
 .gallery-card a {
   display: block;
   height: 100%;
