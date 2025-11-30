@@ -10116,3 +10116,74 @@ body {
   margin-right: 10px;
   margin-top: 3px;
 }
+
+.gallery-section {
+  padding: 72px 0 88px;
+  background: #f8f9f6;
+}
+
+.section-title {
+  font-weight: 800;
+  color: #0f4d2b;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: #4c5b52;
+  max-width: 760px;
+  margin: 0 auto 28px;
+}
+
+.gallery-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-card a {
+  display: block;
+  height: 100%;
+  color: inherit;
+}
+
+.gallery-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  transition: transform 0.35s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 18px 20px;
+  background: linear-gradient(180deg, rgba(4, 36, 20, 0.2) 0%, rgba(4, 36, 20, 0.7) 100%);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.gallery-card:hover .gallery-thumb,
+.gallery-card:focus-within .gallery-thumb {
+  transform: scale(1.03);
+}
+
+.gallery-card:hover .gallery-overlay,
+.gallery-card:focus-within .gallery-overlay {
+  opacity: 1;
+}
