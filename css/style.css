@@ -44,6 +44,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -10654,6 +10655,11 @@ body {
 .article-content h2 {
   font-size: 24px;
   margin-top: 22px;
+}
+
+.article-content h2,
+.article-content h3 {
+  scroll-margin-top: 140px;
 }
 
 .article-callout {
