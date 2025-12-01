@@ -10221,6 +10221,179 @@ body {
   padding: 80px 0;
 }
 
+.service-accordion details {
+  background: #ffffff;
+  border: 1px solid #e3e9e4;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
+.service-accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  cursor: pointer;
+  color: #0f4d2b;
+}
+
+.service-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-accordion summary::after {
+  content: "+";
+  font-size: 18px;
+  color: #0f4d2b;
+  transition: transform 0.2s ease;
+}
+
+.service-accordion details[open] summary::after {
+  content: "–";
+  transform: translateY(-1px);
+}
+
+.service-accordion p {
+  margin: 12px 0 0;
+  color: #4a5b53;
+}
+
+.timeline-rail {
+  position: relative;
+  padding-left: 26px;
+}
+
+.timeline-rail::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: #dfe8e2;
+}
+
+.timeline-rail .rail-item {
+  position: relative;
+  padding: 12px 0 12px 12px;
+}
+
+.timeline-rail .rail-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #115d32;
+  left: -3px;
+  top: 18px;
+  box-shadow: 0 0 0 6px rgba(17, 93, 50, 0.12);
+}
+
+.timeline-rail h4 {
+  margin-bottom: 6px;
+}
+
+.timeline-rail p {
+  margin: 0;
+  color: #4a5b53;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e6ede7;
+  vertical-align: top;
+}
+
+.comparison-table th {
+  background: #f7f9f7;
+  font-weight: 800;
+  color: #0f4d2b;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.matrix-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 18px 14px;
+  border: 1px solid #e5ece6;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.matrix-card h4 {
+  margin-bottom: 6px;
+}
+
+.matrix-card p {
+  margin-bottom: 8px;
+  color: #4a5b53;
+}
+
+.matrix-card .pill-list li {
+  margin-bottom: 8px;
+}
+
+.mini-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.mini-badges span {
+  background: rgba(17, 93, 50, 0.08);
+  color: #0f4d2b;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.cta-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: linear-gradient(120deg, rgba(17, 93, 50, 0.12), rgba(17, 93, 50, 0.04));
+  border-radius: 14px;
+  padding: 18px 20px;
+  border: 1px solid rgba(17, 93, 50, 0.18);
+}
+
+.cta-strip p {
+  margin: 0;
+  color: #0f4d2b;
+  font-weight: 700;
+}
+
+.cta-strip .btn {
+  margin: 0;
+}
+
 .stat-band {
   background: #0f5d32;
   color: #fff;
