@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const page = {
+  title: "Mulch Color Guide | Edwards Landscape Group",
+  description: "Choose the right mulch color and depth to refresh your beds, control weeds, and balance moisture."
+};
+---
+
+<BaseLayout {...page}>
+<main>
+      <section
+        class="page-hero article-hero"
+        style="background-image: url('../images/Mulching_Service.jpg');"
+        aria-label="Mulch color guide hero"
+      >
+        <div class="container">
+          <div class="row align-items-end">
+            <div class="col-lg-8 hero-content-block">
+              <div class="hero-kicker">Landscape beds</div>
+              <h1>Mulch color guide: picking the right finish for your beds</h1>
+              <p class="article-subtitle">
+                Fresh mulch protects plant roots, controls weeds, and sets the tone for your home’s curb appeal.
+              </p>
+              <div class="article-meta">
+                <span>By Edwards Landscape Group</span>
+                <span>&bull;</span>
+                <span>Updated July 18, 2024</span>
+                <span>&bull;</span>
+                <span>5 min read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-container" aria-labelledby="article-heading">
+        <div class="container">
+          <div class="article-layout">
+            <aside class="article-toc" aria-label="On this page">
+              <h2>Quick navigation</h2>
+              <ol>
+                <li><a href="#benefits">Why mulch matters</a></li>
+                <li><a href="#colors">Choosing colors</a></li>
+                <li><a href="#depth">How much to install</a></li>
+                <li><a href="#timing">When to refresh</a></li>
+              </ol>
+            </aside>
+
+            <article class="article-content" id="article-heading">
+              <p>
+                TruGreen-style mulching focuses on more than looks: consistent depth protects soil temperature, locks in
+                moisture, and blocks weeds. Use this guide to pick a color and refresh schedule that fits your home and plantings.
+              </p>
+
+              <h2 id="benefits">1. Why mulch matters</h2>
+              <ul class="checklist">
+                <li>Prevents rapid soil temperature swings around roots.</li>
+                <li>Stops sunlight from reaching weed seeds so they stay dormant.</li>
+                <li>Reduces evaporation to keep irrigation costs down.</li>
+              </ul>
+
+              <h2 id="colors">2. Choosing colors</h2>
+              <div class="tg-card-grid two-col">
+                <div class="tg-card">
+                  <h3>Natural brown</h3>
+                  <p class="mb-0">Great for blending with wooded lots and brick facades.</p>
+                </div>
+                <div class="tg-card">
+                  <h3>Classic black</h3>
+                  <p class="mb-0">High contrast that makes evergreens and flowering plants pop.</p>
+                </div>
+                <div class="tg-card">
+                  <h3>Rich red</h3>
+                  <p class="mb-0">Bold color that pairs with lighter siding and stone.</p>
+                </div>
+              </div>
+
+              <h2 id="depth">3. How much to install</h2>
+              <p>
+                We recommend a 2–3 inch depth for most beds. Going thicker can suffocate roots, while thinner layers break down too
+                quickly to stop weeds.
+              </p>
+
+              <h2 id="timing">4. When to refresh</h2>
+              <p>
+                In Central Virginia, spring installations set you up for summer heat, while a light fall top-off keeps soil
+                insulated through winter.
+              </p>
+
+              <div class="article-cta">
+                <div>
+                  <p class="eyebrow mb-1">Need a fresh layer?</p>
+                  <h3 class="mb-2">Schedule mulch delivery and installation</h3>
+                  <p class="mb-0">Pick your color and we'll handle bed prep, edging, and cleanup.</p>
+                </div>
+                <a class="btn btn-primary" href="../contact.html">Book mulching</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+</BaseLayout>

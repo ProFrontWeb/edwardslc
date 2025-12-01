@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const page = {
+  title: "Blog | Edwards Landscape Group",
+  description: "Explore lawn care advice, seasonal maintenance guides, and landscaping inspiration from Edwards Landscape Group."
+};
+---
+
+<BaseLayout {...page}>
+<main>
+      <section
+        class="page-hero blog-hero"
+        style="background-image: url('images/Landscaping_Service.jpg');"
+        aria-label="Edwards Landscape Group blog hero"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7 hero-content-block">
+              <div class="hero-kicker">Lawn Care 101</div>
+              <h1>Blog &amp; lawn care resources</h1>
+              <p class="mb-3">
+                Learn how to keep your yard healthy year-round with proven tips, seasonal checklists, and
+                expert guidance from the Edwards Landscape Group team.
+              </p>
+              <div class="blog-meta">
+                <span>Practical guides</span>
+                <span>Local expertise</span>
+                <span>Step-by-step tutorials</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding blog-list" aria-labelledby="latest-blogs">
+        <div class="container">
+          <div class="section-header text-center">
+            <p class="eyebrow">Latest articles</p>
+            <h2 id="latest-blogs">Lawn care lessons you can use today</h2>
+            <p class="section-lead">
+              Browse our newest posts to tackle your next project with confidence.
+            </p>
+          </div>
+          <div class="blog-grid">
+            <article class="blog-card">
+              <a class="blog-card__image" href="blog/top-5-reasons-lawn-maintenance.html">
+                <img src="images/Mowing_Service.jpg" alt="Crew mowing a healthy lawn" loading="lazy" />
+              </a>
+              <div class="blog-card__body">
+                <p class="eyebrow">Lawn maintenance</p>
+                <h3><a href="blog/top-5-reasons-lawn-maintenance.html">Top 5 reasons you need lawn maintenance services</a></h3>
+                <p>
+                  See how routine mowing, edging, and visits timed to the season protect your turf health and curb appeal.
+                </p>
+                <div class="blog-card__meta">
+                  <span>March 12, 2024</span>
+                  <span>&bull;</span>
+                  <span>6 min read</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <a class="blog-card__image" href="blog/fall-lawn-recovery-guide.html">
+                <img src="images/FallCleanUp_Service.jpg" alt="Autumn lawn cleanup work" loading="lazy" />
+              </a>
+              <div class="blog-card__body">
+                <p class="eyebrow">Seasonal prep</p>
+                <h3><a href="blog/fall-lawn-recovery-guide.html">Fall lawn recovery guide for thicker spring growth</a></h3>
+                <p>
+                  Aeration, overseeding, and soil nutrition steps that set your yard up for a greener spring comeback.
+                </p>
+                <div class="blog-card__meta">
+                  <span>September 5, 2024</span>
+                  <span>&bull;</span>
+                  <span>7 min read</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <a class="blog-card__image" href="blog/mulch-color-guide.html">
+                <img src="images/Mulching_Service.jpg" alt="Fresh mulch in landscape beds" loading="lazy" />
+              </a>
+              <div class="blog-card__body">
+                <p class="eyebrow">Landscape beds</p>
+                <h3><a href="blog/mulch-color-guide.html">Mulch color guide: picking the right finish for your beds</a></h3>
+                <p>
+                  Compare popular mulch hues, when to refresh them, and how to keep beds weed-free between service visits.
+                </p>
+                <div class="blog-card__meta">
+                  <span>July 18, 2024</span>
+                  <span>&bull;</span>
+                  <span>5 min read</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-panel" aria-label="Request a lawn care estimate">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2>Need help choosing the right service?</h2>
+              <p class="mb-0">Get a custom recommendation for your yard, soil, and schedule.</p>
+            </div>
+            <div class="col-lg-4 text-lg-right mt-3 mt-lg-0">
+              <a class="btn btn-primary" href="contact.html">Request a quote</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+</BaseLayout>

@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const page = {
+  title: "Tree &amp; Shrub Care | Edwards Landscape Group",
+  description: "Protect your investment with tree and shrub care from Edwards Landscape Group\u2014pruning, health checks, and treatments that keep your landscape thriving.",
+  keywords: "tree care Lynchburg, shrub pruning, plant health care, ornamental maintenance"
+};
+---
+
+<BaseLayout {...page}>
+<main>
+      <section class="service-hero service-hero--trugreen" style="background-image: url('images/Tree_Shrub_Care.jpg');">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-xl-6 hero-content-block">
+              <div class="hero-kicker">Tree &amp; Shrub Care</div>
+              <h1 class="mb-3">Health checks, disease defense, and shaping for every season</h1>
+              <p class="mb-4 lead">TruGreen-inspired skinny banner with text on the left, tuned to highlight plant health expertise.</p>
+              <div class="hero-meta mb-4">
+                <span class="tg-badge">Inspections</span>
+                <span class="tg-badge">Targeted treatments</span>
+                <span class="tg-badge">Seasonal pruning</span>
+              </div>
+              <div class="hero-actions d-flex flex-wrap">
+                <a href="contact.html" class="btn btn-primary mr-2 mb-2">Book an inspection</a>
+                <a href="services.html" class="btn btn-outline-light mb-2">All services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section bg-light">
+        <div class="container">
+          <div class="section-label">Diagnostic steps</div>
+          <h2 class="mb-4">How we evaluate every plant</h2>
+          <div class="service-timeline">
+            <div class="timeline-step">
+              <div class="timeline-dot">1</div>
+              <div>
+                <h4>Inspect</h4>
+                <p>Look for stress signs, pest pressure, and structural concerns.</p>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">2</div>
+              <div>
+                <h4>Plan</h4>
+                <p>Choose targeted treatments and pruning timing per species.</p>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">3</div>
+              <div>
+                <h4>Treat &amp; shape</h4>
+                <p>Apply controls, feed roots, and prune for airflow and structure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section">
+        <div class="container">
+          <div class="section-label">Treatment library</div>
+          <h2 class="mb-4">Different needs, different solutions</h2>
+          <div class="tg-card-grid three-col">
+            <div class="tg-card">
+              <h3>Deep root feed</h3>
+              <p>Soil injections to strengthen roots and improve leaf color.</p>
+            </div>
+            <div class="tg-card highlight-card">
+              <h3>Pest &amp; disease</h3>
+              <p>Targeted sprays or systemic applications for bagworms, scales, and leaf spots.</p>
+            </div>
+            <div class="tg-card">
+              <h3>Structure pruning</h3>
+              <p>Selective cuts to improve airflow, reduce weight, and shape for safety.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section bg-light">
+        <div class="container">
+          <div class="section-label">Watchlist</div>
+          <h2 class="mb-4">Common pests and diseases we see locally</h2>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th style="width: 32%">Issue</th>
+                <th>Our response</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Bagworms</strong></td>
+                <td>Inspect evergreens, remove bags, and apply targeted treatment before hatching.</td>
+              </tr>
+              <tr>
+                <td><strong>Scale &amp; aphids</strong></td>
+                <td>Dormant oil where appropriate and systemic applications to stop sap loss.</td>
+              </tr>
+              <tr>
+                <td><strong>Leaf spot</strong></td>
+                <td>Prune for airflow, clean debris, and use disease-specific sprays as needed.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="service-section">
+        <div class="container">
+          <div class="section-label">Pruning windows</div>
+          <h2 class="mb-4">Time cuts around bloom cycles</h2>
+          <div class="timeline-rail">
+            <div class="rail-item">
+              <span class="rail-dot"></span>
+              <h4>Late winter</h4>
+              <p>Structural pruning while trees are dormant to reduce stress.</p>
+            </div>
+            <div class="rail-item">
+              <span class="rail-dot"></span>
+              <h4>Post-bloom</h4>
+              <p>Flowering shrubs get shape trims right after bloom to protect next year's buds.</p>
+            </div>
+            <div class="rail-item">
+              <span class="rail-dot"></span>
+              <h4>Mid-summer touch</h4>
+              <p>Light thinning for airflow and safety clearances over walks and drives.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section bg-light">
+        <div class="container">
+          <div class="section-label">Seasonal focus</div>
+          <h2 class="mb-4">Stay ahead of common issues</h2>
+          <div class="two-col-list">
+            <div>
+              <h4>Spring &amp; summer</h4>
+              <p>Monitor for aphids and leaf spot, feed roots, and prune lightly after flowering.</p>
+            </div>
+            <div>
+              <h4>Fall &amp; winter</h4>
+              <p>Structural pruning, dormant oil where helpful, and storm-readiness trims.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-primary mt-4">Schedule tree &amp; shrub care</a>
+        </div>
+      </section>
+    </main>
+</BaseLayout>

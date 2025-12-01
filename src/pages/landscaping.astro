@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const page = {
+  title: "Landscaping | Edwards Landscape Group",
+  description: "Design, installation, and seasonal care for standout landscapes in Lynchburg and Central Virginia. Edwards Landscape Group brings cohesive plantings, lighting, and finishes together.",
+  keywords: "landscaping Lynchburg, landscape design, plant installation, outdoor lighting"
+};
+---
+
+<BaseLayout {...page}>
+<main>
+      <section class="service-hero service-hero--trugreen" style="background-image: url('images/Landscaping.jpg');">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-xl-6 hero-content-block">
+              <div class="hero-kicker">Landscaping</div>
+              <h1 class="mb-3">Design, install, and maintain outdoor spaces that fit your home</h1>
+              <p class="mb-4 lead">Slim TruGreen-style banner with left text—focused on the full journey from plan to upkeep.</p>
+              <div class="hero-meta mb-4">
+                <span class="tg-badge">Design consults</span>
+                <span class="tg-badge">Plant sourcing</span>
+                <span class="tg-badge">Ongoing care</span>
+              </div>
+              <div class="hero-actions d-flex flex-wrap">
+                <a href="contact.html" class="btn btn-primary mr-2 mb-2">Plan my landscape</a>
+                <a href="services.html" class="btn btn-outline-light mb-2">All services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section bg-light">
+        <div class="container">
+          <div class="section-label">Design focus</div>
+          <h2 class="mb-4">What we consider before we draw</h2>
+          <div class="tg-card-grid three-col">
+            <div class="tg-card">
+              <h3>Use &amp; flow</h3>
+              <p>Paths, seating, and views planned for how you’ll actually live outside.</p>
+            </div>
+            <div class="tg-card highlight-card">
+              <h3>Site &amp; light</h3>
+              <p>Sun, shade, drainage, and grade drive plant and hardscape choices.</p>
+            </div>
+            <div class="tg-card">
+              <h3>Maintenance fit</h3>
+              <p>We design with your desired upkeep level—low-touch or showcase care.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section">
+        <div class="container">
+          <div class="section-label">Plant palette</div>
+          <h2 class="mb-4">Regional choices that thrive</h2>
+          <div class="style-swatches">
+            <div class="swatch">Foundation shrubs</div>
+            <div class="swatch">Seasonal color</div>
+            <div class="swatch">Ornamental trees</div>
+            <div class="swatch">Pollinator beds</div>
+            <div class="swatch">Privacy screens</div>
+          </div>
+          <p class="mt-3 mb-0">We source healthy plant material and stage layouts so bloom times and textures layer well.</p>
+        </div>
+      </section>
+
+      <section class="service-section bg-light">
+        <div class="container">
+          <div class="section-label">Design pathway</div>
+          <h2 class="mb-4">See how we move from idea to install</h2>
+          <div class="timeline-rail">
+            <div class="rail-item">
+              <span class="rail-dot"></span>
+              <h4>Discovery</h4>
+              <p>Walk the property, gather style goals, and review sun/shade patterns.</p>
+            </div>
+            <div class="rail-item">
+              <span class="rail-dot"></span>
+              <h4>Concept &amp; budget</h4>
+              <p>Sketch plant groupings and hardscape placements with tiered budgets to choose from.</p>
+            </div>
+            <div class="rail-item">
+              <span class="rail-dot"></span>
+              <h4>Install day</h4>
+              <p>Prep beds, place plants for balance, and finish with clean mulch and irrigation checks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section">
+        <div class="container">
+          <div class="section-label">Packages</div>
+          <h2 class="mb-4">Choose the experience that fits</h2>
+          <div class="matrix-grid">
+            <div class="matrix-card">
+              <h4>Refresh</h4>
+              <p>Swap tired plantings, reshape beds, and add a new mulch layer.</p>
+              <div class="mini-badges">
+                <span>1-day install</span>
+                <span>Front entry focus</span>
+              </div>
+            </div>
+            <div class="matrix-card">
+              <h4>Full redesign</h4>
+              <p>New bed lines, plant palette, and optional lighting to overhaul curb appeal.</p>
+            </div>
+            <div class="matrix-card">
+              <h4>Outdoor living</h4>
+              <p>Blend planting plans with patios or fire features for a cohesive hangout space.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section bg-light">
+        <div class="container">
+          <div class="section-label">Build &amp; care</div>
+          <h2 class="mb-4">From installation to long-term upkeep</h2>
+          <div class="two-col-list">
+            <div>
+              <h4>Installation</h4>
+              <p>Bed prep, soil amendments, and clean planting techniques with proper spacing.</p>
+            </div>
+            <div>
+              <h4>Maintenance</h4>
+              <p>Mulching, pruning schedules, and irrigation checks to keep the design thriving.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-primary mt-4">Schedule a design consult</a>
+        </div>
+      </section>
+    </main>
+</BaseLayout>

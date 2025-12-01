@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const page = {
+  title: "Edwards Landscape Group | Lynchburg Lawn &amp; Landscape Experts",
+  description: "Edwards Landscape Group delivers premium lawn care, landscaping, and outdoor maintenance across Lynchburg, Forest, Bedford, Amherst, Madison Heights, and Smith Mountain Lake.",
+  keywords: "landscaping lynchburg va, lawn care lynchburg, mulching, mowing, aeration, seeding, landscape design"
+};
+---
+
+<BaseLayout {...page}>
+<main>
+      <section
+        class="home-hero"
+        style="background-image: url('images/Landscaping_Service.jpg');"
+        aria-label="Edwards Landscape Group hero"
+      >
+        <div class="hero-media" aria-hidden="true">
+          <video class="bg-video" autoplay muted playsinline loop poster="images/Landscaping_Service.jpg">
+            <source src="videos/Edwardscapes_compressed.webm" type="video/webm" />
+            <source src="videos/Edwardscapes_compressed.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7 col-xl-6 hero-content-block">
+              <div class="hero-kicker">Premium lawn &amp; landscape care</div>
+              <h1>Help your lawn beat the summer heat</h1>
+              <p class="mb-4">
+                Support your turf with dependable mowing, vibrant beds, and tailored treatments that
+                keep roots resilient all season long. Our local crews focus on healthy growth and
+                curb appeal for every visit.
+              </p>
+              <div class="hero-actions d-flex flex-wrap">
+                <a href="contact.html" class="btn btn-primary">Get a custom quote</a>
+                <a href="services.html" class="btn btn-outline-light">See all services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding services-grid" aria-labelledby="services-heading">
+        <div class="container">
+          <div class="section-header text-center">
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-heading">Lawn &amp; landscape services built for results</h2>
+            <p class="section-lead">
+              Your property gets a dedicated, detail-oriented crew focused on curb appeal and long-term
+              plant health.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-md-4 d-flex">
+              <article class="service-card">
+                <div class="icon-wrapper">
+                  <span class="flaticon-lawn-mower" aria-hidden="true"></span>
+                </div>
+                <h3>Weekly mowing</h3>
+                <p>
+                  Crisp lines, consistent schedules, and lawn treatments that keep grass thick, green,
+                  and healthy all season long.
+                </p>
+                <a class="arrow-link" href="mowing.html">Mowing program</a>
+              </article>
+            </div>
+            <div class="col-md-4 d-flex">
+              <article class="service-card">
+                <div class="icon-wrapper">
+                  <span class="flaticon-fence" aria-hidden="true"></span>
+                </div>
+                <h3>Seasonal cleanups</h3>
+                <p>
+                  Leaf removal, pruning, and mulch refreshes that prepare your beds for healthy growth
+                  and picture-perfect curb appeal.
+                </p>
+                <a class="arrow-link" href="fall-winter-cleanup.html">Seasonal services</a>
+              </article>
+            </div>
+            <div class="col-md-4 d-flex">
+              <article class="service-card">
+                <div class="icon-wrapper">
+                  <span class="flaticon-natural-resources" aria-hidden="true"></span>
+                </div>
+                <h3>Plant health care</h3>
+                <p>
+                  Bed maintenance, tree and shrub care, and proactive treatments that protect your
+                  investment and keep landscapes lush.
+                </p>
+                <a class="arrow-link" href="tree-shrub-care.html">Plant services</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding highlight-band" aria-labelledby="why-heading">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h2 id="why-heading">Why homeowners choose Edwards</h2>
+              <ul class="checklist">
+                <li>Dedicated crews that arrive on time and respect your property.</li>
+                <li>Holistic lawn, plant, and landscape plans tailored to your goals.</li>
+                <li>Local expertise for Lynchburg, Forest, Bedford, Amherst, Madison Heights, and Smith Mountain Lake.</li>
+                <li>Transparent communication with clear estimates and proactive updates.</li>
+              </ul>
+              <a href="about.html" class="btn btn-primary">Meet the team</a>
+            </div>
+            <div class="col-lg-5 ml-lg-auto">
+              <div class="feature-card">
+                <p class="eyebrow">Service spotlight</p>
+                <h3>Fertilization &amp; weed control</h3>
+                <p>
+                  Our licensed technicians build a season-long plan with soil-first treatments, targeted weed control, and aeration
+                  to maximize root strength.
+                </p>
+                <ul class="bullet-list">
+                  <li>Custom treatment schedule for your turf type</li>
+                  <li>Eco-conscious applications focused on long-term health</li>
+                  <li>Detailed visit notes after every appointment</li>
+                </ul>
+                <a class="arrow-link" href="services.html#Fertilization and Weed Control">See the full program</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding" aria-labelledby="area-heading">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="section-header">
+                <p class="eyebrow">Service area</p>
+                <h2 id="area-heading">Proudly serving Central Virginia</h2>
+                <p>
+                  We care for properties across Lynchburg, Forest, Bedford, Amherst, Madison Heights, and Smith Mountain Lake.
+                  Not sure if we work in your neighborhood? Reach out and we’ll confirm availability.
+                </p>
+              </div>
+              <div class="pill-list">
+                <span class="pill">Lynchburg</span>
+                <span class="pill">Forest</span>
+                <span class="pill">Bedford</span>
+                <span class="pill">Amherst</span>
+                <span class="pill">Madison Heights</span>
+                <span class="pill">Smith Mountain Lake</span>
+              </div>
+            </div>
+            <div class="col-md-5 ml-md-auto">
+              <div class="cta-card" aria-label="Request a quote">
+                <p class="eyebrow">Ready to start?</p>
+                <h3>Request your custom quote</h3>
+                <p>
+                  Tell us about your property and we’ll build a tailored plan that keeps your landscape healthy year-round.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-block">Get my quote</a>
+                <p class="small text-muted mb-0 mt-3">Fast responses. Clear pricing. No pressure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+</BaseLayout>
