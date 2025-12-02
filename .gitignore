@@ -1,7 +1,0 @@
-node_modules
-.dist
-/.astro
-/dist
-/.vercel
-/.netlify
-.DS_Store

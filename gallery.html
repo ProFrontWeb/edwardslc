@@ -1,13 +1,136 @@
----
-import BaseLayout from '../layouts/BaseLayout.astro';
-const page = {
-  title: "Gallery | Edwards Landscape Group \u2013 Lawn Care & Landscaping in Lynchburg, VA",
-  description: "Browse our gallery to see Edwards Landscape Group\u2019s professional lawn care and landscaping work in Lynchburg and surrounding areas. View examples of mowing, mulching, seasonal cleanups, and more."
-};
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3TXVE0LR1X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<BaseLayout {...page}>
-<section class="page-hero" style="background-image: url('images/bg_3.jpg');">
+      gtag('config', 'G-3TXVE0LR1X');
+    </script>
+    <title>Gallery | Edwards Landscape Group – Lawn Care & Landscaping in Lynchburg, VA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Browse our gallery to see Edwards Landscape Group’s professional lawn care and landscaping work in Lynchburg and surrounding areas. View examples of mowing, mulching, seasonal cleanups, and more.">
+    
+    <link id="favicon" rel="icon" type="image/png" href="images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    
+<div class="top-bar">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="top-bar__contact">
+      <span class="top-bar__label">Call</span>
+      <a href="tel:14349422455">(434) 942-2455</a>
+      <span class="divider">|</span>
+      <a href="mailto:Will@edwardscapes.com">Will@edwardscapes.com</a>
+    </div>
+    <a class="top-bar__cta" href="contact.html">Get a quote today</a>
+  </div>
+</div>
+
+<header class="main-header">
+  <nav
+    class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+    id="ftco-navbar"
+  >
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/Logo.png" alt="Edwards Landscape Group logo" />
+        <span class="brand-text">Edwards Landscape Group</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#ftco-nav"
+        aria-controls="ftco-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item dropdown nav-services">
+            <a
+              href="services.html"
+              class="nav-link nav-services-toggle"
+              id="servicesDropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services
+              <span class="nav-caret" role="button" aria-label="Toggle services menu" tabindex="0"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+              <a class="dropdown-item" href="mowing.html">Mowing</a>
+              <a class="dropdown-item" href="mulching.html">Mulching</a>
+              <a class="dropdown-item" href="bed-maintenance.html">Bed Maintenance</a>
+              <a class="dropdown-item" href="aeration-seeding.html">Aeration &amp; Seeding</a>
+              <a class="dropdown-item" href="fertilization-weed-control.html">Fertilization &amp; Weed Control</a>
+              <a class="dropdown-item" href="fall-winter-cleanup.html">Fall &amp; Winter Clean Up</a>
+              <a class="dropdown-item" href="tree-shrub-care.html">Tree &amp; Shrub Care</a>
+              <a class="dropdown-item" href="hardscaping.html">Hardscaping</a>
+              <a class="dropdown-item" href="landscaping.html">Landscaping</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item social-link">
+            <a
+              href="https://www.facebook.com/profile.php?id=61571902403468"
+              class="nav-link"
+              target="_blank"
+              aria-label="Facebook"
+              rel="noopener"
+            >
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="nav-item social-link">
+            <a
+              href="https://www.instagram.com/edwardslandscapegroup/"
+              class="nav-link"
+              target="_blank"
+              aria-label="Instagram"
+              rel="noopener"
+            >
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+          <li class="nav-item nav-cta">
+            <a href="contact.html" class="btn btn-primary">Book Service</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    
+      <section class="page-hero" style="background-image: url('images/bg_3.jpg');">
         <div class="container">
           <div class="row">
             <div class="col-lg-8 col-xl-6 hero-content-block">
@@ -323,5 +446,105 @@ const page = {
 
     
     
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row footer-top">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="footer-brand">
+              <a href="index.html" class="footer-logo">
+                <img src="images/Logo.png" alt="Edwards Landscape Group logo" />
+              </a>
+              <p class="footer-tagline">Full-service lawn and landscape care for Lynchburg and surrounding areas.</p>
+              <div class="d-flex flex-wrap footer-cta">
+                <a href="contact.html" class="btn btn-primary mr-2 mb-2">Get a quote</a>
+                <a href="tel:14349422455" class="btn btn-outline-light mb-2">Call (434) 942-2455</a>
+              </div>
+              <ul class="footer-social list-unstyled d-flex">
+                <li><a href="https://www.facebook.com/profile.php?id=61571902403468" target="_blank" aria-label="Facebook"><span class="icon-facebook"></span></a></li>
+                <li><a href="https://www.instagram.com/edwardslandscapegroup/" target="_blank" aria-label="Instagram"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a href="mowing.html">Mowing</a></li>
+              <li><a href="mulching.html">Mulching</a></li>
+              <li><a href="bed-maintenance.html">Bed Maintenance</a></li>
+              <li><a href="aeration-seeding.html">Aeration &amp; Seeding</a></li>
+              <li><a href="fertilization-weed-control.html">Fertilization &amp; Weed Control</a></li>
+              <li><a href="fall-winter-cleanup.html">Fall &amp; Winter Clean Up</a></li>
+              <li><a href="tree-shrub-care.html">Tree &amp; Shrub Care</a></li>
+              <li><a href="hardscaping.html">Hardscaping</a></li>
+              <li><a href="landscaping.html">Landscaping</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h3 class="footer-heading">Contact</h3>
+            <ul class="footer-contact list-unstyled">
+              <li><span class="icon icon-map-marker"></span><span>Lynchburg, Virginia</span></li>
+              <li><a href="tel:14349422455"><span class="icon icon-phone"></span><span>(434) 942-2455</span></a></li>
+              <li><a href="mailto:Will@edwardscapes.com"><span class="icon icon-envelope"></span><span>Will@edwardscapes.com</span></a></li>
+            </ul>
+            <div class="footer-hours">
+              <p class="mb-1 font-weight-bold">Hours</p>
+              <p class="mb-0">Monday – Saturday · 8am – 5pm</p>
+            </div>
+            <p class="footer-subtext mb-0">Licensed • Insured • Family-owned</p>
+          </div>
+        </div>
+        <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <p class="mb-2 mb-md-0">&copy; <script>document.write(new Date().getFullYear());</script> Edwards Landscape Group. All rights reserved.</p>
+          <div class="footer-meta">
+            <span class="mr-2">ProFront Web Design</span>
+            <a href="privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
     
-</BaseLayout>
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+    
+  </body>
+</html>
