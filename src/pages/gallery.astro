@@ -1,0 +1,691 @@
+﻿---
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+import TopBar from "../components/TopBar.astro";
+
+const pageTitle = "Gallery | Edwards Landscape Group â€“ Lawn Care & Landscaping in Lynchburg, VA";
+---
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3TXVE0LR1X"></script>
+  <script>
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).gtag = function () {
+      (window as any).dataLayer.push(arguments);
+    };
+    (window as any).gtag("js", new Date());
+    (window as any).gtag("config", "G-3TXVE0LR1X");
+  </script>
+  <title>{pageTitle}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta
+    name="description"
+    content="Browse our gallery to see Edwards Landscape Group's professional lawn care and landscaping work in Lynchburg and surrounding areas. View examples of mowing, mulching, seasonal cleanups, and more."
+  />
+
+  <link id="favicon" rel="icon" type="image/png" href="/assets/favicon.ico" />
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <link rel="stylesheet" href="/css/animate.css" />
+
+  <link rel="stylesheet" href="/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="/css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="/css/magnific-popup.css" />
+
+  <link rel="stylesheet" href="/css/ionicons.min.css" />
+
+  <link rel="stylesheet" href="/css/flaticon.css" />
+  <link rel="stylesheet" href="/css/icomoon.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <TopBar />
+
+  <Navigation />
+  <section class="page-hero" style="background-image: url('/assets/bg_3.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-xl-6 hero-content-block">
+          <h1 class="mb-3">See what we've built and maintained</h1>
+          <p class="mb-4">
+            Browse grouped collections of our mowing, mulching, bed care, and design-build projects.
+            Click any image to view it larger.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section gallery-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-12 heading-section text-center ftco-animate">
+          <span class="subheading">Our Work</span>
+          <h2 class="mb-2 section-title">Project Gallery</h2>
+          <p class="section-subtitle">
+            Browse highlights from each service category. Tap any thumbnail to open a larger view
+            and swipe through that service's carousel.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-collection">
+        <header class="gallery-collection__header">
+          <div>
+            <p class="eyebrow">Mowing &amp; turf care</p>
+            <h3 class="gallery-collection__title">Weekly routes &amp; pristine stripes</h3>
+            <p class="gallery-collection__copy">
+              See the crisp lines and consistent cuts our mowing crews deliver season after season.
+            </p>
+          </div>
+          <a href="mowing.html" class="gallery-collection__cta">Explore mowing</a>
+        </header>
+        <div class="gallery-carousel owl-carousel">
+          <figure class="gallery-card">
+            <a
+              href="/assets/work1.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Freshly mowed lawn with trimmed edges"
+              title="Mowing and edging finish"
+            >
+              <img
+                src="/assets/work1.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Freshly mowed lawn with trimmed edges"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Mowing &amp; edging</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work3.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Lawn with stripes after mowing"
+              title="Striped mowing finish"
+            >
+              <img
+                src="/assets/work3.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Green lawn with striping after mowing"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Striping detail</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work6.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Backyard mowing stripes"
+              title="Weekly mow"
+            >
+              <img
+                src="/assets/work6.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Backyard lawn mowing stripes"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Weekly route</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work17.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Striped mowing pattern"
+              title="Lawn mowing stripes"
+            >
+              <img
+                src="/assets/work17.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Striped mowing pattern on lawn"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Mowing stripes</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work15-trimmed.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Backyard lawn after seeding"
+              title="Aeration & seeding result"
+            >
+              <img
+                src="/assets/work15-trimmed.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Healthy green lawn after seeding"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Aeration &amp; seed</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+
+      <div class="gallery-collection">
+        <header class="gallery-collection__header">
+          <div>
+            <p class="eyebrow">Mulching &amp; bed care</p>
+            <h3 class="gallery-collection__title">Crisp edges, rich color</h3>
+            <p class="gallery-collection__copy">
+              Fresh mulch, sharp bed lines, and healthy planting beds that frame every home.
+            </p>
+          </div>
+          <a href="mulching.html" class="gallery-collection__cta">Mulching services</a>
+        </header>
+        <div class="gallery-carousel owl-carousel">
+          <figure class="gallery-card">
+            <a
+              href="/assets/work2.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Mulch install around foundation plantings"
+              title="Mulching around plant beds"
+            >
+              <img
+                src="/assets/work2.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Dark mulch spread around shrubs and beds"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Mulch refresh</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work4.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Mulched beds with new shrubs"
+              title="Bed maintenance and mulch"
+            >
+              <img
+                src="/assets/work4.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Mulched landscape bed with shrubs"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Bed refresh</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work7.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Mulch and edging around trees"
+              title="Bed edging and mulch"
+            >
+              <img
+                src="/assets/work7.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Mulched tree ring with clean edge"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Tree rings</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work8.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Landscape bed with fresh mulch"
+              title="Mulching refresh"
+            >
+              <img
+                src="/assets/work8.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Landscape bed with mulch and shrubs"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Bed edging</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work9.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Mulch around shrubs"
+              title="Mulching and bed prep"
+            >
+              <img
+                src="/assets/work9.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Mulched shrubs along a walkway"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Mulch install</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work16.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Mulched beds around home"
+              title="Mulch and maintenance"
+            >
+              <img
+                src="/assets/work16.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Mulched beds surrounding a home"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Foundation beds</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work18.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Mulched beds with shrubs"
+              title="Mulch and bed maintenance"
+            >
+              <img
+                src="/assets/work18.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Mulched landscape bed with shrubs"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Seasonal mulch</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+
+      <div class="gallery-collection">
+        <header class="gallery-collection__header">
+          <div>
+            <p class="eyebrow">Planting &amp; landscape installs</p>
+            <h3 class="gallery-collection__title">Beds, shrubs, &amp; fresh plantings</h3>
+            <p class="gallery-collection__copy">
+              Layered plantings, defined lines, and mulch that keeps everything tidy.
+            </p>
+          </div>
+          <a href="bed-maintenance.html" class="gallery-collection__cta">Landscape care</a>
+        </header>
+        <div class="gallery-carousel owl-carousel">
+          <figure class="gallery-card">
+            <a
+              href="/assets/work4.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Mulched beds with new shrubs"
+              title="Bed maintenance and mulch"
+            >
+              <img
+                src="/assets/work4.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Mulched landscape bed with shrubs"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Bed refresh</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work8.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Landscape bed with fresh mulch"
+              title="Mulching refresh"
+            >
+              <img
+                src="/assets/work8.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Landscape bed with mulch and shrubs"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Bed edging</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work9.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Mulch around shrubs"
+              title="Mulching and bed prep"
+            >
+              <img
+                src="/assets/work9.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Mulched shrubs along a walkway"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Mulch install</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work13-trimmed.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Landscape install with mulch and trees"
+              title="Landscape install"
+            >
+              <img
+                src="/assets/work13-trimmed.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Mulched beds with newly planted trees"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Planting day</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+
+      <div class="gallery-collection">
+        <header class="gallery-collection__header">
+          <div>
+            <p class="eyebrow">Seasonal cleanup &amp; turf health</p>
+            <h3 class="gallery-collection__title">Aeration, seeding, and leaf removal</h3>
+            <p class="gallery-collection__copy">
+              Before-and-after cleanups plus the turf care that brings lawns back to life.
+            </p>
+          </div>
+          <a href="fall-winter-cleanup.html" class="gallery-collection__cta">Cleanup services</a>
+        </header>
+        <div class="gallery-carousel owl-carousel">
+          <figure class="gallery-card">
+            <a
+              href="/assets/work5.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Leaf cleanup and haul away"
+              title="Fall cleanup service"
+            >
+              <img
+                src="/assets/work5.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Cleared yard after leaf cleanup"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Fall cleanup</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work15-trimmed.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Backyard lawn after seeding"
+              title="Aeration & seeding result"
+            >
+              <img
+                src="/assets/work15-trimmed.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Healthy green lawn after seeding"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Aeration &amp; seed</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work1.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Freshly mowed lawn with trimmed edges"
+              title="Mowing and edging finish"
+            >
+              <img
+                src="/assets/work1.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Freshly mowed lawn with trimmed edges"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Trimmed edges</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+
+      <div class="gallery-collection">
+        <header class="gallery-collection__header">
+          <div>
+            <p class="eyebrow">Hardscaping &amp; outdoor living</p>
+            <h3 class="gallery-collection__title">Patios, walls, and living areas</h3>
+            <p class="gallery-collection__copy">
+              Design-build hardscapes that pair stonework with softscape plantings.
+            </p>
+          </div>
+          <a href="hardscaping.html" class="gallery-collection__cta">Hardscaping</a>
+        </header>
+        <div class="gallery-carousel owl-carousel">
+          <figure class="gallery-card">
+            <a
+              href="/assets/work12-trimmed.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Finished patio and landscape beds"
+              title="Outdoor living install"
+            >
+              <img
+                src="/assets/work12-trimmed.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Paver patio with surrounding beds"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Hardscape view</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="gallery-card">
+            <a
+              href="/assets/work13-trimmed.jpg"
+              class="gallery-lightbox image-popup"
+              aria-label="Landscape install with mulch and trees"
+              title="Landscape install"
+            >
+              <img
+                src="/assets/work13-trimmed.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Mulched beds with newly planted trees"
+                width="960"
+                height="640"
+                class="gallery-thumb"
+              />
+              <figcaption class="gallery-overlay">
+                <span>Plantings with stone</span>
+                <i class="icon-expand" aria-hidden="true"></i>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section></body
+>
+
+<!-- <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+        	<div class="col-lg-8 py-4">
+        		<div class="row">
+		          <div class="col-md-6 ftco-animate d-flex align-items-center">
+		            <h2 class="mb-0" style="color:white; font-size: 24px;">Subcribe to our Newsletter</h2>
+		          </div>
+		          <div class="col-md-6 d-flex align-items-center">
+		            <form action="#" class="subscribe-form">
+		              <div class="form-group d-flex">
+		                <input type="text" class="form-control" placeholder="Enter email address">
+		                <input type="submit" value="Subscribe" class="submit px-3">
+		              </div>
+		            </form>
+		          </div>
+	          </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+<Footer />
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+  <svg class="circular" width="48px" height="48px"
+    ><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"
+    ></circle><circle
+      class="path"
+      cx="24"
+      cy="24"
+      r="22"
+      fill="none"
+      stroke-width="4"
+      stroke-miterlimit="10"
+      stroke="#F96D00"></circle></svg
+  >
+</div>
+
+<script src="/js/jquery.min.js" is:inline></script>
+<script src="/js/jquery-migrate-3.0.1.min.js" is:inline></script>
+<script src="/js/popper.min.js" is:inline></script>
+<script src="/js/bootstrap.min.js" is:inline></script>
+<script src="/js/jquery.easing.1.3.js" is:inline></script>
+<script src="/js/jquery.waypoints.min.js" is:inline></script>
+<script src="/js/jquery.stellar.min.js" is:inline></script>
+<script src="/js/owl.carousel.min.js" is:inline></script>
+<script src="/js/jquery.magnific-popup.min.js" is:inline></script>
+<script src="/js/scrollax.min.js" is:inline></script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"
+></script>
+<script src="/js/google-map.js" is:inline></script>
+<script src="/js/main.js" is:inline></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  (window as any).dataLayer = (window as any).dataLayer || [];
+  function gtag(...args: any[]) {
+    ((window as any).dataLayer as any[]).push(args);
+  }
+  gtag("js", new Date());
+  gtag("config", "UA-23581568-13");
+</script>
