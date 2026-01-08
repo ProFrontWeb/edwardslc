@@ -425,15 +425,23 @@
 						processData: false,  // Do not process the data
 						contentType: false,  // Do not set content type
 						success: function(response) {
-							submittingMessage.show();  // Show success message
-								
-							// Clear the form fields
-							form[0].reset();
-							
-							// Optionally, hide the submitting message after a few seconds
-							setTimeout(function() {
-								submittingMessage.hide();
-							}, 5000);
+						// ✅ Fire Meta Lead only on successful submit
+						if (typeof fbq === 'function') {
+							fbq('track', 'Lead', {
+							content_name: 'Contact Form',
+							lead_type: 'Quote Request'
+							});
+						}
+
+						submittingMessage.text('Your message was sent, thank you!').show();
+
+						// Clear the form fields
+						form[0].reset();
+
+						// Optionally, hide the submitting message after a few seconds
+						setTimeout(function() {
+							submittingMessage.hide();
+						}, 5000);
 						},
 						error: function() {
 							submittingMessage.text('Oops! Something went wrong. Please try again later.').show();
