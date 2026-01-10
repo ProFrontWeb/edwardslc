@@ -13190,8 +13190,35 @@ body {
   padding: clamp(40px, 4vw, 64px) 0;
 }
 
+.service-detail .service-section--panel {
+  background: transparent;
+}
+
+.service-detail .service-section--panel .container {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: clamp(20px, 3vw, 32px);
+  box-shadow: 0 18px 42px rgba(12, 55, 34, 0.08);
+  border: 1px solid rgba(15, 77, 43, 0.08);
+}
+
+.service-detail .service-section--tint {
+  background: linear-gradient(180deg, rgba(17, 93, 50, 0.08), rgba(17, 93, 50, 0.04));
+}
+
 .service-detail .section-label {
   margin-bottom: 8px;
+  gap: 8px;
+}
+
+.service-detail .section-label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(17, 93, 50, 0.65), rgba(17, 93, 50, 0.15));
+  box-shadow: 0 0 0 4px rgba(17, 93, 50, 0.12);
+  flex-shrink: 0;
 }
 
 .service-detail .service-section .mb-3 {
@@ -13200,6 +13227,14 @@ body {
 
 .service-detail .service-section .mb-4 {
   margin-bottom: 1rem !important;
+}
+
+.service-detail .checklist {
+  margin: 12px 0 16px;
+}
+
+.service-detail .checklist li {
+  margin-bottom: 8px;
 }
 
 .service-image-grid {
@@ -13830,6 +13865,10 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+}
+
+.service-detail .tg-card-grid {
+  gap: 16px;
 }
 
 .tg-card-grid.two-col {
