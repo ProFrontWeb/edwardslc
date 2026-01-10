@@ -13183,7 +13183,51 @@ body {
 }
 
 .service-section {
-  padding: 80px 0;
+  padding: clamp(56px, 6vw, 84px) 0;
+}
+
+.service-detail .service-section {
+  padding: clamp(40px, 4vw, 64px) 0;
+}
+
+.service-detail .container {
+  max-width: 1100px;
+}
+
+.service-detail .service-section--panel {
+  background: transparent;
+}
+
+.service-detail .service-section--panel .container {
+  padding: 0;
+}
+
+.service-detail .service-section--tint {
+  background: #f4f7f2;
+}
+
+.service-detail .section-label {
+  margin-bottom: 8px;
+}
+
+.service-detail .section-label::before {
+  content: none;
+}
+
+.service-detail .service-section .mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+
+.service-detail .service-section .mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.service-detail .checklist {
+  margin: 12px 0 16px;
+}
+
+.service-detail .checklist li {
+  margin-bottom: 8px;
 }
 
 .service-image-grid {
@@ -13192,10 +13236,9 @@ body {
 
 .service-image-card {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(15, 77, 43, 0.08);
+  border: 1px solid #e3ece7;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -13203,13 +13246,21 @@ body {
 
 .service-image-card img {
   width: 100%;
-  height: 220px;
+  height: clamp(260px, 34vw, 420px);
   object-fit: cover;
   display: block;
 }
 
+.service-detail .service-image-card img {
+  height: clamp(280px, 38vw, 440px);
+}
+
 .service-image-card figcaption {
-  padding: 18px 20px 22px;
+  padding: 12px 14px 14px;
+}
+
+.service-detail .service-image-card figcaption {
+  padding: 12px 14px 14px;
 }
 
 .service-image-card h3 {
@@ -13808,6 +13859,10 @@ body {
   gap: 20px;
 }
 
+.service-detail .tg-card-grid {
+  gap: 16px;
+}
+
 .tg-card-grid.two-col {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
@@ -13816,8 +13871,7 @@ body {
   background: #ffffff;
   border: 1px solid #e3ece7;
   border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 12px 32px rgba(7, 43, 28, 0.06);
+  padding: 20px;
 }
 
 .tg-card h3 {
@@ -14133,12 +14187,20 @@ body {
 
 /* Service layout variations */
 .gutter-40 {
-  row-gap: 30px;
+  row-gap: 24px;
+}
+
+.service-detail .gutter-40 {
+  row-gap: 16px;
 }
 
 @media (min-width: 992px) {
   .gutter-40 {
-    column-gap: 40px;
+    column-gap: 28px;
+  }
+
+  .service-detail .gutter-40 {
+    column-gap: 20px;
   }
 }
 
