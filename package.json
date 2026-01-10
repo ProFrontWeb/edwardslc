@@ -9,6 +9,9 @@
     "astro": "astro",
     "clean:prettier": "prettier --write \"src/**/*.{astro,js,ts,jsx,tsx,css,md}\""
   },
+  "engines": {
+    "node": ">=18.20.8"
+  },
   "dependencies": {
     "astro": "^5.16.3"
   },
