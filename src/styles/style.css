@@ -13190,35 +13190,28 @@ body {
   padding: clamp(40px, 4vw, 64px) 0;
 }
 
+.service-detail .container {
+  max-width: 1100px;
+}
+
 .service-detail .service-section--panel {
   background: transparent;
 }
 
 .service-detail .service-section--panel .container {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: clamp(20px, 3vw, 32px);
-  box-shadow: 0 18px 42px rgba(12, 55, 34, 0.08);
-  border: 1px solid rgba(15, 77, 43, 0.08);
+  padding: 0;
 }
 
 .service-detail .service-section--tint {
-  background: linear-gradient(180deg, rgba(17, 93, 50, 0.08), rgba(17, 93, 50, 0.04));
+  background: #f4f7f2;
 }
 
 .service-detail .section-label {
   margin-bottom: 8px;
-  gap: 8px;
 }
 
 .service-detail .section-label::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(17, 93, 50, 0.65), rgba(17, 93, 50, 0.15));
-  box-shadow: 0 0 0 4px rgba(17, 93, 50, 0.12);
-  flex-shrink: 0;
+  content: none;
 }
 
 .service-detail .service-section .mb-3 {
@@ -13243,10 +13236,9 @@ body {
 
 .service-image-card {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(15, 77, 43, 0.08);
+  border: 1px solid #e3ece7;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -13254,21 +13246,21 @@ body {
 
 .service-image-card img {
   width: 100%;
-  height: clamp(280px, 40vw, 480px);
+  height: clamp(260px, 34vw, 420px);
   object-fit: cover;
   display: block;
 }
 
 .service-detail .service-image-card img {
-  height: clamp(340px, 50vw, 540px);
+  height: clamp(280px, 38vw, 440px);
 }
 
 .service-image-card figcaption {
-  padding: 16px 18px 20px;
+  padding: 12px 14px 14px;
 }
 
 .service-detail .service-image-card figcaption {
-  padding: 12px 16px 16px;
+  padding: 12px 14px 14px;
 }
 
 .service-image-card h3 {
@@ -13879,8 +13871,7 @@ body {
   background: #ffffff;
   border: 1px solid #e3ece7;
   border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 12px 32px rgba(7, 43, 28, 0.06);
+  padding: 20px;
 }
 
 .tg-card h3 {
