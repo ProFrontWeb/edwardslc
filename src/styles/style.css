@@ -13732,6 +13732,36 @@ body {
   z-index: 1;
 }
 
+.service-page--compact .service-hero {
+  padding: 64px 0;
+  min-height: auto;
+}
+
+.service-page--compact .service-section,
+.service-page--compact .service-section.bg-light {
+  padding: 32px 0;
+}
+
+.service-page--compact .section-label {
+  margin-bottom: 6px;
+}
+
+.service-page--compact h2 {
+  margin-bottom: 12px;
+}
+
+.service-page--compact .service-image-card {
+  margin-bottom: 0;
+}
+
+.service-page--compact .callout-panel {
+  padding: 22px;
+}
+
+.service-page--compact .pill-list li {
+  margin-bottom: 6px;
+}
+
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
