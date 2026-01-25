@@ -12421,6 +12421,18 @@ body {
   margin-top: 28px;
 }
 
+.service-card-link {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+}
+
+.service-card-link:focus-visible {
+  outline: 3px solid #0d8f4c;
+  outline-offset: 4px;
+  border-radius: 18px;
+}
+
 .service-card--image {
   display: flex;
   flex-direction: column;

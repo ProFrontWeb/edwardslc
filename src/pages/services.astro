@@ -168,23 +168,26 @@ const services = [
       <div class="row services-page-grid">
         {services.map((service) => (
           <div class="col-md-6 col-lg-4 d-flex" key={service.id}>
-            <article
-              class="service-card service-card--image"
-              id={service.id}
-              itemscope
-              itemtype="https://schema.org/Service"
-            >
-              <div class="service-card__media">
-                <img src={service.image} alt={service.alt} loading="lazy" itemprop="image" />
-              </div>
-              <div class="service-card__body">
-                <h3 itemprop="name">{service.title}</h3>
-                <p itemprop="description">{service.description}</p>
-                <a href={service.link} class="arrow-link" itemprop="url">
-                  Learn more
-                </a>
-              </div>
-            </article>
+            <a href={service.link} class="service-card-link" aria-label={`Learn more about ${service.title}`}>
+              <article
+                class="service-card service-card--image"
+                id={service.id}
+                itemscope
+                itemtype="https://schema.org/Service"
+              >
+                <meta itemprop="url" content={service.link} />
+                <div class="service-card__media">
+                  <img src={service.image} alt={service.alt} loading="lazy" itemprop="image" />
+                </div>
+                <div class="service-card__body">
+                  <h3 itemprop="name">{service.title}</h3>
+                  <p itemprop="description">{service.description}</p>
+                  <span class="arrow-link">
+                    Learn more
+                  </span>
+                </div>
+              </article>
+            </a>
           </div>
         ))}
       </div>
