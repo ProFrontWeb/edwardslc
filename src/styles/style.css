@@ -13925,6 +13925,18 @@ body {
   margin: 0;
 }
 
+.blog-card--compact .blog-card__body {
+  padding: 16px 18px 18px;
+}
+
+.blog-card--compact h3 {
+  font-size: 18px;
+}
+
+.blog-card--compact p {
+  margin-bottom: 0;
+}
+
 .blog-card__body p {
   margin-bottom: 8px;
 }
