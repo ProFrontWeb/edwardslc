@@ -13332,19 +13332,27 @@ body {
 
 .matrix-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 40px;
 }
 
 .matrix-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 18px 18px 14px;
-  border: 1px solid #e5ece6;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
   height: 100%;
 }
 
+@media (max-width: 991px) {
+  .matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.matrix-card h3,
 .matrix-card h4 {
   margin-bottom: 6px;
 }
@@ -13915,6 +13923,18 @@ body {
 .blog-card h3 {
   font-size: 20px;
   margin: 0;
+}
+
+.blog-card--compact .blog-card__body {
+  padding: 16px 18px 18px;
+}
+
+.blog-card--compact h3 {
+  font-size: 18px;
+}
+
+.blog-card--compact p {
+  margin-bottom: 0;
 }
 
 .blog-card__body p {
