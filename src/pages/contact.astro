@@ -133,7 +133,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                       <input
                         type="hidden"
                         name="access_key"
-                        value="1d9f1ce3-a745-4654-a8bd-9215ae24a6d2"
+                        value="64dd2468-214d-4f7c-9353-1dc9b56c8076"
                       />
                       <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
 
@@ -153,6 +153,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              First name is required
                             </p>
                           </div>
                         </div>
@@ -171,6 +172,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              Last name is required
                             </p>
                           </div>
                         </div>
@@ -189,6 +191,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              Email is required
                             </p>
                           </div>
                         </div>
@@ -207,6 +210,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              Phone number is required
                             </p>
                           </div>
                         </div>
@@ -220,6 +224,13 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               id="address"
                               placeholder="Address"
                             />
+                            <p
+                              id="phoneNumberErrorMessage"
+                              class="error"
+                              style="font-size: small; color: #ff0000; display: none;"
+                            >
+                              Address is required
+                            </p>
                           </div>
                         </div>
                         <div class="col-md-12">
@@ -292,6 +303,15 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               />
                               <label for="Drainage">Drainage</label>
                             </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Landscape Design"
+                                name="Landscape Design"
+                                value="Landscape Design"
+                              />
+                              <label for="Landscape Design">Landscape Design</label>
+                            </div>
                           </div>
                         </div>
                         <div class="col-md-6">
@@ -352,15 +372,6 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               />
                               <label for="New Landscape Installs">New Landscape Installs</label>
                             </div>
-                            <div>
-                              <input
-                                type="checkbox"
-                                id="Landscape Design"
-                                name="Landscape Design"
-                                value="Landscape Design"
-                              />
-                              <label for="Landscape Design">Landscape Design</label>
-                            </div>
                           </div>
                         </div>
                         <div class="col-md-12">
@@ -378,6 +389,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              Please put in a message
                             </p>
                           </div>
                         </div>
@@ -407,8 +419,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               />
                               <label for="sms-consent">
                                 By providing your phone number, you agree to receive text messages
-                                from Affinity Lawn and Landscape. Message and data rates may apply.
-                                Message frequency varies. Reply Stop to Unsubscribe.
+                                from Edwards Landscape Group.
                               </label>
                             </div>
                           </div>
@@ -422,7 +433,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                           </div>
                         </div>
                         <div class="h-captcha" data-captcha="true"></div>
-                        <!-- <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                       </div>
                     </form>
                   </div>
@@ -498,6 +509,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
         const lastName = (document.getElementById("last name") as HTMLInputElement).value;
         const email = (document.getElementById("email") as HTMLInputElement).value;
         const phoneNumber = (document.getElementById("phone number") as HTMLInputElement).value;
+        const address = (document.getElementById("address") as HTMLTextAreaElement).value;
         const message = (document.getElementById("message") as HTMLTextAreaElement).value;
 
         // jQuery selectors with the correct id syntax (use #)
@@ -506,6 +518,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
         const emailErrorMessage = jQuery("#emailErrorMessage");
         const phoneNumberErrorMessage = jQuery("#phoneNumberErrorMessage");
         const messageErrorMessage = jQuery("#messageErrorMessage");
+        const addressErrorMessage = jQuery("#addressErrorMessage");
 
         // Reset all error messages first (hide and clear text)
         firstNameErrorMessage.hide().text("");
@@ -513,26 +526,34 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
         emailErrorMessage.hide().text("");
         phoneNumberErrorMessage.hide().text("");
         messageErrorMessage.hide().text("");
+        addressErrorMessage.hide().text("");
 
         // Validation checks
         if (firstName.length <= 0) {
           firstNameErrorMessage.text("First Name is required.").show();
+          return false;
         }
         if (lastName.length <= 0) {
           lastNameErrorMessage.text("Last Name is required.").show();
+          return false;
         }
         if (email.length <= 0) {
           emailErrorMessage.text("Email is required.").show();
+          return false;
         }
         if (phoneNumber.length <= 0) {
           phoneNumberErrorMessage.text("Phone Number is required.").show();
+          return false;
+        }
+        if (address.length <= 0) {
+          addressErrorMessage.text("Address is required").show();
+          return false;
         }
         if (message.length <= 0) {
           messageErrorMessage.text("Message is required.").show();
-        } else {
-          return true;
+          return false;
         }
-        return false;
+        return true;
       }
     </script>
     <script is:inline>
@@ -544,6 +565,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
           const formData = new FormData(this as HTMLFormElement);
           const submittingMessage = jQuery(".submitting");
           const validated = validate();
+
           if (validated) {
             // Make the AJAX request
             jQuery.ajax({
