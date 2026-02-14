@@ -2,76 +2,22 @@
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import TopBar from "../components/TopBar.astro";
+import { serviceBlogs } from "../data/serviceBlogs";
 
 const pageTitle = "Lawn Care Blog & Updates | Edwards Landscape Group";
-const posts = [
-  {
-    title: "Winter lawn prep: fertilization & overseeding",
-    date: "Nov 28, 2025",
-    category: "Maintenance",
-    readTime: "6 min read",
-    description:
-      "How we set turf up for winter with balanced nutrients and overseeding schedules that avoid patchy spring lawns.",
-    image: "/assets/Fertilization_Service.png",
-    imageAlt: "Spreader applying fertilizer to a green lawn",
-    href: "/blogs/Winter-Lawn-Prep-Blog",
-  },
-  {
-    title: "Mulch refresh vs. full install: what to know",
-    date: "Oct 22, 2025",
-    category: "Mulching",
-    readTime: "4 min read",
-    description:
-      "A quick guide to when you can top-dress existing mulch and when a full reset keeps beds tidy.",
-    image: "/assets/Mulching_Service.jpg",
-    imageAlt: "Fresh mulch being spread around shrubs",
-    href: "#",
-  },
-  {
-    title: "Shrub shaping schedule for Central Virginia",
-    date: "Sep 15, 2025",
-    category: "Pruning",
-    readTime: "5 min read",
-    description:
-      "Season-by-season timing to prune boxwoods, hollies, and flowering shrubs without losing next year's blooms.",
-    image: "/assets/ShrubCare_Service.jpg",
-    imageAlt: "Trimmed shrubs lining a clean walkway",
-    href: "#",
-  },
-  {
-    title: "Fall clean-up checklist you can follow",
-    date: "Aug 30, 2025",
-    category: "Clean-up",
-    readTime: "7 min read",
-    description:
-      "Leaf removal, perennial cutbacks, and gutter-edge touch ups that keep your property protected going into winter.",
-    image: "/assets/FallCleanUp_Service.jpg",
-    imageAlt: "Worker raking leaves into a pile",
-    href: "#",
-  },
-  {
-    title: "Designing beds that thrive in shade",
-    date: "Jul 12, 2025",
-    category: "Design",
-    readTime: "6 min read",
-    description:
-      "Plant mixes, soil tweaks, and lighting ideas we use to make low-light areas feel intentional and lush.",
-    image: "/assets/Landscape_Design_Service.jpg",
-    imageAlt: "Stone walkway with shaded planting beds",
-    href: "#",
-  },
-  {
-    title: "What weekly mowing really includes",
-    date: "Jun 5, 2025",
-    category: "Mowing",
-    readTime: "3 min read",
-    description:
-      "Our checklist for height, edging, blow-offs, and blades so your lawn looks sharp between visits.",
-    image: "/assets/Mowing_Service.jpg",
-    imageAlt: "Mower cutting a freshly striped lawn",
-    href: "#",
-  },
-];
+
+const formatServiceType = (value: string) =>
+  value
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+const posts = serviceBlogs.map((blog) => ({
+  ...blog,
+  category: formatServiceType(blog.serviceTypes[0] ?? "Lawn Care"),
+  image: "/assets/bg_2.jpg",
+  imageAlt: "Freshly maintained lawn and landscaped beds",
+}));
 ---
 
 <head>
@@ -161,10 +107,6 @@ const posts = [
                 <div class="blog-card__body">
                   <div class="blog-card__meta">
                     <span>{post.category}</span>
-                    <span aria-hidden="true">&bull;</span>
-                    <span>{post.date}</span>
-                    {post.readTime && <span aria-hidden="true">&bull;</span>}
-                    {post.readTime && <span>{post.readTime}</span>}
                   </div>
                   <h3>{post.href ? <a href={post.href}>{post.title}</a> : post.title}</h3>
                   <p>{post.description}</p>
