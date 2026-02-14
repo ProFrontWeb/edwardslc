@@ -2,6 +2,7 @@
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/Navigation.astro";
 import TopBar from "../../components/TopBar.astro";
+import RelatedServiceBlogs from "../../components/RelatedServiceBlogs.astro";
 
 const pageTitle = "Mulching | Edwards Landscape Group";
 ---
@@ -228,41 +229,7 @@ const pageTitle = "Mulching | Edwards Landscape Group";
       </div>
     </section>
 
-    <section class="service-section service-section--compact">
-      <div class="container">
-        <h2 class="mb-3">Related Mulching Articles</h2>
-        <div class="blog-grid">
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/how-often-should-you-mulch-your-beds">How Often Should You Mulch Your Beds?</a></h3>
-              <p>Find the right refresh cadence for clean, healthy beds.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/mulch-vs-rock-which-is-better">Mulch vs. Rock: Which Is Better?</a></h3>
-              <p>Compare cost, upkeep, and plant health benefits before deciding.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/best-mulch-depth-for-flower-beds">Best Mulch Depth for Flower Beds</a></h3>
-              <p>Dial in the depth that protects roots without smothering plants.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/how-to-prevent-weeds-in-landscape-beds">How to Prevent Weeds in Landscape Beds</a></h3>
-              <p>Use prep, mulch, and maintenance to keep weeds under control.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <RelatedServiceBlogs serviceType="mulching" heading="Related Mulching Articles" />
   </main>
 
   <Footer />

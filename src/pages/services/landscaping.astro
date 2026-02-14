@@ -2,6 +2,7 @@
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/Navigation.astro";
 import TopBar from "../../components/TopBar.astro";
+import RelatedServiceBlogs from "../../components/RelatedServiceBlogs.astro";
 
 const pageTitle = "Landscaping | Edwards Landscape Group";
 ---
@@ -229,41 +230,7 @@ const pageTitle = "Landscaping | Edwards Landscape Group";
       </div>
     </section>
 
-    <section class="service-section service-section--compact">
-      <div class="container">
-        <h2 class="mb-3">Related Landscaping Articles</h2>
-        <div class="blog-grid">
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/top-landscaping-upgrades-for-curb-appeal">Top Landscaping Upgrades for Curb Appeal</a></h3>
-              <p>Learn which updates deliver the biggest visual impact for your home.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/best-low-maintenance-plants-for-virginia">Best Low-Maintenance Plants for Virginia</a></h3>
-              <p>Pick plants that thrive locally while keeping upkeep simple.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/how-to-plan-a-landscape-refresh">How to Plan a Landscape Refresh</a></h3>
-              <p>Organize a refresh that improves flow, color, and year-round interest.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/front-yard-landscaping-ideas">Front Yard Landscaping Ideas</a></h3>
-              <p>Explore design ideas that make your front yard feel finished and welcoming.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <RelatedServiceBlogs serviceType="landscaping" heading="Related Landscaping Articles" />
   </main>
 
   <Footer />
