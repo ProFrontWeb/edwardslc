@@ -2,6 +2,7 @@
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/Navigation.astro";
 import TopBar from "../../components/TopBar.astro";
+import RelatedServiceBlogs from "../../components/RelatedServiceBlogs.astro";
 
 const pageTitle = "Hardscaping | Edwards Landscape Group";
 ---
@@ -227,41 +228,7 @@ const pageTitle = "Hardscaping | Edwards Landscape Group";
       </div>
     </section>
 
-    <section class="service-section service-section--compact">
-      <div class="container">
-        <h2 class="mb-3">Related Hardscaping Articles</h2>
-        <div class="blog-grid">
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/paver-patio-vs-concrete-which-is-better">Paver Patio vs. Concrete: Which Is Better?</a></h3>
-              <p>Compare durability, cost, and style so you can choose the right surface.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/how-to-choose-the-right-paver-style">How to Choose the Right Paver Style</a></h3>
-              <p>Find the textures, colors, and patterns that fit your home’s look.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/retaining-wall-ideas-for-sloped-yards">Retaining Wall Ideas for Sloped Yards</a></h3>
-              <p>Get inspiration for functional walls that add structure and curb appeal.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/outdoor-living-upgrades-that-add-value">Outdoor Living Upgrades That Add Value</a></h3>
-              <p>See which upgrades make outdoor spaces more enjoyable and valuable.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <RelatedServiceBlogs serviceType="hardscaping" heading="Related Hardscaping Articles" />
   </main>
 
   <Footer />

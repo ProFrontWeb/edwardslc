@@ -2,6 +2,7 @@
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/Navigation.astro";
 import TopBar from "../../components/TopBar.astro";
+import RelatedServiceBlogs from "../../components/RelatedServiceBlogs.astro";
 
 const pageTitle = "Lawn Mowing | Edwards Landscape Group";
 ---
@@ -241,41 +242,7 @@ const pageTitle = "Lawn Mowing | Edwards Landscape Group";
       </div>
     </section>
 
-    <section class="service-section service-section--compact">
-      <div class="container">
-        <h2 class="mb-3">Related Lawn Care Articles</h2>
-        <div class="blog-grid">
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/how-often-should-you-mow-your-lawn">How Often Should You Mow Your Lawn?</a></h3>
-              <p>Get a simple schedule that keeps your lawn healthy through every growth phase.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/common-mowing-mistakes-to-avoid">Common Mowing Mistakes to Avoid</a></h3>
-              <p>Avoid habits that thin turf, stress roots, and lead to uneven growth.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/weekly-vs-biweekly-lawn-service">Weekly vs. Bi-Weekly Lawn Service: What’s Best?</a></h3>
-              <p>Compare service cadence so your lawn always looks tidy and well-kept.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/when-to-edge-your-lawn">When to Edge Your Lawn for the Cleanest Look</a></h3>
-              <p>Learn the best timing for crisp edges that make your yard look polished.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <RelatedServiceBlogs serviceType="mowing" heading="Related Lawn Care Articles" />
   </main>
 
   <Footer />

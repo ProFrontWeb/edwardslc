@@ -2,6 +2,7 @@
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/Navigation.astro";
 import TopBar from "../../components/TopBar.astro";
+import RelatedServiceBlogs from "../../components/RelatedServiceBlogs.astro";
 
 const pageTitle = "Bed Maintenance | Edwards Landscape Group";
 ---
@@ -228,41 +229,7 @@ const pageTitle = "Bed Maintenance | Edwards Landscape Group";
       </div>
     </section>
 
-    <section class="service-section service-section--compact">
-      <div class="container">
-        <h2 class="mb-3">Related Bed Maintenance Articles</h2>
-        <div class="blog-grid">
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/how-to-keep-flower-beds-weed-free">How to Keep Flower Beds Weed-Free</a></h3>
-              <p>Learn the simple habits that keep weeds from taking over beds.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/spring-flower-bed-cleanup-checklist">Spring Flower Bed Cleanup Checklist</a></h3>
-              <p>Use this checklist to prep beds for healthy spring growth.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/how-to-edge-flower-beds">How to Edge Flower Beds for a Crisp Look</a></h3>
-              <p>Create clean lines that keep mulch contained and beds defined.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/mulch-and-bed-maintenance-benefits">Why Mulch and Bed Maintenance Work Best Together</a></h3>
-              <p>See how mulch and routine care work together for lasting results.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <RelatedServiceBlogs serviceType="bed-maintenance" heading="Related Bed Maintenance Articles" />
   </main>
 
   <Footer />

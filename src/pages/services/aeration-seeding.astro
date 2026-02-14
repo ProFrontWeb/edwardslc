@@ -2,6 +2,7 @@
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/Navigation.astro";
 import TopBar from "../../components/TopBar.astro";
+import RelatedServiceBlogs from "../../components/RelatedServiceBlogs.astro";
 
 const pageTitle = "Aeration & Seeding | Edwards Landscape Group";
 ---
@@ -230,41 +231,7 @@ const pageTitle = "Aeration & Seeding | Edwards Landscape Group";
       </div>
     </section>
 
-    <section class="service-section service-section--compact">
-      <div class="container">
-        <h2 class="mb-3">Related Aeration & Seeding Articles</h2>
-        <div class="blog-grid">
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/is-lawn-aeration-worth-it">Is Lawn Aeration Worth It?</a></h3>
-              <p>See how aeration improves turf health and when it delivers the most value.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/best-time-to-aerate-and-seed-in-virginia">Best Time to Aerate and Seed in Virginia</a></h3>
-              <p>Find the ideal seasonal window for healthier growth and stronger roots.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/overseeding-tips-for-thicker-grass">Overseeding Tips for Thicker Grass</a></h3>
-              <p>Use overseeding to fill thin spots and boost lawn density quickly.</p>
-            </div>
-          </article>
-          <article class="blog-card blog-card--compact">
-            <div class="blog-card__body">
-              <div class="blog-card__meta"><span>Related article</span></div>
-              <h3><a href="/blog/how-to-water-after-overseeding">How to Water After Overseeding</a></h3>
-              <p>Keep new seed on track with the right watering schedule after service.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <RelatedServiceBlogs serviceType="aeration-seeding" heading="Related Aeration & Seeding Articles" />
   </main>
 
   <Footer />
