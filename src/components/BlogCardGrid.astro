@@ -1,0 +1,35 @@
+---
+interface BlogCard {
+  title: string;
+  description: string;
+  href?: string;
+  category: string;
+  image: string;
+  imageAlt: string;
+}
+
+interface Props {
+  posts: BlogCard[];
+}
+
+const { posts } = Astro.props;
+---
+
+<div class={`blog-grid blog-grid--count-${posts.length}`}>
+  {
+    posts.map((post) => (
+      <article class="blog-card">
+        <div class="blog-card__image">
+          <img src={post.image} alt={post.imageAlt} loading="lazy" />
+        </div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span>{post.category}</span>
+          </div>
+          <h3>{post.href ? <a href={post.href}>{post.title}</a> : post.title}</h3>
+          <p>{post.description}</p>
+        </div>
+      </article>
+    ))
+  }
+</div>

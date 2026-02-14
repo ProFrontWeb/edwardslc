@@ -3,6 +3,7 @@ import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import TopBar from "../components/TopBar.astro";
 import { serviceBlogs } from "../data/serviceBlogs";
+import BlogCardGrid from "../components/BlogCardGrid.astro";
 
 const pageTitle = "Lawn Care Blog & Updates | Edwards Landscape Group";
 
@@ -97,24 +98,7 @@ const posts = serviceBlogs.map((blog) => ({
           </div>
         </div>
 
-        <div class="blog-grid">
-          {
-            posts.map((post) => (
-              <article class="blog-card">
-                <div class="blog-card__image">
-                  <img src={post.image} alt={post.imageAlt} loading="lazy" />
-                </div>
-                <div class="blog-card__body">
-                  <div class="blog-card__meta">
-                    <span>{post.category}</span>
-                  </div>
-                  <h3>{post.href ? <a href={post.href}>{post.title}</a> : post.title}</h3>
-                  <p>{post.description}</p>
-                </div>
-              </article>
-            ))
-          }
-        </div>
+        <BlogCardGrid posts={posts} />
       </div>
     </section>
   </main>
