@@ -97,7 +97,7 @@ const posts = serviceBlogs.map((blog) => ({
           </div>
         </div>
 
-        <div class="blog-grid">
+        <div class={`blog-grid blog-grid--count-${posts.length}`}>
           {
             posts.map((post) => (
               <article class="blog-card">
