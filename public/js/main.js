@@ -156,15 +156,52 @@
   });
 
   // magnific popup
+  var imageZoomed = false;
+
+  var bindPopupImageZoom = function () {
+    $(".mfp-img")
+      .off("click.galleryZoom")
+      .on("click.galleryZoom", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        imageZoomed = !imageZoomed;
+
+        $(this).css({
+          transform: imageZoomed ? "scale(1.8)" : "scale(1)",
+          transformOrigin: "center center",
+          transition: "transform 0.25s ease",
+          cursor: imageZoomed ? "zoom-out" : "zoom-in",
+        });
+
+        $(".mfp-bottom-bar").css({
+          opacity: imageZoomed ? "0" : "1",
+          visibility: imageZoomed ? "hidden" : "visible",
+        });
+      });
+  };
+
+  var resetPopupImageZoom = function () {
+    imageZoomed = false;
+    $(".mfp-img").css({
+      transform: "scale(1)",
+      cursor: "zoom-in",
+    });
+    $(".mfp-bottom-bar").css({
+      opacity: "1",
+      visibility: "visible",
+    });
+  };
+
   $(".image-popup").magnificPopup({
     type: "image",
-    closeOnContentClick: true,
+    closeOnContentClick: false,
     closeBtnInside: false,
     fixedContentPos: true,
     mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
     gallery: {
       enabled: true,
-      navigateByImgClick: true,
+      navigateByImgClick: false,
       preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
     },
     image: {
@@ -173,6 +210,19 @@
     zoom: {
       enabled: true,
       duration: 300, // don't foget to change the duration also in CSS
+    },
+    callbacks: {
+      open: function () {
+        resetPopupImageZoom();
+        bindPopupImageZoom();
+      },
+      change: function () {
+        resetPopupImageZoom();
+        setTimeout(bindPopupImageZoom, 0);
+      },
+      close: function () {
+        resetPopupImageZoom();
+      },
     },
   });
 
