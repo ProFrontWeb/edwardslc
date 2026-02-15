@@ -19,6 +19,13 @@ export interface ServiceBlog {
 
 export const serviceBlogs: ServiceBlog[] = [
   {
+    title: "From Winter to Spring: Smart Lawn Care for a Strong Start",
+    href: "/blog/winter-to-spring-lawn-care",
+    description:
+      "Use a practical spring transition plan with cleanup, fertilization, aeration, seeding, and mowing for stronger turf.",
+    serviceTypes: ["fertilization-weed-control", "aeration-seeding", "mowing"],
+  },
+  {
     title: "Is Lawn Aeration Worth It?",
     href: "/blog/is-lawn-aeration-worth-it",
     description: "Understand how aeration improves root depth, drainage, and long-term turf health.",
