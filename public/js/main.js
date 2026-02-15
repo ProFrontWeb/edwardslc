@@ -173,6 +173,11 @@
           transition: "transform 0.25s ease",
           cursor: imageZoomed ? "zoom-out" : "zoom-in",
         });
+
+        $(".mfp-bottom-bar").css({
+          opacity: imageZoomed ? "0" : "1",
+          visibility: imageZoomed ? "hidden" : "visible",
+        });
       });
   };
 
@@ -181,6 +186,10 @@
     $(".mfp-img").css({
       transform: "scale(1)",
       cursor: "zoom-in",
+    });
+    $(".mfp-bottom-bar").css({
+      opacity: "1",
+      visibility: "visible",
     });
   };
 
