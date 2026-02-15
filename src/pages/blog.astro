@@ -16,8 +16,6 @@ const formatServiceType = (value: string) =>
 const posts = serviceBlogs.map((blog) => ({
   ...blog,
   category: formatServiceType(blog.serviceTypes[0] ?? "Lawn Care"),
-  image: "/assets/bg_2.jpg",
-  imageAlt: "Freshly maintained lawn and landscaped beds",
 }));
 ---
 
