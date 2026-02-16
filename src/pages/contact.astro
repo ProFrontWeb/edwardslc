@@ -50,6 +50,12 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
   <link rel="stylesheet" href="/css/flaticon.css" />
   <link rel="stylesheet" href="/css/icomoon.css" />
   <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .required-asterisk {
+      color: #ff0000;
+      margin-left: 4px;
+    }
+  </style>
 </head>
 <body>
   <div class="top-bar">
@@ -116,8 +122,8 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                   </div>
                 </div>
               </div>
-              <div class="row no-gutters">
-                <div class="col-md-7">
+              <div class="row no-gutters justify-content-center">
+                <div class="col-md-10 col-lg-8">
                   <div class="contact-wrap w-100 p-md-5 p-4">
                     <h3 class="mb-4">Contact Us</h3>
                     <div id="form-message-warning" class="mb-4"></div>
@@ -133,81 +139,133 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                       <input
                         type="hidden"
                         name="access_key"
-                        value="1d9f1ce3-a745-4654-a8bd-9215ae24a6d2"
+                        value="64dd2468-214d-4f7c-9353-1dc9b56c8076"
                       />
                       <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
 
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="label" for="name">First Name</label>
+                            <label class="label" for="name">
+                              First Name <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
                             <input
                               type="text"
                               class="form-control"
                               name="first name"
                               id="first name"
                               placeholder="First Name"
+                              required
                             />
                             <p
                               id="firstNameErrorMessage"
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              First name is required
                             </p>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="label" for="name">Last Name</label>
+                            <label class="label" for="name">
+                              Last Name <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
                             <input
                               type="text"
                               class="form-control"
                               name="last name"
                               id="last name"
                               placeholder="Last Name"
+                              required
                             />
                             <p
                               id="lastNameErrorMessage"
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              Last name is required
                             </p>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="label" for="email">Email Address</label>
+                            <label class="label" for="email">
+                              Email Address <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
                             <input
                               type="email"
                               class="form-control"
                               name="email"
                               id="email"
                               placeholder="Email"
+                              required
                             />
                             <p
                               id="emailErrorMessage"
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              Email is required
                             </p>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label class="label" for="name">Phone Number</label>
+                            <label class="label" for="name">
+                              Phone Number <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
                             <input
                               type="text"
                               class="form-control"
                               name="phone number"
                               id="phone number"
                               placeholder="Phone Number"
+                              required
                             />
                             <p
                               id="phoneNumberErrorMessage"
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              Phone number is required
                             </p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="address">
+                              Address <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="address"
+                              id="address"
+                              placeholder="Address"
+                              required
+                            />
+                            <p
+                              id="addressErrorMessage"
+                              class="error"
+                              style="font-size: small; color: #ff0000; display: none;"
+                            >
+                              Address is required
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="budget">Estimated Budget</label>
+                            <select class="form-control" name="budget" id="budget">
+                              <option value="">Select a budget range</option>
+                              <option value="$5k-$10k">$5k - $10k</option>
+                              <option value="$10k-$25k">$10k - $25k</option>
+                              <option value="$25k-$50k">$25k - $50k</option>
+                              <option value="$50k-$75k">$50k - $75k</option>
+                              <option value="$75k-$100k">$75k - $100k</option>
+                              <option value="$75k-$100k">$100k+</option>
+                            </select>
                           </div>
                         </div>
                         <div class="col-md-12">
@@ -240,11 +298,11 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                             <div>
                               <input
                                 type="checkbox"
-                                id="Fall and Winter Clean Up"
-                                name="Fall and Winter Clean Up"
-                                value="Fall and Winter Clean Up"
+                                id="Seasonal Cleanup"
+                                name="Seasonal Cleanup"
+                                value="Seasonal Cleanup"
                               />
-                              <label for="Fall and Winter Clean Up">Fall and Winter Clean Up</label>
+                              <label for="Seasonal Cleanup">Seasonal Cleanup</label>
                             </div>
                             <div>
                               <input
@@ -256,6 +314,24 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               <label for="Fertilization and Weed Control"
                                 >Fertilization and Weed Control</label
                               >
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Drainage"
+                                name="Drainage"
+                                value="Drainage"
+                              />
+                              <label for="Drainage">Drainage</label>
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Landscape Design"
+                                name="Landscape Design"
+                                value="Landscape Design"
+                              />
+                              <label for="Landscape Design">Landscape Design</label>
                             </div>
                           </div>
                         </div>
@@ -297,6 +373,26 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               />
                               <label for="Weekly Mowing">Weekly Mowing</label>
                             </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Grading and Land Clearing"
+                                name="Grading and Land Clearing"
+                                value="Grading and Land Clearing"
+                              />
+                              <label for="Grading and Land Clearing"
+                                >Grading and Land Clearing</label
+                              >
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="New Landscape Installs"
+                                name="New Landscape Installs"
+                                value="New Landscape Installs"
+                              />
+                              <label for="New Landscape Installs">New Landscape Installs</label>
+                            </div>
                           </div>
                         </div>
                         <div class="col-md-12">
@@ -314,7 +410,39 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                               class="error"
                               style="font-size: small; color: #ff0000; display: none;"
                             >
+                              Please put in a message
                             </p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <div class="form-check d-flex align-items-start">
+                              <input
+                                type="checkbox"
+                                id="hard-deadline"
+                                name="hard deadline"
+                                value="Hard Deadline"
+                                class="mt-1 mr-2"
+                              />
+                              <label for="hard-deadline">I have a hard deadline for this project.</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <div class="form-check d-flex align-items-start">
+                              <input
+                                type="checkbox"
+                                id="sms-consent"
+                                name="sms consent"
+                                value="SMS Consent"
+                                class="mt-1 mr-2"
+                              />
+                              <label for="sms-consent">
+                                By providing your phone number, you agree to receive text messages
+                                from Edwards Landscape Group.
+                              </label>
+                            </div>
                           </div>
                         </div>
                         <div class="col-md-12">
@@ -326,16 +454,9 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                           </div>
                         </div>
                         <div class="h-captcha" data-captcha="true"></div>
-                        <!-- <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                       </div>
                     </form>
-                  </div>
-                </div>
-                <div class="col-md-5 d-flex align-items-stretch">
-                  <div
-                    class="info-wrap w-100 p-5 img"
-                    style="background-image: url(/assets/work10.jpg);"
-                  >
                   </div>
                 </div>
               </div>
@@ -402,41 +523,43 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
         const lastName = (document.getElementById("last name") as HTMLInputElement).value;
         const email = (document.getElementById("email") as HTMLInputElement).value;
         const phoneNumber = (document.getElementById("phone number") as HTMLInputElement).value;
-        const message = (document.getElementById("message") as HTMLTextAreaElement).value;
-
+        const address = (document.getElementById("address") as HTMLTextAreaElement).value;
         // jQuery selectors with the correct id syntax (use #)
         const firstNameErrorMessage = jQuery("#firstNameErrorMessage");
         const lastNameErrorMessage = jQuery("#lastNameErrorMessage");
         const emailErrorMessage = jQuery("#emailErrorMessage");
         const phoneNumberErrorMessage = jQuery("#phoneNumberErrorMessage");
-        const messageErrorMessage = jQuery("#messageErrorMessage");
+        const addressErrorMessage = jQuery("#addressErrorMessage");
 
         // Reset all error messages first (hide and clear text)
         firstNameErrorMessage.hide().text("");
         lastNameErrorMessage.hide().text("");
         emailErrorMessage.hide().text("");
         phoneNumberErrorMessage.hide().text("");
-        messageErrorMessage.hide().text("");
+        addressErrorMessage.hide().text("");
 
         // Validation checks
         if (firstName.length <= 0) {
           firstNameErrorMessage.text("First Name is required.").show();
+          return false;
         }
         if (lastName.length <= 0) {
           lastNameErrorMessage.text("Last Name is required.").show();
+          return false;
         }
         if (email.length <= 0) {
           emailErrorMessage.text("Email is required.").show();
+          return false;
         }
         if (phoneNumber.length <= 0) {
           phoneNumberErrorMessage.text("Phone Number is required.").show();
+          return false;
         }
-        if (message.length <= 0) {
-          messageErrorMessage.text("Message is required.").show();
-        } else {
-          return true;
+        if (address.length <= 0) {
+          addressErrorMessage.text("Address is required").show();
+          return false;
         }
-        return false;
+        return true;
       }
     </script>
     <script is:inline>
@@ -448,6 +571,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
           const formData = new FormData(this as HTMLFormElement);
           const submittingMessage = jQuery(".submitting");
           const validated = validate();
+
           if (validated) {
             // Make the AJAX request
             jQuery.ajax({

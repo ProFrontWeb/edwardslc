@@ -5,6 +5,99 @@ import TopBar from "../components/TopBar.astro";
 
 const pageTitle =
   "Our Services | Edwards Landscape Group - Lawn Care & Landscaping in Lynchburg, VA";
+
+const services = [
+  {
+    title: "Weekly mowing",
+    description:
+      "Consistent weekly mowing keeps your lawn neat, healthy, and professionally manicured all season long.",
+    image: "/assets/Mowing/Mowing5.jpg",
+    alt: "Crew mowing a residential lawn in Lynchburg, Virginia",
+    link: "/services/mowing.html",
+    id: "weekly-mowing",
+  },
+  {
+    title: "Fertilization & weed control",
+    description:
+      "Targeted fertilization and weed control programs build thick turf and reduce invasive growth.",
+    image: "/public/assets/Fertilization-Weed-Control/FertilizationWeedControl.jpg",
+    alt: "Lawn care specialist applying fertilizer treatment to a green lawn",
+    link: "/services/fertilization-weed-control.html",
+    id: "fertilization-weed-control",
+  },
+  {
+    title: "Aeration & seeding",
+    description:
+      "Core aeration and overseeding improve soil structure and support stronger, healthier roots.",
+    image: "/assets/Aeration-Seeding/AerationSeeding.jpg",
+    alt: "Aeration machine improving soil health on a residential lawn",
+    link: "/services/aeration-seeding.html",
+    id: "aeration-seeding",
+  },
+  {
+    title: "Fall & winter clean up",
+    description:
+      "Seasonal cleanups remove leaves and debris to protect your landscape through colder months.",
+    image: "/public/assets/Seasonal-Cleanup/SeasonalCleanup.jpg",
+    alt: "Landscaping crew clearing leaves from a landscaped property",
+    link: "/services/fall-winter-cleanup.html",
+    id: "fall-winter-cleanup",
+  },
+  {
+    title: "Mulching",
+    description:
+      "Fresh mulch retains moisture, suppresses weeds, and delivers a polished look to your beds.",
+    image: "/assets/Mulching/Mulching4.jpg",
+    alt: "Freshly mulched flower beds with clean edging",
+    link: "/services/mulching.html",
+    id: "mulching",
+  },
+  {
+    title: "Bed maintenance",
+    description:
+      "Detailed edging, trimming, and weeding keep planting beds tidy and intentional.",
+    image: "/assets/Bed-Maintenance/BedMaintenance.jpg",
+    alt: "Well-maintained flower beds with trimmed borders",
+    link: "/services/bed-maintenance.html",
+    id: "bed-maintenance",
+  },
+  {
+    title: "Tree & shrub care",
+    description:
+      "Protect long-term plant health with pruning, treatments, and proactive pest management.",
+    image: "/assets/Tree-Shrub-Care/TreeShrubCare2.jpg",
+    alt: "Shrub care and pruning in a landscaped yard",
+    link: "/services/tree-shrub-care.html",
+    id: "tree-shrub-care",
+  },
+  {
+    title: "Hardscaping",
+    description:
+      "Stonework, patios, and retaining walls add structure, function, and lasting value.",
+    image: "/assets/Hardscaping/Hardscaping2.jpg",
+    alt: "Stone patio and hardscape features in an outdoor living area",
+    link: "/services/hardscaping.html",
+    id: "hardscaping",
+  },
+  {
+    title: "Landscaping",
+    description:
+      "Full landscape installations and enhancements that transform your outdoor space.",
+    image: "/assets/Landscaping/Landscaping1.jpg",
+    alt: "Completed landscape installation with plantings and hardscaping",
+    link: "/services/landscaping.html",
+    id: "landscaping",
+  },
+  {
+    title: "Landscape design",
+    description:
+      "Thoughtful landscape design creates cohesive outdoor spaces tailored to your lifestyle.",
+    image: "/assets/Landscape-Design/LandscapeDesign.jpg",
+    alt: "Professionally designed landscape with plantings and walkways",
+    link: "/services/landscape-design.html",
+    id: "landscape-design",
+  },
+];
 ---
 
 <head>
@@ -71,263 +164,41 @@ const pageTitle =
     </div>
   </section>
 
-  <section class="ftco-section ftco-no-pt" id="services-list">
-    <div class="container" style="max-width: 2000px;">
-      <div class="row" style="justify-content: center; text-align: center;">
-        <div class="col-lg-9 services-wrap px-4 pt-5">
-          <h2 class="mb-4" style="font-weight: 700;">Explore our services</h2>
-          <div class="d-flex align-items-stretch" id="Weekly Mowing">
-            <div class="ftco-animate" style="width: 100%; height: 300px; overflow: hidden;">
-              <img
-                src="/assets/Mowing_Service.jpg"
-                alt="mowing"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
-              />
-            </div>
-            <div style="width: 10%;"></div>
-            <div
-              class="heading-section ftco-animate service-text"
-              style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;"
-            >
-              <h2 class="mb-4">Weekly Mowing</h2>
-              <p>
-                Weekly mowing is key to keeping your lawn looking neat and well-maintained all
-                season long. Our professional mowing services ensure your grass stays at the perfect
-                height for a healthy, manicured appearance.
-              </p>
-              <p>
-                <a href="/services/mowing.html" class="btn btn-primary py-3 px-4">Learn more</a>
-              </p>
-            </div>
+  <section class="section-padding services-page" id="services-list" aria-labelledby="services-list-heading">
+    <div class="container">
+      <div class="section-header text-center">
+        <p class="eyebrow">Service options</p>
+        <h2 id="services-list-heading">Lawn &amp; landscape services tailored to your property</h2>
+        <p class="section-lead">
+          Explore our full lineup of residential and commercial services designed to keep your
+          landscape healthy, polished, and ready for every season.
+        </p>
+      </div>
+      <div class="row services-page-grid">
+        {services.map((service) => (
+          <div class="col-md-6 col-lg-4 d-flex" key={service.id}>
+            <a href={service.link} class="service-card-link" aria-label={`Learn more about ${service.title}`}>
+              <article
+                class="service-card service-card--image"
+                id={service.id}
+                itemscope
+                itemtype="https://schema.org/Service"
+              >
+                <meta itemprop="url" content={service.link} />
+                <div class="service-card__media">
+                  <img src={service.image} alt={service.alt} loading="lazy" itemprop="image" />
+                </div>
+                <div class="service-card__body">
+                  <h3 itemprop="name">{service.title}</h3>
+                  <p itemprop="description">{service.description}</p>
+                  <span class="arrow-link">
+                    Learn more
+                  </span>
+                </div>
+              </article>
+            </a>
           </div>
-          <div
-            class="service-item align-items-stretch"
-            style="padding-top: 35px;"
-            id="Fertilization and Weed Control"
-          >
-            <div
-              class="heading-section ftco-animate service-text"
-              style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;"
-            >
-              <h2 class="mb-4">Fertilization and Weed Control</h2>
-              <p>
-                Fertilization and weed control are essential for a lush, green lawn free from
-                unwanted growth. Our services provide the right nutrients while eliminating weeds to
-                keep your yard looking pristine.
-              </p>
-              <p>
-                <a
-                  href="/services/fertilization-weed-control.html"
-                  class="btn btn-primary py-3 px-4">Learn more</a
-                >
-              </p>
-            </div>
-            <div style="width: 10%;"></div>
-            <div class="ftco-animate" style="width: 100%; height: 300px; overflow: hidden;">
-              <img
-                src="/assets/Fertilization_Service.png"
-                alt="mowing"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
-              />
-            </div>
-          </div>
-          <div
-            class="d-flex align-items-stretch"
-            style="padding-top: 35px;"
-            id="Aeration and Seeding"
-          >
-            <div class="ftco-animate" style="width: 100%; height: 300px; overflow: hidden;">
-              <img
-                src="/assets/Aeration_Service.jpg"
-                alt="mowing"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
-              />
-            </div>
-            <div style="width: 10%;"></div>
-            <div
-              class="heading-section ftco-animate service-text"
-              style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;"
-            >
-              <h2 class="mb-4">Aeration and Seeding</h2>
-              <p>
-                Aeration and seeding are key to revitalizing your lawn and promoting healthy growth.
-                Our expert services help improve soil structure and ensure your grass gets the
-                nutrients it needs to thrive.
-              </p>
-              <p>
-                <a href="/services/aeration-seeding.html" class="btn btn-primary py-3 px-4"
-                  >Learn more</a
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="service-item align-items-stretch"
-            style="padding-top: 35px;"
-            id="Fall and Winter Clean Up"
-          >
-            <div
-              class="heading-section ftco-animate service-text"
-              style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;"
-            >
-              <h2 class="mb-4">Fall and Winter Clean Up</h2>
-              <p>
-                Fall and winter clean-up is crucial for preparing your yard for the colder months.
-                Our services remove leaves, debris, and dead plants, ensuring your landscape stays
-                tidy and ready for spring
-              </p>
-              <p>
-                <a href="/services/fall-winter-cleanup.html" class="btn btn-primary py-3 px-4"
-                  >Learn more</a
-                >
-              </p>
-            </div>
-            <div style="width: 10%;"></div>
-            <div class="ftco-animate" style="width: 100%; height: 300px; overflow: hidden;">
-              <img
-                src="/assets/FallCleanUp_Service.jpg"
-                alt="mowing"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
-              />
-            </div>
-          </div>
-          <div class="d-flex align-items-stretch" style="padding-top: 35px;" id="Mulching">
-            <div class="ftco-animate" style="width: 100%; height: 300px; overflow: hidden;">
-              <img
-                src="/assets/Mulching_Service.jpg"
-                alt="mowing"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
-              />
-            </div>
-            <div style="width: 10%;"></div>
-            <div
-              class="heading-section ftco-animate service-text"
-              style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;"
-            >
-              <h2 class="mb-4">Mulching</h2>
-              <p>
-                Mulching is essential for maintaining healthy soil and vibrant plants in your
-                garden. Our mulching services help retain moisture, reduce weeds, and provide your
-                landscape with a polished, finished look.
-              </p>
-              <p>
-                <a href="/services/mulching.html" class="btn btn-primary py-3 px-4">Learn more</a>
-              </p>
-            </div>
-          </div>
-          <div class="service-item align-items-stretch" style="padding-top: 35px;" id="Hardscaping">
-            <div
-              class="heading-section ftco-animate service-text"
-              style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;"
-            >
-              <h2 class="mb-4">Bed Maintenance</h2>
-              <p>
-                A well-maintained flower bed can be the highlight of your garden, but it needs
-                constant care to flourish. We provide expert flower bed maintenance to keep your
-                flowers blooming beautifully all season long.
-              </p>
-              <p>
-                <a href="/services/bed-maintenance.html" class="btn btn-primary py-3 px-4"
-                  >Learn more</a>
-              </p>
-            </div>
-
-            <div style="width: 10%;"></div>
-            <div class="ftco-animate" style="width: 100%; height: 300px; overflow: hidden;">
-              <img
-                src="/assets/Bed_Service.jpg"
-                alt="mowing"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
-              />
-            </div>
-          </div>
-          <div class="d-flex align-items-stretch" style="padding-top: 35px;" id="Landscaping">
-            <div class="ftco-animate" style="width: 100%; height: 300px; overflow: hidden;">
-              <img
-                src="/assets/ShrubCare_Service.jpg"
-                alt="mowing"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
-              />
-            </div>
-            <div style="width: 10%;"></div>
-            <div
-              class="heading-section ftco-animate service-text"
-              style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;"
-            >
-              <h2 class="mb-4">Tree and Shrub Care</h2>
-              <p>
-                Keeping your trees and shrubs healthy is essential to maintaining a vibrant
-                landscape. Our expert care services help protect them from disease and pests,
-                ensuring they thrive throughout the seasons.
-              </p>
-              <p>
-                <a href="/services/tree-shrub-care.html" class="btn btn-primary py-3 px-4"
-                  >Learn more</a>
-              </p>
-            </div>
-          </div>
-          <div
-            class="service-item align-items-stretch"
-            style="padding-top: 35px;"
-            id="Bed Maintenance"
-          >
-            <div
-              class="heading-section ftco-animate service-text"
-              style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;"
-            >
-              <h2 class="mb-4">Hardscaping</h2>
-              <p>
-                A beautifully designed yard starts with solid structure. Our expert hardscaping
-                services bring lasting style and function to your outdoor space from elegant stone
-                pathways to durable retaining walls so your landscape stays stunning year-round with
-                less upkeep.
-              </p>
-              <p>
-                <a href="/services/hardscaping.html" class="btn btn-primary py-3 px-4"
-                  >Learn more</a>
-              </p>
-            </div>
-
-            <div style="width: 10%;"></div>
-            <div class="ftco-animate" style="width: 100%; height: 300px; overflow: hidden;">
-              <img
-                src="/assets/Landscaping_Service.jpg"
-                alt="mowing"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
-              />
-            </div>
-          </div>
-          <div
-            class="d-flex align-items-stretch"
-            style="padding-top: 35px;"
-            id="Tree and Shrub Care"
-          >
-            <div class="ftco-animate" style="width: 100%; height: 300px; overflow: hidden;">
-              <img
-                src="/assets/Landscape_Design_Service.jpg"
-                alt="mowing"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
-              />
-            </div>
-            <div style="width: 10%;"></div>
-            <div
-              class="heading-section ftco-animate service-text"
-              style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;"
-            >
-              <h2 class="mb-4">Landscape Design</h2>
-              <p>
-                A great yard doesn't happen by accident it's designed. Our professional landscape
-                design services transform your outdoor space with thoughtful layouts, plant
-                selections, and features that reflect your style and enhance your home's curb
-                appeal, season after season.
-              </p>
-              <p>
-                <a href="/services/landscaping.html" class="btn btn-primary py-3 px-4"
-                  >Learn more</a>
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>

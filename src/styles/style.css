@@ -12413,6 +12413,76 @@ body {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
+.services-page {
+  background: #f8fbf9;
+}
+
+.services-page-grid {
+  margin-top: 28px;
+}
+
+.service-card-link {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+}
+
+.service-card-link:focus-visible {
+  outline: 3px solid #0d8f4c;
+  outline-offset: 4px;
+  border-radius: 18px;
+}
+
+.service-card--image {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+}
+
+.service-card__media {
+  position: relative;
+  width: 100%;
+  padding-top: 58%;
+  overflow: hidden;
+}
+
+.service-card__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card--image:hover .service-card__media img {
+  transform: scale(1.05);
+}
+
+.service-card__body {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-card__body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f4d2b;
+  margin-bottom: 0;
+}
+
+.service-card__body p {
+  color: #4c5b52;
+  margin-bottom: 0;
+}
+
+.service-card__body .arrow-link {
+  margin-top: auto;
+}
+
 .icon-wrapper {
   width: 56px;
   height: 56px;
@@ -13186,6 +13256,43 @@ body {
   padding: 80px 0;
 }
 
+.service-image-grid {
+  row-gap: 24px;
+}
+
+.service-image-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(15, 77, 43, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-image-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-image-card figcaption {
+  padding: 18px 20px 22px;
+}
+
+.service-image-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #0f4d2b;
+}
+
+.service-image-card p {
+  margin-bottom: 0;
+  color: #4a5b53;
+}
+
 .service-accordion details {
   background: #ffffff;
   border: 1px solid #e3e9e4;
@@ -13295,19 +13402,27 @@ body {
 
 .matrix-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 40px;
 }
 
 .matrix-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 18px 18px 14px;
-  border: 1px solid #e5ece6;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
   height: 100%;
 }
 
+@media (max-width: 991px) {
+  .matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.matrix-card h3,
 .matrix-card h4 {
   margin-bottom: 6px;
 }
@@ -13695,6 +13810,36 @@ body {
   z-index: 1;
 }
 
+.service-page--compact .service-hero {
+  padding: 64px 0;
+  min-height: auto;
+}
+
+.service-page--compact .service-section,
+.service-page--compact .service-section.bg-light {
+  padding: 32px 0;
+}
+
+.service-page--compact .section-label {
+  margin-bottom: 6px;
+}
+
+.service-page--compact h2 {
+  margin-bottom: 12px;
+}
+
+.service-page--compact .service-image-card {
+  margin-bottom: 0;
+}
+
+.service-page--compact .callout-panel {
+  padding: 22px;
+}
+
+.service-page--compact .pill-list li {
+  margin-bottom: 6px;
+}
+
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -13809,8 +13954,33 @@ body {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+}
+
+.blog-grid--count-1 {
+  grid-template-columns: minmax(280px, 420px);
+  justify-content: center;
+}
+
+.blog-grid--count-2 {
+  grid-template-columns: repeat(2, minmax(280px, 420px));
+  justify-content: center;
+}
+
+@media (max-width: 991.98px) {
+  .blog-grid,
+  .blog-grid--count-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog-grid,
+  .blog-grid--count-1,
+  .blog-grid--count-2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .blog-card {
@@ -13848,6 +14018,18 @@ body {
 .blog-card h3 {
   font-size: 20px;
   margin: 0;
+}
+
+.blog-card--compact .blog-card__body {
+  padding: 16px 18px 18px;
+}
+
+.blog-card--compact h3 {
+  font-size: 18px;
+}
+
+.blog-card--compact p {
+  margin-bottom: 0;
 }
 
 .blog-card__body p {

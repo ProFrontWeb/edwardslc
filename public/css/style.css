@@ -13695,6 +13695,69 @@ body {
   z-index: 1;
 }
 
+.service-page--compact .service-hero {
+  padding: 64px 0;
+  min-height: auto;
+}
+
+.service-page--compact .service-section,
+.service-page--compact .service-section.bg-light {
+  padding: 32px 0;
+}
+
+.service-page--compact .section-label {
+  margin-bottom: 6px;
+}
+
+.service-page--compact h2 {
+  margin-bottom: 12px;
+}
+
+.service-page--compact .service-image-card {
+  margin-bottom: 0;
+}
+
+.service-page--compact .callout-panel {
+  padding: 22px;
+}
+
+.service-page--compact .pill-list li {
+  margin-bottom: 6px;
+}
+
+.service-visual {
+  background: linear-gradient(
+    120deg,
+    var(--service-accent-start, #f2f8f4) 0%,
+    var(--service-accent-end, #e0f1e7) 100%
+  );
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(7, 43, 28, 0.12);
+}
+
+.service-visual__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--service-accent-badge, #0f4d2b);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.service-visual__image {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  max-height: 360px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+}
+
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -13809,8 +13872,33 @@ body {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+}
+
+.blog-grid--count-1 {
+  grid-template-columns: minmax(280px, 420px);
+  justify-content: center;
+}
+
+.blog-grid--count-2 {
+  grid-template-columns: repeat(2, minmax(280px, 420px));
+  justify-content: center;
+}
+
+@media (max-width: 991.98px) {
+  .blog-grid,
+  .blog-grid--count-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog-grid,
+  .blog-grid--count-1,
+  .blog-grid--count-2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .blog-card {

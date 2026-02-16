@@ -2,8 +2,9 @@
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/Navigation.astro";
 import TopBar from "../../components/TopBar.astro";
+import RelatedServiceBlogs from "../../components/RelatedServiceBlogs.astro";
 
-const pageTitle = "Mulching Services | Edwards Landscape Group";
+const pageTitle = "Mulching | Edwards Landscape Group";
 ---
 
 <head>
@@ -22,7 +23,7 @@ const pageTitle = "Mulching Services | Edwards Landscape Group";
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta
     name="description"
-    content="Refresh your beds with premium mulching from Edwards Landscape Group. We install clean edges, the right mulch depth, and professional finishes for healthier soil and standout curb appeal."
+    content="Refresh your beds with a clean, finished look through professional mulching services in Lynchburg, VA."
   />
   <meta
     name="keywords"
@@ -54,202 +55,181 @@ const pageTitle = "Mulching Services | Edwards Landscape Group";
   <TopBar />
 
   <Navigation />
-  <main>
+  <main class="service-page service-page--compact">
     <section
-      class="service-hero service-hero--trugreen"
-      style="background-image: url('/assets/Mulching_service.jpg');"
+      class="service-hero service-hero--trugreen service-hero--compact"
+      style="background-image: url('/assets/Mulching/Mulching5.jpg');"
     >
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-xl-6 hero-content-block">
-            <h1 class="mb-3">Color, moisture control, and crisp beds in one visit</h1>
+          <div class="col-lg-9 col-xl-7 hero-content-block">
+            <h1 class="mb-2">Mulching</h1>
             <p class="mb-4 lead">
-              Slim TruGreen-inspired banner with left-anchored copy no yellow accents, just clear
-              reasons to refresh your beds.
+              Fresh mulch improves curb appeal while helping protect plants and soil.
+              Our mulching service provides even coverage and clean bed edges for a professional finish.
             </p>
-            <div class="hero-meta mb-4">
-              <span class="tg-badge">Dyed &amp; natural options</span>
-              <span class="tg-badge">Bed prep included</span>
-              <span class="tg-badge">Sharp, slim edging</span>
-            </div>
+            <a href="/contact" class="btn btn-primary">Get a Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service-section service-section--compact">
+      <div class="container">
+        <h2 class="mb-3">What’s included with Mulching</h2>
+        <div class="matrix-grid">
+          <div class="matrix-card">
+            <h3>Bed preparation</h3>
+            <p>
+              We clear out loose debris, tidy the beds, and create a clean base so new mulch
+              looks crisp and performs better from the start.
+            </p>
+          </div>
+          <div class="matrix-card">
+            <h3>Even mulch installation</h3>
+            <p>
+              A consistent depth helps regulate soil temperature and moisture while giving your
+              beds a rich, uniform appearance.
+            </p>
+          </div>
+          <div class="matrix-card">
+            <h3>Defined bed edging</h3>
+            <p>
+              Sharp, defined edges keep mulch where it belongs and make your beds stand out with
+              clean, professional lines.
+            </p>
+          </div>
+          <div class="matrix-card">
+            <h3>Debris removal</h3>
+            <p>
+              We haul away loose debris and excess material so your landscape looks finished,
+              tidy, and ready to enjoy.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="service-section bg-light">
+    <section class="service-section service-section--compact">
       <div class="container">
-        <div class="section-label">Mulch palette</div>
-        <h2 class="mb-4">Pick a finish that fits your landscape</h2>
-        <div class="style-swatches">
-          <div class="swatch">Espresso brown</div>
-          <div class="swatch">Classic black</div>
-          <div class="swatch">Warm cedar</div>
-          <div class="swatch">Natural hardwood</div>
-          <div class="swatch">Playground-safe chips</div>
-        </div>
-        <p class="mt-3 mb-0">
-          We source consistent color lots and install at the right depth to protect soil temperature
-          and moisture.
-        </p>
+        <h2 class="mb-3">Why Mulching Matters</h2>
+        <ul class="bullet-list">
+          <li>Enhances landscape appearance with rich color and a finished look.</li>
+          <li>Retains moisture and protects roots during hot, dry stretches.</li>
+          <li>Reduces weed growth by blocking sunlight and limiting germination.</li>
+          <li>Helps insulate soil so plants experience fewer temperature swings.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="service-section">
+    <section class="service-section service-section--compact">
       <div class="container">
-        <div class="section-label">Install approach</div>
-        <h2 class="mb-4">Prep, edge, and place for lasting color</h2>
-        <div class="row gutter-40 align-items-start">
-          <div class="col-lg-5">
-            <div class="tg-card h-100">
-              <h3>Bed prep</h3>
-              <ul class="checklist">
-                <li>Remove weeds and debris, loosen crusted soil for better water exchange.</li>
-                <li>Cut a slim trench edge that keeps mulch off turf and hardscape.</li>
-                <li>Feather high spots and smooth around shrubs for a finished grade.</li>
+        <div
+          class="service-visual"
+          style="--service-accent-start: #f1f9f6; --service-accent-end: #d7f0e5; --service-accent-badge: #2f7d59;"
+        >
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <span class="service-visual__eyebrow">Fresh Finish</span>
+              <h2 class="mb-3">Mulch that makes beds pop</h2>
+              <p>
+                A clean layer of mulch locks in moisture, keeps weeds down, and gives your beds a
+                rich, finished look that highlights your plantings.
+              </p>
+              <ul class="pill-list">
+                <li class="pill">Moisture shield</li>
+                <li class="pill">Weed control</li>
+                <li class="pill">Color refresh</li>
               </ul>
             </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="tg-card highlight-card h-100">
-              <h3>Placement options</h3>
-              <div class="two-col-list">
-                <div>
-                  <h5>Refresh</h5>
-                  <p>Top off existing mulch with a color-matched layer for a quick lift.</p>
-                </div>
-                <div>
-                  <h5>Full reset</h5>
-                  <p>
-                    Strip faded product, reshape beds, and install a fresh base at proper depth.
-                  </p>
-                </div>
-                <div>
-                  <h5>Play &amp; pet friendly</h5>
-                  <p>
-                    Install chips where kids and pets roam, with edging that keeps material
-                    contained.
-                  </p>
-                </div>
-              </div>
-              <a href="contact.html" class="btn btn-primary mt-3">Build my mulch plan</a>
+            <div class="col-lg-6">
+              <img
+                class="service-visual__image"
+                src="/assets/Mulching/Mulching4.jpg"
+                alt="Fresh mulch installed around landscape plants"
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="service-section bg-light">
+    <section class="service-section service-section--compact">
       <div class="container">
-        <div class="section-label">Schedule map</div>
-        <h2 class="mb-4">Plan installs around weather and color goals</h2>
-        <div class="row gutter-40 align-items-start">
-          <div class="col-lg-6">
-            <div class="timeline-rail">
-              <div class="rail-item">
-                <span class="rail-dot"></span>
-                <h4>Early spring</h4>
-                <p>
-                  Book Marchâ€“April to lock in the freshest color lots and prep beds before weeds
-                  surface.
-                </p>
-              </div>
-              <div class="rail-item">
-                <span class="rail-dot"></span>
-                <h4>Summer refresh</h4>
-                <p>Add a light top-off in July for shaded beds to keep tones rich through heat.</p>
-              </div>
-              <div class="rail-item">
-                <span class="rail-dot"></span>
-                <h4>Fall lock</h4>
-                <p>
-                  Install in October to insulate roots, reduce frost heave, and keep storm washouts
-                  in check.
-                </p>
-              </div>
-            </div>
+        <h2 class="mb-3">Benefits of Mulching in Lynchburg, VA</h2>
+        <div class="matrix-grid">
+          <div class="matrix-card">
+            <h3>Moisture retention</h3>
+            <p>Mulch helps soil stay hydrated longer, protecting roots during hot Central Virginia summers.</p>
           </div>
-          <div class="col-lg-6">
-            <div class="service-accordion">
-              <details open>
-                <summary>Can I mix colors between beds?</summary>
-                <p>
-                  Yes front beds often get espresso while natural hardwood softens backyard
-                  plantings. We'll edge between for a clean break.
-                </p>
-              </details>
-              <details>
-                <summary>How do you keep mulch off hard surfaces?</summary>
-                <p>
-                  We trench a slim edge, tarp hardscape, and finish with a blower sweep so stones
-                  and walkways stay spotless.
-                </p>
-              </details>
-              <details>
-                <summary>What about rain on install day?</summary>
-                <p>
-                  Light rain is fine and even helps color set. Heavy rain reschedules automatically
-                  no extra fee.
-                </p>
-              </details>
-            </div>
+          <div class="matrix-card">
+            <h3>Weed suppression</h3>
+            <p>A clean mulch layer blocks sunlight to reduce weed growth and keep beds looking tidy.</p>
+          </div>
+          <div class="matrix-card">
+            <h3>Enhanced curb appeal</h3>
+            <p>Fresh mulch delivers a polished, finished look that highlights your landscape design.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="service-section bg-light">
+    <section class="service-section service-section--compact">
       <div class="container">
-        <div class="section-label">Seasonal payoffs</div>
-        <h2 class="mb-4">How fresh mulch works through the year</h2>
-        <div class="service-timeline">
-          <div class="timeline-step">
-            <div class="timeline-dot">Spring</div>
-            <div>
-              <h4>Jump-start growth</h4>
-              <p>Locks moisture for new plantings and suppresses weeds before they sprout.</p>
-            </div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-dot">Summer</div>
-            <div>
-              <h4>Heat protection</h4>
-              <p>Shields roots from harsh temps and keeps soil from baking near foundations.</p>
-            </div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-dot">Fall</div>
-            <div>
-              <h4>Storm-ready</h4>
-              <p>Holds soil in place and prevents washouts as storms roll through.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <h2 class="mb-4">Frequently Asked Questions</h2>
 
-    <section class="service-section">
-      <div class="container">
-        <div class="section-label">Care tips</div>
-        <h2 class="mb-4">Keep beds tidy between visits</h2>
-        <div class="tg-card-grid three-col">
-          <div class="tg-card">
-            <h3>Quick fluff</h3>
-            <p>Rake lightly once a month to keep color bright and avoid matting.</p>
-          </div>
-          <div class="tg-card">
-            <h3>Water check</h3>
-            <p>After installs, water beds to settle fibers and lock coverage in place.</p>
-          </div>
-          <div class="tg-card">
-            <h3>Bundle it</h3>
+        <div class="service-accordion">
+          <details open>
+            <summary>How often should mulch be replaced?</summary>
             <p>
-              Pair mulching with bed maintenance for weed pulls and shrub shaping on each visit.
+            Many properties benefit from refreshing mulch once per year. Sun exposure, slope, and rainfall can affect how quickly mulch breaks down.
             </p>
-          </div>
+          </details>
+
+          <details>
+            <summary>How much mulch do I need?</summary>
+            <p>
+            Mulch needs depend on bed size and the depth required. We typically aim for an even layer that looks clean and supports plant health.
+            We’ll estimate volume during the quote.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do you remove old mulch?</summary>
+            <p>
+            In most cases, we refresh by top-dressing. If mulch buildup is excessive or a bed needs reworking, we can discuss removal options.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will mulch stop weeds completely?</summary>
+            <p>
+            Mulch helps reduce weeds, but it may not eliminate them entirely. Proper bed prep and ongoing maintenance usually provide the best results.
+            </p>
+          </details>
+
+          <details>
+            <summary>What type of mulch is best?</summary>
+            <p>
+            Common choices include hardwood mulch and dyed mulch. The “best” option depends on your preference, budget, and the look you want for the property.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can you mulch around trees?</summary>
+            <p>
+            Yes, but proper technique matters. We avoid piling mulch too high against trunks to help prevent moisture and rot issues.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do you edge beds before mulching?</summary>
+            <p>Yes. Clean bed edges create a sharp finish and help the mulch stay in place.</p>
+          </details>
         </div>
       </div>
     </section>
+
+    <RelatedServiceBlogs serviceType="mulching" heading="Related Mulching Articles" />
   </main>
 
   <Footer />

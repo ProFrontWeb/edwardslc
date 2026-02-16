@@ -2,8 +2,9 @@
 import Footer from "../../components/Footer.astro";
 import Navigation from "../../components/Navigation.astro";
 import TopBar from "../../components/TopBar.astro";
+import RelatedServiceBlogs from "../../components/RelatedServiceBlogs.astro";
 
-const pageTitle = "Flower Bed Maintenance | Edwards Landscape Group";
+const pageTitle = "Bed Maintenance | Edwards Landscape Group";
 ---
 
 <head>
@@ -22,11 +23,11 @@ const pageTitle = "Flower Bed Maintenance | Edwards Landscape Group";
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta
     name="description"
-    content="Keep beds healthy and weed-free with Edwards Landscape Group's flower bed maintenance. Seasonal pruning, clean edging, and plant care for standout color and structure."
+    content="Keep landscape beds clean, edged, and weed-free with professional bed maintenance services in Lynchburg, VA."
   />
   <meta
     name="keywords"
-    content="bed maintenance Lynchburg, flower bed care, pruning and weeding, landscape maintenance"
+    content="bed maintenance lynchburg, landscape bed care, weed control beds, garden cleanup"
   />
   <link id="favicon" rel="icon" type="image/png" href="/assets/favicon.ico" />
   <link
@@ -54,194 +55,181 @@ const pageTitle = "Flower Bed Maintenance | Edwards Landscape Group";
   <TopBar />
 
   <Navigation />
-
-  <main>
+  <main class="service-page service-page--compact">
     <section
-      class="service-hero service-hero--trugreen"
-      style="background-image: url('/assets/Bed_Maintenance.jpg');"
+      class="service-hero service-hero--trugreen service-hero--compact"
+      style="background-image: url('/assets/Bed-Maintenance/BedMaintenance1.jpg');"
     >
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-xl-6 hero-content-block">
-            <h1 class="mb-3">Beds that stay weed-free, edged, and presentable</h1>
+          <div class="col-lg-9 col-xl-7 hero-content-block">
+            <h1 class="mb-2">Bed Maintenance</h1>
             <p class="mb-4 lead">
-              Clean, narrow hero with left-justified text to mirror TruGreen's simplicity while
-              spotlighting routine care.
+              Our bed maintenance services keep your landscape looking neat and intentional.
+              We remove weeds, trim growth, maintain edges, and clean out debris so your property stays presentable.
+            </p>
+            <a href="/contact" class="btn btn-primary">Get a Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service-section service-section--compact">
+      <div class="container">
+        <h2 class="mb-3">What’s included with Bed Maintenance</h2>
+        <div class="matrix-grid">
+          <div class="matrix-card">
+            <h3>Weed removal</h3>
+            <p>
+              We remove weeds at the root to keep beds clean and reduce competition so your
+              plants have the space and nutrients they need.
+            </p>
+          </div>
+          <div class="matrix-card">
+            <h3>Plant trimming</h3>
+            <p>
+              Light trimming and shaping keeps growth tidy, encourages healthier branching, and
+              helps your beds maintain a manicured look.
+            </p>
+          </div>
+          <div class="matrix-card">
+            <h3>Edge touch-ups</h3>
+            <p>
+              We refresh bed edges so the lines stay crisp, keeping mulch contained and giving
+              the landscape a polished finish.
+            </p>
+          </div>
+          <div class="matrix-card">
+            <h3>Debris cleanup</h3>
+            <p>
+              Leaves, sticks, and debris are cleared away so your beds look tidy and welcoming
+              without you lifting a finger.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="service-section bg-light">
+    <section class="service-section service-section--compact">
       <div class="container">
-        <div class="section-label">What we tackle</div>
-        <h2 class="mb-4">The essentials that keep beds sharp</h2>
-        <div class="tg-card-grid three-col">
-          <div class="tg-card">
-            <h3>Weed control</h3>
-            <p>Hand pulls for broadleaf invaders plus targeted spot sprays where safe.</p>
-          </div>
-          <div class="tg-card">
-            <h3>Bed edges</h3>
-            <p>Re-cut or touch up the trench so mulch stays put and turf lines stay crisp.</p>
-          </div>
-          <div class="tg-card">
-            <h3>Shrub shape-up</h3>
-            <p>Light pruning for structure and visibility, timing cuts by plant type.</p>
-          </div>
-        </div>
+        <h2 class="mb-3">Why Bed Maintenance Matters</h2>
+        <ul class="bullet-list">
+          <li>Prevents weeds from taking over and spreading throughout the beds.</li>
+          <li>Keeps beds looking crisp, professional, and well cared for all season.</li>
+          <li>Supports healthier plants by reducing competition for water and nutrients.</li>
+          <li>Protects your landscape investment by keeping plantings tidy and thriving.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="service-section">
+    <section class="service-section service-section--compact">
       <div class="container">
-        <div class="section-label">Visit rhythm</div>
-        <h2 class="mb-4">A monthly cadence that flexes with growth</h2>
-        <div class="service-matrix">
-          <div class="matrix-row">
-            <div class="matrix-label">Early spring</div>
-            <div class="matrix-value">Prep beds, pre-emergent where appropriate, edge resets</div>
-          </div>
-          <div class="matrix-row">
-            <div class="matrix-label">Peak season</div>
-            <div class="matrix-value">Bi-weekly weed pulls and pruning touch-ups</div>
-          </div>
-          <div class="matrix-row">
-            <div class="matrix-label">Late season</div>
-            <div class="matrix-value">Final shaping, mulch spot fixes, perennial cutbacks</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="service-section bg-light">
-      <div class="container">
-        <div class="section-label">Seasonal calendar</div>
-        <h2 class="mb-4">What we focus on during each visit</h2>
-        <table class="comparison-table mb-4">
-          <thead>
-            <tr>
-              <th style="width: 28%">Timing</th>
-              <th>Focus</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Early spring</td>
-              <td
-                >Cut back perennials, reshape beds, pre-emergent where appropriate, and reset edges.</td
-              >
-            </tr>
-            <tr>
-              <td>Mid-season</td>
-              <td>Hand-weed beds, tidy shrubs, deadhead blooms, and refresh thin mulch bands.</td>
-            </tr>
-            <tr>
-              <td>Late season</td>
-              <td>Rejuvenation pruning, perennial cleanups, and soil loosening before winter.</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="cta-strip">
-          <p>Choose monthly or bi-weekly touchpoints; we'll adjust based on growth.</p>
-          <a href="contact.html" class="btn btn-primary">Set my cadence</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="service-section">
-      <div class="container">
-        <div class="section-label">Add-on menu</div>
-        <h2 class="mb-4">Build a bed care bundle</h2>
-        <div class="row gutter-40">
-          <div class="col-lg-6">
-            <div class="service-accordion">
-              <details open>
-                <summary>Annual installs</summary>
-                <p>
-                  Swap seasonal color in planters and entry beds with soil refresh, fertilizer, and
-                  irrigation check.
-                </p>
-              </details>
-              <details>
-                <summary>Micro pruning</summary>
-                <p>
-                  Quick visits between major trims to keep hedges and boxwoods tight before events.
-                </p>
-              </details>
-              <details>
-                <summary>Bed edging only</summary>
-                <p>
-                  Standalone edge refresh for driveways and walkways when you don't need a full
-                  visit.
-                </p>
-              </details>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="matrix-grid">
-              <div class="matrix-card">
-                <h4>Soil boosts</h4>
-                <p>Compost top-dressing and slow-release nutrition for flowering beds.</p>
-                <div class="mini-badges">
-                  <span>Organic options</span>
-                  <span>Microbial tea</span>
-                </div>
-              </div>
-              <div class="matrix-card">
-                <h4>Landscape fabric checks</h4>
-                <p>Repair tears, tuck edges, and re-pin areas where weeds sneak through.</p>
-              </div>
-              <div class="matrix-card">
-                <h4>Seasonal lighting</h4>
-                <p>
-                  Trim around fixtures, replace bulbs, and reposition for refreshed night curb
-                  appeal.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="service-section bg-light">
-      <div class="container">
-        <div class="section-label">Protection plan</div>
-        <h2 class="mb-4">Pair maintenance with preventive care</h2>
-        <div class="row gutter-40 align-items-start">
-          <div class="col-lg-6">
-            <div class="tg-card h-100">
-              <h3>Mulch &amp; soil</h3>
+        <div
+          class="service-visual"
+          style="--service-accent-start: #f1f9f6; --service-accent-end: #d7f0e5; --service-accent-badge: #2f7d59;"
+        >
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <span class="service-visual__eyebrow">Crisp Edges</span>
+              <h2 class="mb-3">Beds that look freshly detailed</h2>
               <p>
-                Refresh mulch to lock moisture and reduce weeds; loosen soil near shrubs to keep
-                roots breathing.
+                We trim, edge, and refresh beds so your plants stay the focus and your landscape
+                looks clean from every angle.
               </p>
-              <ul class="checklist">
-                <li>Color-matched mulch top-offs</li>
-                <li>Granular weed barrier where safe</li>
-                <li>Hand-weeding around delicate plantings</li>
+              <ul class="pill-list">
+                <li class="pill">Clean edging</li>
+                <li class="pill">Weed removal</li>
+                <li class="pill">Bed reshaping</li>
               </ul>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="tg-card highlight-card h-100">
-              <h3>Seasonal shaping</h3>
-              <p class="mb-3">
-                We time pruning so blooms aren't lost and growth stays healthy into next season.
-              </p>
-              <div class="pill-list">
-                <span>Spring: structure cuts</span>
-                <span>Summer: light trims</span>
-                <span>Fall: rejuvenation</span>
-              </div>
-              <a href="contact.html" class="btn btn-primary mt-2">Plan my visits</a>
+            <div class="col-lg-6">
+              <img
+                class="service-visual__image"
+                src="/assets/Bed-Maintenance/BedMaintenance.jpg"
+                alt="Neatly edged landscape bed with fresh mulch"
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="service-section service-section--compact">
+      <div class="container">
+        <h2 class="mb-3">Benefits of Bed Maintenance in Lynchburg, VA</h2>
+        <div class="matrix-grid">
+          <div class="matrix-card">
+            <h3>Cleaner landscape presentation</h3>
+            <p>Routine weeding and edging keep beds crisp and well-defined for a professional look.</p>
+          </div>
+          <div class="matrix-card">
+            <h3>Healthier plants</h3>
+            <p>Removing weeds and debris reduces competition for nutrients so plants can thrive.</p>
+          </div>
+          <div class="matrix-card">
+            <h3>Lower long-term costs</h3>
+            <p>Consistent upkeep prevents overgrowth and reduces the need for major cleanups later.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-section service-section--compact">
+      <div class="container">
+        <h2 class="mb-4">Frequently Asked Questions</h2>
+
+        <div class="service-accordion">
+          <details open>
+            <summary>How often should beds be maintained?</summary>
+            <p>
+            Many customers choose monthly maintenance during the growing season. Some properties only need seasonal cleanups.
+            We’ll recommend a plan based on how fast weeds and growth appear.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do you remove weeds by hand or spray?</summary>
+            <p>
+            We can discuss the best approach for your property. Hand weeding is common, and other options may be available depending on preference and conditions.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will you trim shrubs and small plants during visits?</summary>
+            <p>
+            Yes, light trimming can be included to keep plants neat. Larger pruning jobs can be quoted separately if needed.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can you maintain only certain beds?</summary>
+            <p>
+            Yes. Some customers focus on the front of the home or high-visibility areas first. We can build a plan around your priorities.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do you clean up leaves and debris in beds?</summary>
+            <p>
+            Yes. Debris cleanup is a key part of bed maintenance because it keeps the landscape looking neat and prevents buildup.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can you add mulch during bed maintenance?</summary>
+            <p>Yes. Mulching is commonly combined with bed maintenance for a cleaner, longer-lasting result.</p>
+          </details>
+
+          <details>
+            <summary>What if beds are severely overgrown?</summary>
+            <p>
+            If beds are heavily overgrown, we may recommend an initial cleanup visit and then ongoing maintenance to keep it under control.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <RelatedServiceBlogs serviceType="bed-maintenance" heading="Related Bed Maintenance Articles" />
   </main>
 
   <Footer />
