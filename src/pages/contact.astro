@@ -1,0 +1,607 @@
+﻿---
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+import TopBar from "../components/TopBar.astro";
+
+const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Landscaping";
+---
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3TXVE0LR1X"></script>
+  <script>
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).gtag = function () {
+      (window as any).dataLayer.push(arguments);
+    };
+    (window as any).gtag("js", new Date());
+  </script>
+  <title>{pageTitle}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta
+    name="description"
+    content="Contact Edwards Landscape Group for professional lawn care and landscaping services in Lynchburg and surrounding areas. Request a quote, ask questions, or schedule your next service today."
+  />
+
+  <link id="favicon" rel="icon" type="image/png" href="/assets/favicon.ico" />
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <link rel="stylesheet" href="/css/animate.css" />
+
+  <link rel="stylesheet" href="/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="/css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="/css/magnific-popup.css" />
+
+  <link rel="stylesheet" href="/css/ionicons.min.css" />
+
+  <link rel="stylesheet" href="/css/flaticon.css" />
+  <link rel="stylesheet" href="/css/icomoon.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .required-asterisk {
+      color: #ff0000;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="top-bar__contact">
+        <span class="top-bar__label">Call</span>
+        <a href="tel:14349422455">(434) 942-2455</a>
+        <span class="divider">|</span>
+        <a href="mailto:Will@edwardscapes.com">Will@edwardscapes.com</a>
+      </div>
+      <a class="top-bar__cta" href="/contact.html">Get a quote today</a>
+    </div>
+  </div>
+
+  <Navigation />
+
+  <section class="page-hero" style="background-image: url('/assets/bg_3.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-xl-6 hero-content-block">
+          <h1 class="mb-3">Tell us about your lawn or landscape</h1>
+          <p class="mb-4">
+            Share what you need routine mowing, seasonal cleanups, or a full redesign and we'll
+            respond quickly with next steps.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section bg-light" id="contact-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="wrapper">
+            <div class="row mb-5 justify-content-center">
+              <div class="col-md-3">
+                <div class="dbox w-100 text-center">
+                  <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="fa fa-map-marker"></span>
+                  </div>
+                  <div class="text">
+                    <p>Lynchburg, Virginia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="dbox w-100 text-center">
+                  <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="fa fa-paper-plane"></span>
+                  </div>
+                  <div class="text">
+                    <p>Will@edwardscapes.com</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="dbox w-100 text-center">
+                  <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="fa fa-phone"></span>
+                  </div>
+                  <div class="text">
+                    <p>(434) 942-2455</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-gutters justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                  <div class="contact-wrap w-100 p-md-5 p-4">
+                    <h3 class="mb-4">Contact Us</h3>
+                    <div id="form-message-warning" class="mb-4"></div>
+                    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+                    <form
+                      action="https://api.web3forms.com/submit"
+                      method="POST"
+                      class="contactForm"
+                      id="form"
+                      target="dummyframe"
+                    >
+                      <!-- <form method="POST" class="contactForm" id="form"> -->
+                      <input
+                        type="hidden"
+                        name="access_key"
+                        value="64dd2468-214d-4f7c-9353-1dc9b56c8076"
+                      />
+                      <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="label" for="name">
+                              First Name <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="first name"
+                              id="first name"
+                              placeholder="First Name"
+                              required
+                            />
+                            <p
+                              id="firstNameErrorMessage"
+                              class="error"
+                              style="font-size: small; color: #ff0000; display: none;"
+                            >
+                              First name is required
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="label" for="name">
+                              Last Name <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="last name"
+                              id="last name"
+                              placeholder="Last Name"
+                              required
+                            />
+                            <p
+                              id="lastNameErrorMessage"
+                              class="error"
+                              style="font-size: small; color: #ff0000; display: none;"
+                            >
+                              Last name is required
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="label" for="email">
+                              Email Address <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="email"
+                              id="email"
+                              placeholder="Email"
+                              required
+                            />
+                            <p
+                              id="emailErrorMessage"
+                              class="error"
+                              style="font-size: small; color: #ff0000; display: none;"
+                            >
+                              Email is required
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="label" for="name">
+                              Phone Number <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="phone number"
+                              id="phone number"
+                              placeholder="Phone Number"
+                              required
+                            />
+                            <p
+                              id="phoneNumberErrorMessage"
+                              class="error"
+                              style="font-size: small; color: #ff0000; display: none;"
+                            >
+                              Phone number is required
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="address">
+                              Address <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="address"
+                              id="address"
+                              placeholder="Address"
+                              required
+                            />
+                            <p
+                              id="addressErrorMessage"
+                              class="error"
+                              style="font-size: small; color: #ff0000; display: none;"
+                            >
+                              Address is required
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="budget">
+                              Estimated Budget <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
+                            <select class="form-control" name="budget" id="budget" required>
+                              <option value="">Select a budget range</option>
+                              <option value="$5k-$10k">$5k - $10k</option>
+                              <option value="$10k-$25k">$10k - $25k</option>
+                              <option value="$25k-$50k">$25k - $50k</option>
+                              <option value="$50k-$75k">$50k - $75k</option>
+                              <option value="$75k-$100k">$75k - $100k</option>
+                              <option value="$75k-$100k">$100k+</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="subject"
+                              >Which service(s) are you interested in</label
+                            >
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Aeration and Seeding"
+                                name="Aeration and Seeding"
+                                value="Aeration and Seeding"
+                              />
+                              <label for="Aeration and Seeding">Aeration and Seeding</label>
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Bed Maintenance"
+                                name="Bed Maintenance"
+                                value="Bed Maintenance"
+                              />
+                              <label for="Bed Maintenance">Bed Maintenance</label>
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Seasonal Cleanup"
+                                name="Seasonal Cleanup"
+                                value="Seasonal Cleanup"
+                              />
+                              <label for="Seasonal Cleanup">Seasonal Cleanup</label>
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Fertilization and Weed Control"
+                                name="Fertilization and Weed Control"
+                                value="Fertilization and Weed Control"
+                              />
+                              <label for="Fertilization and Weed Control"
+                                >Fertilization and Weed Control</label
+                              >
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Drainage"
+                                name="Drainage"
+                                value="Drainage"
+                              />
+                              <label for="Drainage">Drainage</label>
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Landscape Design"
+                                name="Landscape Design"
+                                value="Landscape Design"
+                              />
+                              <label for="Landscape Design">Landscape Design</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="" form-group>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Hardscaping"
+                                name="Hardscaping"
+                                value="Hardscaping"
+                              />
+                              <label for="Hardscaping">Hardscaping</label>
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Mulching"
+                                name="Mulching"
+                                value="Mulching"
+                              />
+                              <label for="Mulching">Mulching</label>
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Tree and Shrub Care"
+                                name="Tree and Shrub Care"
+                                value="Tree and Shrub Care"
+                              />
+                              <label for="Tree and Shrub Care">Tree and Shrub Care</label>
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Weekly Mowing"
+                                name="Weekly Mowing"
+                                value="Weekly Mowing"
+                              />
+                              <label for="Weekly Mowing">Weekly Mowing</label>
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="Grading and Land Clearing"
+                                name="Grading and Land Clearing"
+                                value="Grading and Land Clearing"
+                              />
+                              <label for="Grading and Land Clearing"
+                                >Grading and Land Clearing</label
+                              >
+                            </div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id="New Landscape Installs"
+                                name="New Landscape Installs"
+                                value="New Landscape Installs"
+                              />
+                              <label for="New Landscape Installs">New Landscape Installs</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="#">Message</label>
+                            <textarea
+                              name="message"
+                              class="form-control"
+                              id="message"
+                              cols="30"
+                              rows="4"
+                              placeholder="Message"></textarea>
+                            <p
+                              id="messageErrorMessage"
+                              class="error"
+                              style="font-size: small; color: #ff0000; display: none;"
+                            >
+                              Please put in a message
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <div class="form-check d-flex align-items-start">
+                              <input
+                                type="checkbox"
+                                id="hard-deadline"
+                                name="hard deadline"
+                                value="Hard Deadline"
+                                class="mt-1 mr-2"
+                              />
+                              <label for="hard-deadline">I have a hard deadline for this project.</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <div class="form-check d-flex align-items-start">
+                              <input
+                                type="checkbox"
+                                id="sms-consent"
+                                name="sms consent"
+                                value="SMS Consent"
+                                class="mt-1 mr-2"
+                              />
+                              <label for="sms-consent">
+                                By providing your phone number, you agree to receive text messages
+                                from Edwards Landscape Group.
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary" />
+                            <div class="submitting" style="display: none;">
+                              Your message was sent, thank you!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="h-captcha" data-captcha="true"></div>
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <Footer />
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px"
+        ><circle
+          class="path-bg"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke="#eeeeee"></circle><circle
+          class="path"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          stroke="#F96D00"></circle></svg
+      >
+    </div>
+
+    <script src="/js/jquery.min.js" is:inline></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js" is:inline></script>
+    <script src="/js/popper.min.js" is:inline></script>
+    <script src="/js/bootstrap.min.js" is:inline></script>
+    <script src="/js/jquery.easing.1.3.js" is:inline></script>
+    <script src="/js/jquery.waypoints.min.js" is:inline></script>
+    <script src="/js/jquery.stellar.min.js" is:inline></script>
+    <script src="/js/owl.carousel.min.js" is:inline></script>
+    <script src="/js/jquery.magnific-popup.min.js" is:inline></script>
+    <script src="/js/scrollax.min.js" is:inline></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"
+    ></script>
+    <script src="/js/google-map.js" is:inline></script>
+    <script src="/js/main.js" is:inline></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-23581568-13");
+    </script>
+    <script is:inline>
+      function validate(): boolean {
+        const firstName = (document.getElementById("first name") as HTMLInputElement).value;
+        const lastName = (document.getElementById("last name") as HTMLInputElement).value;
+        const email = (document.getElementById("email") as HTMLInputElement).value;
+        const phoneNumber = (document.getElementById("phone number") as HTMLInputElement).value;
+        const address = (document.getElementById("address") as HTMLTextAreaElement).value;
+        // jQuery selectors with the correct id syntax (use #)
+        const firstNameErrorMessage = jQuery("#firstNameErrorMessage");
+        const lastNameErrorMessage = jQuery("#lastNameErrorMessage");
+        const emailErrorMessage = jQuery("#emailErrorMessage");
+        const phoneNumberErrorMessage = jQuery("#phoneNumberErrorMessage");
+        const addressErrorMessage = jQuery("#addressErrorMessage");
+
+        // Reset all error messages first (hide and clear text)
+        firstNameErrorMessage.hide().text("");
+        lastNameErrorMessage.hide().text("");
+        emailErrorMessage.hide().text("");
+        phoneNumberErrorMessage.hide().text("");
+        addressErrorMessage.hide().text("");
+
+        // Validation checks
+        if (firstName.length <= 0) {
+          firstNameErrorMessage.text("First Name is required.").show();
+          return false;
+        }
+        if (lastName.length <= 0) {
+          lastNameErrorMessage.text("Last Name is required.").show();
+          return false;
+        }
+        if (email.length <= 0) {
+          emailErrorMessage.text("Email is required.").show();
+          return false;
+        }
+        if (phoneNumber.length <= 0) {
+          phoneNumberErrorMessage.text("Phone Number is required.").show();
+          return false;
+        }
+        if (address.length <= 0) {
+          addressErrorMessage.text("Address is required").show();
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <script is:inline>
+      jQuery(document).ready(function () {
+        jQuery("form").submit(function (e: JQuery.SubmitEvent) {
+          e.preventDefault(); // Prevent default form submission (no page reload)
+
+          const form = jQuery(this);
+          const formData = new FormData(this as HTMLFormElement);
+          const submittingMessage = jQuery(".submitting");
+          const validated = validate();
+
+          if (validated) {
+            // Make the AJAX request
+            jQuery.ajax({
+              url: form.attr("action"),
+              method: form.attr("method"),
+              data: formData,
+              processData: false, // Do not process the data
+              contentType: false, // Do not set content type
+              success: function (_response: any) {
+                submittingMessage.show(); // Show success message
+
+                // Clear the form fields
+                (form[0] as HTMLFormElement).reset();
+
+                // Optionally, hide the submitting message after a few seconds
+                setTimeout(function () {
+                  submittingMessage.hide();
+                }, 5000);
+              },
+              error: function () {
+                submittingMessage
+                  .text("Oops! Something went wrong. Please try again later.")
+                  .show();
+              },
+            });
+          }
+        });
+      });
+    </script>
+  </section>
+</body>

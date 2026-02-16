@@ -1,0 +1,31 @@
+---
+import BlogCardGrid from "./BlogCardGrid.astro";
+import { serviceBlogs, type ServiceType } from "../data/serviceBlogs";
+
+interface Props {
+  serviceType: ServiceType;
+  heading?: string;
+}
+
+const { serviceType, heading = "Related Articles" } = Astro.props;
+const blogsForService = serviceBlogs.filter((blog) => blog.serviceTypes.includes(serviceType));
+
+const relatedPosts = blogsForService.map((blog) => ({
+  ...blog,
+  category: "Related article",
+  image: "/assets/bg_1.jpg",
+  imageAlt: "Freshly maintained lawn and landscaped beds",
+}));
+
+---
+
+{
+  blogsForService.length > 0 && (
+    <section class="service-section service-section--compact">
+      <div class="container">
+        <h2 class="mb-3">{heading}</h2>
+        <BlogCardGrid posts={relatedPosts} />
+      </div>
+    </section>
+  )
+}
