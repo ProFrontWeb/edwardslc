@@ -66,7 +66,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
         <span class="divider">|</span>
         <a href="mailto:Will@edwardscapes.com">Will@edwardscapes.com</a>
       </div>
-      <a class="top-bar__cta" href="contact.html">Get a quote today</a>
+      <a class="top-bar__cta" href="/contact.html">Get a quote today</a>
     </div>
   </div>
 
@@ -256,8 +256,10 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <label class="label" for="budget">Estimated Budget</label>
-                            <select class="form-control" name="budget" id="budget">
+                            <label class="label" for="budget">
+                              Estimated Budget <span class="required-asterisk" aria-hidden="true">*</span>
+                            </label>
+                            <select class="form-control" name="budget" id="budget" required>
                               <option value="">Select a budget range</option>
                               <option value="$5k-$10k">$5k - $10k</option>
                               <option value="$10k-$25k">$10k - $25k</option>

@@ -22,7 +22,7 @@ export const serviceBlogs: ServiceBlog[] = [
   {
     title: "From Winter to Spring: Smart Lawn Care for a Strong Start",
     href: "/blog/winter-to-spring-lawn-care",
-    image: "/public/assets/Blog/Winter-to-spring-transition.jpg",
+    image: "/assets/Blog/Winter-to-spring-transition.jpg",
     description:
       "Use a practical spring transition plan with cleanup, fertilization, aeration, seeding, and mowing for stronger turf.",
     serviceTypes: [],
