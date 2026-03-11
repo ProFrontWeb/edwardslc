@@ -480,6 +480,12 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                       </div>
                     </form>
+                    <div id="form-success-card" class="card" style="display: none;">
+                      <div class="card-body text-center">
+                        <h4 class="mb-2">Message sent successfully</h4>
+                        <p class="mb-0">Thanks for contacting Edwards Landscape Group. We'll be in touch shortly.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -603,6 +609,8 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
 
           const form = this;
           const formData = new FormData(form);
+          const formElement = jQuery("#form");
+          const formSuccessCard = jQuery("#form-success-card");
           const submittingMessage = jQuery("#form-status");
 
           jQuery.ajax({
@@ -613,8 +621,9 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
             contentType: false,
             success: function (response) {
               if (response && response.success) {
-                submittingMessage.text("Your message was sent successfully. Thank you!").show();
                 form.reset();
+                formElement.hide();
+                formSuccessCard.show();
                 return;
               }
 
