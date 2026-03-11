@@ -127,13 +127,11 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                   <div class="contact-wrap w-100 p-md-5 p-4">
                     <h3 class="mb-4">Contact Us</h3>
                     <div id="form-message-warning" class="mb-4"></div>
-                    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
                     <form
                       action="https://api.web3forms.com/submit"
                       method="POST"
                       class="contactForm"
                       id="form"
-                      target="dummyframe"
                     >
                       <!-- <form method="POST" class="contactForm" id="form"> -->
                       <input
@@ -141,6 +139,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                         name="access_key"
                         value="1d9f1ce3-a745-4654-a8bd-9215ae24a6d2"
                       />
+                      <input type="hidden" name="accept" value="application/json" />
                       <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
 
                       <div class="row">
@@ -152,8 +151,8 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                             <input
                               type="text"
                               class="form-control"
-                              name="first name"
-                              id="first name"
+                              name="first_name"
+                              id="first_name"
                               placeholder="First Name"
                               required
                             />
@@ -174,8 +173,8 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                             <input
                               type="text"
                               class="form-control"
-                              name="last name"
-                              id="last name"
+                              name="last_name"
+                              id="last_name"
                               placeholder="Last Name"
                               required
                             />
@@ -218,8 +217,8 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                             <input
                               type="text"
                               class="form-control"
-                              name="phone number"
-                              id="phone number"
+                              name="phone_number"
+                              id="phone_number"
                               placeholder="Phone Number"
                               required
                             />
@@ -261,13 +260,21 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                             </label>
                             <select class="form-control" name="budget" id="budget" required>
                               <option value="">Select a budget range</option>
+                              <option value="$0-$5k">$0 - $5k</option>
                               <option value="$5k-$10k">$5k - $10k</option>
                               <option value="$10k-$25k">$10k - $25k</option>
                               <option value="$25k-$50k">$25k - $50k</option>
                               <option value="$50k-$75k">$50k - $75k</option>
                               <option value="$75k-$100k">$75k - $100k</option>
-                              <option value="$75k-$100k">$100k+</option>
+                              <option value="$100k+">$100k+</option>
                             </select>
+                            <p
+                              id="budgetErrorMessage"
+                              class="error"
+                              style="font-size: small; color: #ff0000; display: none;"
+                            >
+                              Please select an estimated budget
+                            </p>
                           </div>
                         </div>
 
@@ -466,9 +473,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                         <div class="col-md-12">
                           <div class="form-group">
                             <input type="submit" value="Send Message" class="btn btn-primary" />
-                            <div class="submitting" style="display: none;">
-                              Your message was sent, thank you!
-                            </div>
+                            <p id="form-status" class="submitting" style="display: none;"></p>
                           </div>
                         </div>
                         <div class="h-captcha" data-captcha="true"></div>
@@ -537,17 +542,21 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
     </script>
     <script is:inline>
       function validate(): boolean {
-        const firstName = (document.getElementById("first name") as HTMLInputElement).value;
-        const lastName = (document.getElementById("last name") as HTMLInputElement).value;
-        const email = (document.getElementById("email") as HTMLInputElement).value;
-        const phoneNumber = (document.getElementById("phone number") as HTMLInputElement).value;
-        const address = (document.getElementById("address") as HTMLTextAreaElement).value;
+        const firstName = (document.getElementById("first_name") as HTMLInputElement).value.trim();
+        const lastName = (document.getElementById("last_name") as HTMLInputElement).value.trim();
+        const email = (document.getElementById("email") as HTMLInputElement).value.trim();
+        const phoneNumber = (document.getElementById("phone_number") as HTMLInputElement).value.trim();
+        const address = (document.getElementById("address") as HTMLInputElement).value.trim();
+        const budget = (document.getElementById("budget") as HTMLSelectElement).value;
+        const formStatusMessage = jQuery("#form-status");
+
         // jQuery selectors with the correct id syntax (use #)
         const firstNameErrorMessage = jQuery("#firstNameErrorMessage");
         const lastNameErrorMessage = jQuery("#lastNameErrorMessage");
         const emailErrorMessage = jQuery("#emailErrorMessage");
         const phoneNumberErrorMessage = jQuery("#phoneNumberErrorMessage");
         const addressErrorMessage = jQuery("#addressErrorMessage");
+        const budgetErrorMessage = jQuery("#budgetErrorMessage");
 
         // Reset all error messages first (hide and clear text)
         firstNameErrorMessage.hide().text("");
@@ -555,6 +564,8 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
         emailErrorMessage.hide().text("");
         phoneNumberErrorMessage.hide().text("");
         addressErrorMessage.hide().text("");
+        budgetErrorMessage.hide().text("");
+        formStatusMessage.hide().text("");
 
         // Validation checks
         if (firstName.length <= 0) {
@@ -577,17 +588,21 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
           addressErrorMessage.text("Address is required").show();
           return false;
         }
+        if (budget.length <= 0) {
+          budgetErrorMessage.text("Please select an estimated budget.").show();
+          return false;
+        }
         return true;
       }
     </script>
     <script is:inline>
       jQuery(document).ready(function () {
-        jQuery("form").submit(function (e: JQuery.SubmitEvent) {
+        jQuery("#form").submit(function (e: JQuery.SubmitEvent) {
           e.preventDefault(); // Prevent default form submission (no page reload)
 
           const form = jQuery(this);
           const formData = new FormData(this as HTMLFormElement);
-          const submittingMessage = jQuery(".submitting");
+          const submittingMessage = jQuery("#form-status");
           const validated = validate();
 
           if (validated) {
@@ -598,16 +613,18 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
               data: formData,
               processData: false, // Do not process the data
               contentType: false, // Do not set content type
-              success: function (_response: any) {
-                submittingMessage.show(); // Show success message
+              success: function (response: { success?: boolean; message?: string }) {
+                if (response.success) {
+                  submittingMessage
+                    .text("Your message was sent successfully. Thank you!")
+                    .show();
+                  (form[0] as HTMLFormElement).reset();
+                  return;
+                }
 
-                // Clear the form fields
-                (form[0] as HTMLFormElement).reset();
-
-                // Optionally, hide the submitting message after a few seconds
-                setTimeout(function () {
-                  submittingMessage.hide();
-                }, 5000);
+                submittingMessage
+                  .text(response.message || "Oops! Something went wrong. Please try again later.")
+                  .show();
               },
               error: function () {
                 submittingMessage
