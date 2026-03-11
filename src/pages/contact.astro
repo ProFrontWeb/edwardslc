@@ -541,16 +541,15 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
       gtag("config", "UA-23581568-13");
     </script>
     <script is:inline>
-      function validate(): boolean {
-        const firstName = (document.getElementById("first_name") as HTMLInputElement).value.trim();
-        const lastName = (document.getElementById("last_name") as HTMLInputElement).value.trim();
-        const email = (document.getElementById("email") as HTMLInputElement).value.trim();
-        const phoneNumber = (document.getElementById("phone_number") as HTMLInputElement).value.trim();
-        const address = (document.getElementById("address") as HTMLInputElement).value.trim();
-        const budget = (document.getElementById("budget") as HTMLSelectElement).value;
+      function validate() {
+        const firstName = document.getElementById("first_name").value.trim();
+        const lastName = document.getElementById("last_name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phoneNumber = document.getElementById("phone_number").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const budget = document.getElementById("budget").value;
         const formStatusMessage = jQuery("#form-status");
 
-        // jQuery selectors with the correct id syntax (use #)
         const firstNameErrorMessage = jQuery("#firstNameErrorMessage");
         const lastNameErrorMessage = jQuery("#lastNameErrorMessage");
         const emailErrorMessage = jQuery("#emailErrorMessage");
@@ -558,7 +557,6 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
         const addressErrorMessage = jQuery("#addressErrorMessage");
         const budgetErrorMessage = jQuery("#budgetErrorMessage");
 
-        // Reset all error messages first (hide and clear text)
         firstNameErrorMessage.hide().text("");
         lastNameErrorMessage.hide().text("");
         emailErrorMessage.hide().text("");
@@ -567,72 +565,67 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
         budgetErrorMessage.hide().text("");
         formStatusMessage.hide().text("");
 
-        // Validation checks
-        if (firstName.length <= 0) {
+        if (!firstName) {
           firstNameErrorMessage.text("First Name is required.").show();
           return false;
         }
-        if (lastName.length <= 0) {
+        if (!lastName) {
           lastNameErrorMessage.text("Last Name is required.").show();
           return false;
         }
-        if (email.length <= 0) {
+        if (!email) {
           emailErrorMessage.text("Email is required.").show();
           return false;
         }
-        if (phoneNumber.length <= 0) {
+        if (!phoneNumber) {
           phoneNumberErrorMessage.text("Phone Number is required.").show();
           return false;
         }
-        if (address.length <= 0) {
+        if (!address) {
           addressErrorMessage.text("Address is required").show();
           return false;
         }
-        if (budget.length <= 0) {
+        if (!budget) {
           budgetErrorMessage.text("Please select an estimated budget.").show();
           return false;
         }
+
         return true;
       }
-    </script>
-    <script is:inline>
+
       jQuery(document).ready(function () {
-        jQuery("#form").submit(function (e: JQuery.SubmitEvent) {
-          e.preventDefault(); // Prevent default form submission (no page reload)
+        jQuery("#form").on("submit", function (e) {
+          e.preventDefault();
 
-          const form = jQuery(this);
-          const formData = new FormData(this as HTMLFormElement);
-          const submittingMessage = jQuery("#form-status");
-          const validated = validate();
-
-          if (validated) {
-            // Make the AJAX request
-            jQuery.ajax({
-              url: form.attr("action"),
-              method: form.attr("method"),
-              data: formData,
-              processData: false, // Do not process the data
-              contentType: false, // Do not set content type
-              success: function (response: { success?: boolean; message?: string }) {
-                if (response.success) {
-                  submittingMessage
-                    .text("Your message was sent successfully. Thank you!")
-                    .show();
-                  (form[0] as HTMLFormElement).reset();
-                  return;
-                }
-
-                submittingMessage
-                  .text(response.message || "Oops! Something went wrong. Please try again later.")
-                  .show();
-              },
-              error: function () {
-                submittingMessage
-                  .text("Oops! Something went wrong. Please try again later.")
-                  .show();
-              },
-            });
+          if (!validate()) {
+            return;
           }
+
+          const form = this;
+          const formData = new FormData(form);
+          const submittingMessage = jQuery("#form-status");
+
+          jQuery.ajax({
+            url: form.action,
+            method: form.method,
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+              if (response && response.success) {
+                submittingMessage.text("Your message was sent successfully. Thank you!").show();
+                form.reset();
+                return;
+              }
+
+              submittingMessage
+                .text((response && response.message) || "Oops! Something went wrong. Please try again later.")
+                .show();
+            },
+            error: function () {
+              submittingMessage.text("Oops! Something went wrong. Please try again later.").show();
+            },
+          });
         });
       });
     </script>
