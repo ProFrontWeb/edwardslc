@@ -14,7 +14,7 @@ const galleryCollections = [
     copy: "See the crisp lines and consistent cuts our mowing crews deliver season after season.",
     ctaLabel: "Explore mowing",
     ctaLink: "/services/mowing.html",
-    folder: "Mowing",
+    folders: ["Mowing"],
   },
   {
     id: "mulching",
@@ -23,7 +23,7 @@ const galleryCollections = [
     copy: "Fresh mulch, sharp bed lines, and healthy planting beds that frame every home.",
     ctaLabel: "Mulching services",
     ctaLink: "/services/mulching.html",
-    folder: "Mulching",
+    folders: ["Mulching"],
   },
   {
     id: "hardscaping",
@@ -32,7 +32,7 @@ const galleryCollections = [
     copy: "Design-build hardscapes that pair stonework with softscape plantings.",
     ctaLabel: "Hardscaping",
     ctaLink: "/services/hardscaping.html",
-    folder: "Hardscaping",
+    folders: ["Hardscaping"],
   },
   {
     id: "landscape-design",
@@ -41,7 +41,7 @@ const galleryCollections = [
     copy: "Beautiful, functional outdoor spaces designed and built to complement each property.",
     ctaLabel: "Landscape design",
     ctaLink: "/services/landscape-design.html",
-    folder: "Landscape-Design",
+    folders: ["Landscape-Design"],
   },
 ];
 
@@ -64,10 +64,15 @@ async function getCollectionImages(folder: string) {
   }
 }
 
+async function getImagesFromFolders(folders: string[]) {
+  const imageSets = await Promise.all(folders.map((folder) => getCollectionImages(folder)));
+  return imageSets.flat();
+}
+
 const collectionsWithImages = await Promise.all(
   galleryCollections.map(async (collection) => ({
     ...collection,
-    images: await getCollectionImages(collection.folder),
+    images: await getImagesFromFolders(collection.folders),
   })),
 );
 
