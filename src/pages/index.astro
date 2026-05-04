@@ -72,20 +72,27 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
   <main>
     <section
       class="home-hero"
-      style="background-image: url('/assets/Landscaping/Landscaping.jpg'); min-height: 600px;"
       aria-label="Edwards Landscape Group hero"
     >
       <div class="hero-media" aria-hidden="true">
         <video
-          class="bg-video"
           autoplay
           muted
           playsinline
           loop
           poster="/assets/Landscaping/Landscaping.jpg"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+          "
         >
-          <source src="/videos/Edwardscapes_compressed.webm" type="video/webm" />
-          <source src="/videos/Edwardscapes_compressed.mp4" type="video/mp4" />
+          <source src="/videos/Landing_Page_Video.webm" type="video/webm" />
+          <source src="/videos/Landing_Page_Video.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="container">
