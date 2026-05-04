@@ -14298,6 +14298,9 @@ body {
   color: #0f4d2b !important;
   background: #ffffff;
   line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-header .navbar-toggler .fa-bars {
@@ -14344,6 +14347,12 @@ body {
     border: 1px solid #d5e7dc;
     box-shadow: none;
     border-radius: 10px;
+    display: none;
+  }
+
+  .nav-services.show .dropdown-menu,
+  .nav-services .dropdown-menu.show {
+    display: block;
   }
 
   .social-link .nav-link {
