@@ -1,14 +1,18 @@
 (function ($) {
   "use strict";
 
-  $(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: "scroll",
-  });
+  var isMobileViewport = window.matchMedia("(max-width: 991.98px)").matches;
+
+  if (!isMobileViewport) {
+    $(window).stellar({
+      responsive: true,
+      parallaxBackgrounds: true,
+      parallaxElements: true,
+      horizontalScrolling: false,
+      hideDistantElements: false,
+      scrollProperty: "scroll",
+    });
+  }
 
   var fullHeight = function () {
     $(".js-fullheight").css("height", $(window).height());
@@ -29,7 +33,9 @@
   loader();
 
   // Scrollax
-  $.Scrollax();
+  if (!isMobileViewport) {
+    $.Scrollax();
+  }
 
   var carousel = function () {
     $(".carousel-testimony").owlCarousel({
@@ -121,25 +127,35 @@
     }
   );
 
+  var toggleServicesMenu = function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var $parent = $(this).closest(".nav-services");
+    var $menu = $parent.find(".dropdown-menu");
+    var $toggle = $parent.find(".nav-services-toggle");
+    var isOpen = $parent.hasClass("show");
+
+    $(".nav-services").removeClass("show");
+    $(".nav-services .dropdown-menu").removeClass("show");
+    $(".nav-services .nav-services-toggle").attr("aria-expanded", false);
+
+    if (!isOpen) {
+      $parent.addClass("show");
+      $menu.addClass("show");
+      $toggle.attr("aria-expanded", true);
+    }
+  };
+
   $(".nav-services .nav-caret").on("click keydown", function (e) {
     if (e.type === "click" || e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      e.stopPropagation();
+      toggleServicesMenu.call(this, e);
+    }
+  });
 
-      var $parent = $(this).closest(".nav-services");
-      var $menu = $parent.find(".dropdown-menu");
-      var $toggle = $parent.find(".nav-services-toggle");
-      var isOpen = $parent.hasClass("show");
-
-      $(".nav-services").removeClass("show");
-      $(".nav-services .dropdown-menu").removeClass("show");
-      $(".nav-services .nav-services-toggle").attr("aria-expanded", false);
-
-      if (!isOpen) {
-        $parent.addClass("show");
-        $menu.addClass("show");
-        $toggle.attr("aria-expanded", true);
-      }
+  $(".nav-services .nav-services-toggle").on("click", function (e) {
+    if (window.matchMedia("(max-width: 991.98px)").matches) {
+      toggleServicesMenu.call(this, e);
     }
   });
 
