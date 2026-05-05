@@ -107,23 +107,20 @@
 
   $("nav .dropdown").hover(
     function () {
+      if (!window.matchMedia("(min-width: 992px)").matches) return;
+
       var $this = $(this);
-      // 	 timer;
-      // clearTimeout(timer);
       $this.addClass("show");
       $this.find("> a").attr("aria-expanded", true);
-      // $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
       $this.find(".dropdown-menu").addClass("show");
     },
     function () {
+      if (!window.matchMedia("(min-width: 992px)").matches) return;
+
       var $this = $(this);
-      // timer;
-      // timer = setTimeout(function(){
       $this.removeClass("show");
       $this.find("> a").attr("aria-expanded", false);
-      // $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
       $this.find(".dropdown-menu").removeClass("show");
-      // }, 100);
     }
   );
 
@@ -165,6 +162,12 @@
       $(".nav-services .dropdown-menu").removeClass("show");
       $(".nav-services .nav-services-toggle").attr("aria-expanded", false);
     }
+  });
+
+  $("#ftco-nav").on("hide.bs.collapse", function () {
+    $(".nav-services").removeClass("show");
+    $(".nav-services .dropdown-menu").removeClass("show");
+    $(".nav-services .nav-services-toggle").attr("aria-expanded", false);
   });
 
   $("#dropdown04").on("show.bs.dropdown", function () {
