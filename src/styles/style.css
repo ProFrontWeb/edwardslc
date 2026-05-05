@@ -10779,11 +10779,18 @@ h5,
 }
 @media (max-width: 991.98px) {
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
+    display: none !important;
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0.35rem;
+    background: #ffffff;
+  }
+  .ftco-navbar-light .navbar-nav > .nav-item.show .dropdown-menu {
     display: block !important;
-    background: #000000;
   }
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
-    color: rgba(255, 255, 255, 0.8);
+    color: #0f4d2b;
   }
 }
 .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
@@ -10814,6 +10821,7 @@ h5,
 }
 .ftco-navbar-light .navbar-toggler {
   border: none;
+  box-shadow: none;
   color: rgba(255, 255, 255, 0.5) !important;
   cursor: pointer;
   padding-right: 0;
@@ -10823,6 +10831,7 @@ h5,
 }
 .ftco-navbar-light .navbar-toggler:focus {
   outline: none !important;
+  box-shadow: none !important;
 }
 
 .navbar-brand {
@@ -12291,6 +12300,16 @@ body {
 
 .nav-services .dropdown-menu {
   min-width: 240px;
+}
+
+@media (max-width: 991.98px) {
+  .nav-services {
+    display: block;
+  }
+
+  .nav-services .dropdown-menu {
+    min-width: 0;
+  }
 }
 
 .navbar-nav .nav-link:hover,
