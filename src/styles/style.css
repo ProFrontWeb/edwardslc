@@ -10784,13 +10784,13 @@ h5,
     float: none;
     width: 100%;
     margin-top: 0.35rem;
-    background: #000000;
+    background: #ffffff;
   }
   .ftco-navbar-light .navbar-nav > .nav-item.show .dropdown-menu {
     display: block !important;
   }
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
-    color: rgba(255, 255, 255, 0.8);
+    color: #0f4d2b;
   }
 }
 .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
