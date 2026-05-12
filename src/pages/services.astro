@@ -105,8 +105,11 @@ const services = [
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18132266056">
   </script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    const w = window as any;
+    const dataLayer = (w.dataLayer = w.dataLayer || []);
+    function gtag(...args: any[]) {
+      dataLayer.push(args);
+    }
     gtag('js', new Date());
 
     gtag('config', 'AW-18132266056');
