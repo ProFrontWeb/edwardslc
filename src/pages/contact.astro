@@ -615,11 +615,9 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
             contentType: false,
             success: function (response) {
               if (response && response.success) {
-                if (typeof gtag === "function") {
-                  gtag("event", "conversion", {
-                    send_to: "AW-18132266056/21I1CLi5jKccEMjYkcZD",
-                  });
-                }
+                gtag("event", "conversion", {
+                  send_to: "AW-18132266056/21I1CLi5jKccEMjYkcZD",
+                });
 
                 form.reset();
                 formElement.hide();
