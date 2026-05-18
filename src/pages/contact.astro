@@ -613,6 +613,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
             data: formData,
             processData: false,
             contentType: false,
+            dataType: "json",
             success: function (response) {
               if (response && response.success) {
                 gtag("event", "conversion", {
