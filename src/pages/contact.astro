@@ -129,7 +129,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
               <div class="row no-gutters justify-content-center">
                 <div class="col-md-10 col-lg-8">
                   <div class="contact-wrap w-100 p-md-5 p-4">
-                    <h3 class="mb-4">Contact Us</h3>
+                    <h3 id="contact-form-heading" class="mb-4">Contact Us</h3>
                     <div id="form-message-warning" class="mb-4"></div>
                     <form
                       action="https://api.web3forms.com/submit"
@@ -622,6 +622,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
           const formElement = jQuery("#form");
           const formSuccessMessage = jQuery("#form-success-message");
           const submittingMessage = jQuery("#form-status");
+          const formHeading = jQuery("#contact-form-heading");
 
           jQuery.ajax({
             url: form.action,
@@ -646,6 +647,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
 
               if (responseSuccess) {
                 form.reset();
+                formHeading.hide();
                 formElement.css("display", "none");
                 submittingMessage.hide().text("");
                 formSuccessMessage.show();
