@@ -484,16 +484,9 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                       </div>
                     </form>
-                    <div
-                      id="form-success-overlay"
-                      style="display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); z-index: 9999; align-items: center; justify-content: center; padding: 1rem;"
-                    >
-                      <div class="card" style="max-width: 580px; width: 100%;">
-                        <div class="card-body text-center py-5">
-                          <h3 class="mb-3">Message sent successfully</h3>
-                          <p class="mb-0">Thanks for contacting Edwards Landscape Group. We'll be in touch shortly.</p>
-                        </div>
-                      </div>
+                    <div id="form-success-message" class="text-center py-5" style="display: none; min-height: 220px;">
+                      <h3 class="mb-3">Message sent successfully</h3>
+                      <p class="mb-0">Thanks for contacting Edwards Landscape Group. We'll be in touch shortly.</p>
                     </div>
                   </div>
                 </div>
@@ -627,7 +620,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
           const form = this;
           const formData = new FormData(form);
           const formElement = jQuery("#form");
-          const formSuccessOverlay = jQuery("#form-success-overlay");
+          const formSuccessMessage = jQuery("#form-success-message");
           const submittingMessage = jQuery("#form-status");
 
           jQuery.ajax({
@@ -656,7 +649,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                 formElement.css("display", "none");
                 submittingMessage.hide().text("");
                 window.scrollTo({ top: 0, behavior: "smooth" });
-                formSuccessOverlay.css("display", "flex");
+                formSuccessMessage.show();
 
                 gtag_report_conversion();
                 return;
