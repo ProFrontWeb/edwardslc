@@ -599,12 +599,17 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
       }
 
       function gtag_report_conversion(url) {
+        if (typeof window.gtag !== "function") {
+          return false;
+        }
+
         var callback = function () {
           if (typeof url != "undefined") {
             window.location = url;
           }
         };
-        gtag("event", "conversion", {
+
+        window.gtag("event", "conversion", {
           send_to: "AW-18132266056/21I1CLi5jKccEMjYkcZD",
           event_callback: callback,
         });
@@ -644,23 +649,17 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
 
               const responseMessage = (response && response.message ? String(response.message) : "").toLowerCase();
               const requestSucceeded = xhr.status >= 200 && xhr.status < 300;
-              const responseSuccess =
-                requestSucceeded &&
-                (!response ||
-                  response.success === true ||
-                  response.success === "true" ||
-                  response.status === 200 ||
-                  responseMessage.includes("success"));
+              const responseSuccess = requestSucceeded;
 
               if (responseSuccess) {
-                gtag_report_conversion();
-
                 form.reset();
                 formElement.hide();
                 formSuccessOverlay.css("display", "flex");
                 submittingMessage
                   .text((response && response.message) || "Thanks! Your message was sent successfully.")
                   .show();
+
+                gtag_report_conversion();
                 return;
               }
 
