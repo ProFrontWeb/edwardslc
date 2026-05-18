@@ -129,7 +129,7 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
               <div class="row no-gutters justify-content-center">
                 <div class="col-md-10 col-lg-8">
                   <div class="contact-wrap w-100 p-md-5 p-4">
-                    <h3 class="mb-4">Contact Us</h3>
+                    <h3 id="contact-form-heading" class="mb-4">Contact Us</h3>
                     <div id="form-message-warning" class="mb-4"></div>
                     <form
                       action="https://api.web3forms.com/submit"
@@ -484,11 +484,9 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                       </div>
                     </form>
-                    <div id="form-success-card" class="card" style="display: none;">
-                      <div class="card-body text-center">
-                        <h4 class="mb-2">Message sent successfully</h4>
-                        <p class="mb-0">Thanks for contacting Edwards Landscape Group. We'll be in touch shortly.</p>
-                      </div>
+                    <div id="form-success-message" class="text-center py-5" style="display: none; min-height: 220px;">
+                      <h3 class="mb-3">Message sent successfully</h3>
+                      <p class="mb-0">Thanks for contacting Edwards Landscape Group. We'll be in touch shortly.</p>
                     </div>
                   </div>
                 </div>
@@ -594,12 +592,17 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
       }
 
       function gtag_report_conversion(url) {
+        if (typeof window.gtag !== "function") {
+          return false;
+        }
+
         var callback = function () {
           if (typeof url != "undefined") {
             window.location = url;
           }
         };
-        gtag("event", "conversion", {
+
+        window.gtag("event", "conversion", {
           send_to: "AW-18132266056/21I1CLi5jKccEMjYkcZD",
           event_callback: callback,
         });
@@ -617,8 +620,9 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
           const form = this;
           const formData = new FormData(form);
           const formElement = jQuery("#form");
-          const formSuccessCard = jQuery("#form-success-card");
+          const formSuccessMessage = jQuery("#form-success-message");
           const submittingMessage = jQuery("#form-status");
+          const formHeading = jQuery("#contact-form-heading");
 
           jQuery.ajax({
             url: form.action,
@@ -626,34 +630,36 @@ const pageTitle = "Contact Edwards Landscape Group | Lynchburg Lawn Care & Lands
             data: formData,
             processData: false,
             contentType: false,
-            dataType: "json",
-            success: function (response) {
+            complete: function (xhr) {
+              let response = xhr.responseJSON;
+
+              if (!response && xhr.responseText) {
+                try {
+                  response = JSON.parse(xhr.responseText);
+                } catch (error) {
+                  response = null;
+                }
+              }
+
               const responseMessage = (response && response.message ? String(response.message) : "").toLowerCase();
-              const responseSuccess =
-                response &&
-                (response.success === true ||
-                  response.success === "true" ||
-                  response.status === 200 ||
-                  responseMessage.includes("success"));
+              const requestSucceeded = xhr.status >= 200 && xhr.status < 300;
+              const responseSuccess = requestSucceeded;
 
               if (responseSuccess) {
-                gtag_report_conversion();
-
                 form.reset();
-                formElement.hide();
-                formSuccessCard.show();
-                submittingMessage
-                  .text((response && response.message) || "Thanks! Your message was sent successfully.")
-                  .show();
+                formHeading.hide();
+                formElement.css("display", "none");
+                submittingMessage.hide().text("");
+                formSuccessMessage.show();
+                document.getElementById("form-success-message")?.scrollIntoView({ behavior: "smooth", block: "center" });
+
+                gtag_report_conversion();
                 return;
               }
 
               submittingMessage
-                .text((response && response.message) || "Thanks! Your message was sent successfully.")
+                .text((response && response.message) || "Oops! Something went wrong. Please try again later.")
                 .show();
-            },
-            error: function () {
-              submittingMessage.text("Oops! Something went wrong. Please try again later.").show();
             },
           });
         });
