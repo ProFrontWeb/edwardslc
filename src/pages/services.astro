@@ -1,4 +1,5 @@
 ---
+import Seo from "../components/Seo.astro";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import TopBar from "../components/TopBar.astro";
@@ -13,7 +14,7 @@ const services = [
       "Consistent weekly mowing keeps your lawn neat, healthy, and professionally manicured all season long.",
     image: "/assets/Mowing/Mowing5.jpg",
     alt: "Crew mowing a residential lawn in Lynchburg, Virginia",
-    link: "/services/mowing.html",
+    link: "/services/mowing",
     id: "weekly-mowing",
   },
   {
@@ -22,7 +23,7 @@ const services = [
       "Targeted fertilization and weed control programs build thick turf and reduce invasive growth.",
     image: "/assets/Fertilization-Weed-Control/FertilizationWeedControl.jpg",
     alt: "Lawn care specialist applying fertilizer treatment to a green lawn",
-    link: "/services/fertilization-weed-control.html",
+    link: "/services/fertilization-weed-control",
     id: "fertilization-weed-control",
   },
   {
@@ -31,7 +32,7 @@ const services = [
       "Core aeration and overseeding improve soil structure and support stronger, healthier roots.",
     image: "/assets/Aeration-Seeding/AerationSeeding.jpg",
     alt: "Aeration machine improving soil health on a residential lawn",
-    link: "/services/aeration-seeding.html",
+    link: "/services/aeration-seeding",
     id: "aeration-seeding",
   },
   {
@@ -40,7 +41,7 @@ const services = [
       "Seasonal cleanups remove leaves and debris to protect your landscape through colder months.",
     image: "/assets/Seasonal-Cleanup/SeasonalCleanup.jpg",
     alt: "Landscaping crew clearing leaves from a landscaped property",
-    link: "/services/fall-winter-cleanup.html",
+    link: "/services/fall-winter-cleanup",
     id: "fall-winter-cleanup",
   },
   {
@@ -49,7 +50,7 @@ const services = [
       "Fresh mulch retains moisture, suppresses weeds, and delivers a polished look to your beds.",
     image: "/assets/Mulching/Mulching4.jpg",
     alt: "Freshly mulched flower beds with clean edging",
-    link: "/services/mulching.html",
+    link: "/services/mulching",
     id: "mulching",
   },
   {
@@ -58,7 +59,7 @@ const services = [
       "Detailed edging, trimming, and weeding keep planting beds tidy and intentional.",
     image: "/assets/Bed-Maintenance/BedMaintenance.jpg",
     alt: "Well-maintained flower beds with trimmed borders",
-    link: "/services/bed-maintenance.html",
+    link: "/services/bed-maintenance",
     id: "bed-maintenance",
   },
   {
@@ -67,7 +68,7 @@ const services = [
       "Protect long-term plant health with pruning, treatments, and proactive pest management.",
     image: "/assets/Tree-Shrub-Care/TreeShrubCare2.jpg",
     alt: "Shrub care and pruning in a landscaped yard",
-    link: "/services/tree-shrub-care.html",
+    link: "/services/tree-shrub-care",
     id: "tree-shrub-care",
   },
   {
@@ -76,7 +77,7 @@ const services = [
       "Stonework, patios, and retaining walls add structure, function, and lasting value.",
     image: "/assets/Hardscaping/Hardscaping2.jpg",
     alt: "Stone patio and hardscape features in an outdoor living area",
-    link: "/services/hardscaping.html",
+    link: "/services/hardscaping",
     id: "hardscaping",
   },
   {
@@ -85,7 +86,7 @@ const services = [
       "Full landscape installations and enhancements that transform your outdoor space.",
     image: "/assets/Landscaping/Landscaping1.jpg",
     alt: "Completed landscape installation with plantings and hardscaping",
-    link: "/services/landscaping.html",
+    link: "/services/landscaping",
     id: "landscaping",
   },
   {
@@ -94,13 +95,14 @@ const services = [
       "Thoughtful landscape design creates cohesive outdoor spaces tailored to your lifestyle.",
     image: "/assets/Landscape-Design/LandscapeDesign.jpg",
     alt: "Professionally designed landscape with plantings and walkways",
-    link: "/services/landscape-design.html",
+    link: "/services/landscape-design",
     id: "landscape-design",
   },
 ];
 ---
 
 <head>
+  <Seo />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18132266056">
   </script>

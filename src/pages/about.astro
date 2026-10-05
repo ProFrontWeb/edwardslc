@@ -1,4 +1,5 @@
 ---
+import Seo from "../components/Seo.astro";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import TopBar from "../components/TopBar.astro";
@@ -7,6 +8,8 @@ const pageTitle = "About Edwards Landscape Group | Lynchburg Lawn Care Experts";
 ---
 
 <head>
+  <Seo />
+  <meta name="description" content="Meet Edwards Landscape Group, a locally owned lawn care and landscaping company serving Lynchburg and surrounding communities. Learn about our team and approach." />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18132266056">
   </script>
@@ -263,8 +266,8 @@ const pageTitle = "About Edwards Landscape Group | Lynchburg Lawn Care Experts";
             you're nearby, reach out - we'll confirm availability and get you on the schedule.
           </p>
           <div class="d-flex flex-wrap gap-4">
-            <a href="/contact.html" class="btn btn-light mr-2">Request service</a>
-            <a href="/services.html" class="btn btn-outline-light">Browse services</a>
+            <a href="/contact" class="btn btn-light mr-2">Request service</a>
+            <a href="/services" class="btn btn-outline-light">Browse services</a>
           </div>
         </div>
         <div class="col-lg-5 mt-4 mt-lg-0">
