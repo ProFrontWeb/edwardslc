@@ -1,4 +1,5 @@
 ---
+import Seo from "../components/Seo.astro";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import TopBar from "../components/TopBar.astro";
@@ -7,6 +8,7 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
 ---
 
 <head>
+  <Seo />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18132266056">
   </script>
@@ -64,9 +66,9 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
         <span class="top-bar__label">Call</span>
         <a href="tel:14349422455">(434) 942-2455</a>
         <span class="divider">|</span>
-        <a href="mailto:Will@edwardscapes.com">Will@edwardscapes.com</a>
+        <!--email_off--><a href="mailto:Will@edwardscapes.com">Will@edwardscapes.com</a><!--/email_off-->
       </div>
-      <a class="top-bar__cta" href="/contact.html">Get a quote today</a>
+      <a class="top-bar__cta" href="/contact">Get a quote today</a>
     </div>
   </div>
 
@@ -107,8 +109,8 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
               year long.
             </p>
             <div class="hero-actions d-flex flex-wrap">
-              <a href="/contact.html" class="btn btn-primary">Get a custom quote</a>
-              <a href="/services.html" class="btn btn-outline-light">See all services</a>
+              <a href="/contact" class="btn btn-primary">Get a custom quote</a>
+              <a href="/services" class="btn btn-outline-light">See all services</a>
             </div>
           </div>
         </div>
@@ -127,7 +129,7 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
         </div>
         <div class="row">
           <div class="col-md-4 d-flex">
-            <a href="/services/mowing.html" class="service-card-link">
+            <a href="/services/mowing" class="service-card-link">
               <article class="service-card">
                 <div class="icon-wrapper">
                   <span class="flaticon-lawn-mower" aria-hidden="true"></span>
@@ -142,7 +144,7 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
             </a>
           </div>
           <div class="col-md-4 d-flex">
-            <a href="/services/fall-winter-cleanup.html" class="service-card-link">
+            <a href="/services/fall-winter-cleanup" class="service-card-link">
               <article class="service-card">
                 <div class="icon-wrapper">
                   <span class="flaticon-fence" aria-hidden="true"></span>
@@ -157,7 +159,7 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
             </a>
           </div>
           <div class="col-md-4 d-flex">
-            <a href="/services/tree-shrub-care.html" class="service-card-link">
+            <a href="/services/tree-shrub-care" class="service-card-link">
               <article class="service-card">
                 <div class="icon-wrapper">
                   <span class="flaticon-natural-resources" aria-hidden="true"></span>
@@ -239,7 +241,7 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
                 Tell us about your property and we'll build a tailored plan that keeps your
                 landscape healthy year-round.
               </p>
-              <a href="/contact.html" class="btn btn-primary btn-block">Get my quote</a>
+              <a href="/contact" class="btn btn-primary btn-block">Get my quote</a>
               <p class="small mb-0 mt-3">Fast responses. Clear pricing. No pressure.</p>
             </div>
           </div>

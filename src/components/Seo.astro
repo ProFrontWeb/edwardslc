@@ -1,0 +1,6 @@
+---
+// Use the production origin, even when building a preview deployment.
+const pathname = Astro.url.pathname.replace(/\/index(?:\.html)?$/, "/").replace(/\.html$/, "").replace(/\/$/, "") || "/";
+const canonical = new URL(pathname, Astro.site);
+---
+<link rel="canonical" href={canonical.href} />
