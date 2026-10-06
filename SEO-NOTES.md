@@ -13,3 +13,9 @@ Run `npm ci`, `npm run build`, and `npm run test:seo`. The regression check craw
 After deploying the PR, rerun openSEO, verify the live sitemap and robots.txt, and confirm legacy .html URLs still redirect to clean URLs. The existing Cloudflare Pages clean-URL behavior is preserved. Submit https://edwardscapes.com/sitemap.xml in Search Console and compare impressions, clicks, CTR, and qualified inquiries over comparable periods after recrawling. No ranking improvement or new live audit score has been measured by this change.
 
 References: [Google canonicalization guidance](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) and [Cloudflare email exclusions](https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/).
+
+## Follow-up: audit-issues.json
+
+The 18 supplied issue records map to three email-protection findings already addressed in PR #45, two heading-order findings, six description-length findings, and seven title-length findings. The follow-up shortens the six descriptions to 70–160 characters and the seven titles to no more than 60 characters while retaining service, location, or brand context. These ranges are audit recommendations, not guaranteed Google display limits.
+
+On About, the introductory eyebrow becomes a paragraph and the three H5 card headings become H3s beneath their H2. On Contact, the form heading becomes H2 beneath the page H1. Bootstrap typography classes preserve their previous visual sizes. The existing SEO check now verifies heading order on both pages and metadata lengths on all flagged routes. The email-protection endpoint should not become a fabricated content page or redirect; verify the existing email exclusions after deployment and recrawl.
