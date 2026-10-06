@@ -21,6 +21,15 @@ export interface ServiceBlog {
 
 export const serviceBlogs: ServiceBlog[] = [
   {
+    title: "Summer to Fall Lawn Care: Help Your Lawn Recover",
+    href: "/blog/summer-to-fall-lawn-care",
+    image: "/assets/bg_2.jpg",
+    imageAlt: "Green lawn bordered by planting beds and mature shade trees",
+    description:
+      "Plan fall aeration, seeding, mowing, and leaf cleanup with practical tips and help from Edwards Landscape Group.",
+    serviceTypes: ["aeration-seeding", "mowing", "fertilization-weed-control", "fall-winter-cleanup", "bed-maintenance"],
+  },
+  {
     title: "Spring to Summer Lawn Care: A Healthy Transition",
     href: "/blog/spring-to-summer-lawn-care",
     image: "/assets/bg_2.jpg",
