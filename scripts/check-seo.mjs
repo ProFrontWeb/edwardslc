@@ -11,6 +11,14 @@ const sitemap = read(path.join(root, "sitemap.xml"));
 const locations = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
 assert.equal(new Set(locations).size, locations.length, "Duplicate sitemap URLs");
 let checked = 0;
+// Limits reflect the supplied openSEO audit's recommendations, not Google limits.
+const descriptionRoutes = new Set(["/", "/about", "/contact", "/privacy", "/gallery", "/services"]);
+const titleRoutes = new Set([
+  "/blog/spring-to-summer-lawn-care", "/contact", "/gallery", "/services",
+  "/services/aeration-seeding", "/services/fall-winter-cleanup",
+  "/services/fertilization-weed-control",
+]);
+const decode = (text) => text.replace(/&amp;/g, "&").replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"');
 for (const file of pages) {
   const html = read(file);
   const route = "/" + path.relative(root, file).replaceAll(path.sep, "/").replace(/\.html$/, "").replace(/^index$/, "");
@@ -26,6 +34,22 @@ for (const file of pages) {
   assert.equal((html.match(/<h1\b/g) || []).length, 1, `${route}: H1 count`);
   assert.match(html, /<title>[^<]+<\/title>/, `${route}: title`);
   assert.match(html, /name="description" content="[^"]+"/, `${route}: description`);
+  if (descriptionRoutes.has(route)) {
+    const description = decode(html.match(/name="description" content="([^"]+)"/)[1]);
+    assert(description.length >= 70 && description.length <= 160, `${route}: description length ${description.length}`);
+  }
+  if (titleRoutes.has(route)) {
+    const title = decode(html.match(/<title>([^<]+)<\/title>/)[1]);
+    assert(title.length <= 60, `${route}: title length ${title.length}`);
+  }
+  if (route === "/about" || route === "/contact") {
+    let previous = 0;
+    for (const [, level] of html.matchAll(/<h([1-6])\b/g)) {
+      const current = Number(level);
+      assert(current <= previous + 1, `${route}: heading skips H${previous} to H${current}`);
+      previous = current;
+    }
+  }
   for (const [tag] of html.matchAll(/<img\b[^>]*>/g)) {
     assert.match(tag, /\balt="[^"]+"/, `${route}: missing image description: ${tag}`);
   }
