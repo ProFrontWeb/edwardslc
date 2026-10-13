@@ -18,7 +18,9 @@ const titleRoutes = new Set([
   "/services/aeration-seeding", "/services/fall-winter-cleanup",
   "/services/fertilization-weed-control",
 ]);
-const decode = (text) => text.replace(/&amp;/g, "&").replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"');
+const decode = (text) => text.replace(/&amp;/g, "&").replace(/&apos;/g, "'").replace(/&quot;/g, '"')
+  .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
+  .replace(/&#x([\da-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)));
 for (const file of pages) {
   const html = read(file);
   const route = "/" + path.relative(root, file).replaceAll(path.sep, "/").replace(/\.html$/, "").replace(/^index$/, "");
@@ -34,6 +36,33 @@ for (const file of pages) {
   assert.equal((html.match(/<h1\b/g) || []).length, 1, `${route}: H1 count`);
   assert.match(html, /<title>[^<]+<\/title>/, `${route}: title`);
   assert.match(html, /name="description" content="[^"]+"/, `${route}: description`);
+  const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/)[1];
+  const meta = (attribute, key) => {
+    const matches = [...head.matchAll(new RegExp(`<meta\\s+${attribute}="${key}"\\s+content="([^"]+)"`, "g"))];
+    assert.equal(matches.length, 1, `${route}: exactly one ${key} in head`);
+    return decode(matches[0][1]);
+  };
+  assert.equal((head.match(/<title>/g) || []).length, 1, `${route}: title count`);
+  const pageTitle = decode(head.match(/<title>([^<]+)<\/title>/)[1]);
+  const pageDescription = meta("name", "description");
+  assert.equal(meta("property", "og:title"), pageTitle, `${route}: social title`);
+  assert.equal(meta("property", "og:description"), pageDescription, `${route}: social description`);
+  assert.equal(meta("property", "og:site_name"), "Edwards Landscape Group");
+  assert.equal(meta("property", "og:url"), canonical);
+  assert.equal(meta("property", "og:type"), /^\/blogs?\//.test(route) ? "article" : "website");
+  assert.equal(meta("name", "twitter:card"), "summary_large_image");
+  assert.equal(meta("name", "twitter:title"), pageTitle);
+  assert.equal(meta("name", "twitter:description"), pageDescription);
+  const imageUrl = new URL(meta("property", "og:image"));
+  assert.equal(imageUrl.origin, "https://edwardscapes.com");
+  assert.equal(meta("name", "twitter:image"), imageUrl.href);
+  assert.equal(meta("name", "twitter:image:alt"), meta("property", "og:image:alt"));
+  const imageBytes = readFileSync(path.join(root, decodeURIComponent(imageUrl.pathname).slice(1)));
+  assert.equal(imageBytes.subarray(1, 4).toString(), "PNG", `${route}: PNG image`);
+  assert.equal(meta("property", "og:image:type"), "image/png");
+  assert.equal(Number(meta("property", "og:image:width")), imageBytes.readUInt32BE(16));
+  assert.equal(Number(meta("property", "og:image:height")), imageBytes.readUInt32BE(20));
+  assert(imageBytes.length < 5 * 1024 * 1024, `${route}: preview image size`);
   if (descriptionRoutes.has(route)) {
     const description = decode(html.match(/name="description" content="([^"]+)"/)[1]);
     assert(description.length >= 70 && description.length <= 160, `${route}: description length ${description.length}`);
@@ -66,4 +95,4 @@ for (const file of pages) {
 }
 assert.equal(locations.length, checked, "Sitemap contains unexpected pages");
 assert.match(read(path.join(root, "robots.txt")), /Sitemap: https:\/\/edwardscapes\.com\/sitemap\.xml/);
-console.log(`SEO checks passed for ${checked} pages: canonical URLs, sitemap, headings, descriptions, image alt text, local links, and email exclusions.`);
+console.log(`SEO checks passed for ${checked} pages: canonical URLs, social cards, sitemap, headings, descriptions, image alt text, local links, and email exclusions.`);

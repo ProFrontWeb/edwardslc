@@ -81,7 +81,10 @@ const populatedCollections = collectionsWithImages.filter((collection) => collec
 ---
 
 <head>
-  <Seo />
+  <Seo
+    title={pageTitle}
+    description="Explore lawn mowing, mulching, hardscaping, and landscape design projects by Edwards Landscape Group in Lynchburg and surrounding areas."
+  />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18132266056">
   </script>
@@ -96,13 +99,8 @@ const populatedCollections = collectionsWithImages.filter((collection) => collec
     gtag('config', 'AW-18132266056');
   </script>
 
-  <title>{pageTitle}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta
-    name="description"
-    content="Explore lawn mowing, mulching, hardscaping, and landscape design projects by Edwards Landscape Group in Lynchburg and surrounding areas."
-  />
 
   <link id="favicon" rel="icon" type="image/png" href="/assets/favicon.ico" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />

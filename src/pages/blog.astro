@@ -21,7 +21,10 @@ const posts = serviceBlogs.map((blog) => ({
 ---
 
 <head>
-  <Seo />
+  <Seo
+    title={pageTitle}
+    description="Explore Edwards Landscape Group's blog for lawn care tips, seasonal maintenance checklists, and project spotlights from our crew."
+  />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18132266056">
   </script>
@@ -35,13 +38,9 @@ const posts = serviceBlogs.map((blog) => ({
 
     gtag('config', 'AW-18132266056');
   </script>
-<title>{pageTitle}</title>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta
-    name="description"
-    content="Explore Edwards Landscape Group's blog for lawn care tips, seasonal maintenance checklists, and project spotlights from our crew."
-  />
   <meta
     name="keywords"
     content="lawn care blog, landscaping tips, Lynchburg lawn advice, seasonal lawn maintenance"
