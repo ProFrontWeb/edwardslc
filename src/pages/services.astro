@@ -102,7 +102,10 @@ const services = [
 ---
 
 <head>
-  <Seo />
+  <Seo
+    title={pageTitle}
+    description="Explore lawn mowing, mulching, aeration, weed control, and landscape design in Lynchburg, VA. Request a quote from Edwards Landscape Group."
+  />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18132266056">
   </script>
@@ -116,13 +119,9 @@ const services = [
 
     gtag('config', 'AW-18132266056');
   </script>
-<title>{pageTitle}</title>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta
-    name="description"
-    content="Explore lawn mowing, mulching, aeration, weed control, and landscape design in Lynchburg, VA. Request a quote from Edwards Landscape Group."
-  />
 
   <link id="favicon" rel="icon" type="image/png" href="/assets/favicon.ico" />
 
