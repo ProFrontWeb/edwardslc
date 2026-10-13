@@ -101,6 +101,16 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
       </div>
       <div class="container">
         <div class="row align-items-center">
+          <div class="col-lg-5 col-xl-6 hero-award">
+            <img
+              src="/assets/LivingLynchburgWinnerStar2027.webp"
+              alt="Lynchburg Living — The Best of Lynchburg 2027 winner"
+              width="1500"
+              height="1500"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
           <div class="col-lg-7 col-xl-6 hero-content-block">
             <h1>Professional Lawn Care & Landscaping in Lynchburg You Can Rely On</h1>
             <p class="mb-4">
@@ -286,3 +296,36 @@ const pageTitle = "Edwards Landscape Group | Lynchburg Lawn & Landscape Experts"
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 </body>
+
+<style>
+  .hero-award {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .hero-award img {
+    display: block;
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.3));
+  }
+
+  @media (min-width: 992px) {
+    .hero-award {
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    .hero-award img {
+      width: 340px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .home-hero {
+      padding-top: 24px;
+    }
+  }
+</style>
