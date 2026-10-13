@@ -1,19 +1,6 @@
 (function ($) {
   "use strict";
 
-  var isMobileViewport = window.matchMedia("(max-width: 991.98px)").matches;
-
-  if (!isMobileViewport) {
-    $(window).stellar({
-      responsive: true,
-      parallaxBackgrounds: true,
-      parallaxElements: true,
-      horizontalScrolling: false,
-      hideDistantElements: false,
-      scrollProperty: "scroll",
-    });
-  }
-
   var fullHeight = function () {
     $(".js-fullheight").css("height", $(window).height());
     $(window).resize(function () {
@@ -32,12 +19,8 @@
   };
   loader();
 
-  // Scrollax
-  if (!isMobileViewport) {
-    $.Scrollax();
-  }
-
   var carousel = function () {
+    if (!$.fn.owlCarousel) return;
     $(".carousel-testimony").owlCarousel({
       center: true,
       loop: true,
@@ -212,50 +195,53 @@
     });
   };
 
-  $(".image-popup").magnificPopup({
-    type: "image",
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    fixedContentPos: true,
-    mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
-    gallery: {
-      enabled: true,
-      navigateByImgClick: false,
-      preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      verticalFit: true,
-    },
-    zoom: {
-      enabled: true,
-      duration: 300, // don't foget to change the duration also in CSS
-    },
-    callbacks: {
-      open: function () {
-        resetPopupImageZoom();
-        bindPopupImageZoom();
+  if ($.fn.magnificPopup) {
+    $(".image-popup").magnificPopup({
+      type: "image",
+      closeOnContentClick: false,
+      closeBtnInside: false,
+      fixedContentPos: true,
+      mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
+      gallery: {
+        enabled: true,
+        navigateByImgClick: false,
+        preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
       },
-      change: function () {
-        resetPopupImageZoom();
-        setTimeout(bindPopupImageZoom, 0);
+      image: {
+        verticalFit: true,
       },
-      close: function () {
-        resetPopupImageZoom();
+      zoom: {
+        enabled: true,
+        duration: 300, // don't foget to change the duration also in CSS
       },
-    },
-  });
+      callbacks: {
+        open: function () {
+          resetPopupImageZoom();
+          bindPopupImageZoom();
+        },
+        change: function () {
+          resetPopupImageZoom();
+          setTimeout(bindPopupImageZoom, 0);
+        },
+        close: function () {
+          resetPopupImageZoom();
+        },
+      },
+    });
 
-  $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
-    disableOn: 700,
-    type: "iframe",
-    mainClass: "mfp-fade",
-    removalDelay: 160,
-    preloader: false,
+    $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
+      disableOn: 700,
+      type: "iframe",
+      mainClass: "mfp-fade",
+      removalDelay: 160,
+      preloader: false,
 
-    fixedContentPos: false,
-  });
+      fixedContentPos: false,
+    });
+  }
 
   var contentWayPoint = function () {
+    if (!$.fn.waypoint) return;
     var i = 0;
     $(".ftco-animate").waypoint(
       function (direction) {
